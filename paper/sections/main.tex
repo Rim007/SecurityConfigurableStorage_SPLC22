@@ -1,0 +1,168 @@
+% !TeX spellcheck = en_US
+\PassOptionsToPackage{table}{xcolor}
+
+\documentclass[sigconf,review]{acmart}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+\usepackage{combelow}
+\usepackage{tabularx}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\arraybackslash}p{#1}}
+\newlength{\fixedColWidth}
+\setlength{\fixedColWidth}{1em}
+\usepackage{multicol}
+\usepackage{multirow}
+\usepackage{natbib}
+\usepackage{hyperref}
+\renewcommand{\sectionautorefname}{Section}
+\renewcommand{\subsectionautorefname}{Section}
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{balance}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{relsize,xspace}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage[super]{nth}
+\usepackage{csquotes}
+\usepackage{acronym}
+\usepackage{xspace}
+\usepackage{wasysym}
+\usepackage{pifont}
+
+\newcommand{\searchString}[1]{\noindent \begin{center} \vspace{-.2em} \hspace*{0.5ex}\colorbox{lightgray}{\parbox{0.95\columnwidth}{{\texttt{#1}}}} \vspace{-.5em} \hspace*{0.5ex} \end{center}}
+
+\newcommand{\tableCircFull}{\CIRCLE{}\xspace}
+%\newcommand{\tableCircFullAst}{\CIRCLE{}$\ast$\xspace}
+\newcommand{\tableCircFullAst}{\CIRCLE{}\xspace}
+\newcommand{\tableCircHalf}{\LEFTcircle{}\xspace}
+\newcommand{\tableCircEmpty}{\Circle{}\xspace}
+\newcommand{\tableCiteSized}[1]{\cite{#1}}
+
+\newcommand\tabrotate[1]{\rotatebox{90}{#1\hspace{\tabcolsep}}}
+
+% REMOVE FOR FINAL %%
+\usepackage[sharp]{easylist}
+\AtBeginEnvironment{easylist}{\ListProperties(	Start1=1,%
+	Hang=true,Space=2pt,Space*=2pt,Hide=1000,%
+	Align=fixed,
+	Margin1=0.0em,Style1*=\textbullet\hskip .5em,%
+	Margin2=1.0em,Style2*=--\hskip .5em,%
+	Margin3=2.0em,Style3*=$\ast$\hskip .5em,%
+	Margin4=3.0em,Style4*=$\cdot$\hskip .5em,%
+	Margin5=4.0em,Style5*=$\cdot$\hskip .5em,%
+	Margin6=5.0em,Style6*=$\cdot$\hskip .5em,%
+	Margin7=6.0em,Style7*=$\cdot$\hskip .5em)
+}%
+
+\acmConference[SPLC’22]{26th ACM International Systems and Software Product Lines Conference}{12-16 September, 2022}{Graz, Austria}
+
+\newcommand{\myPar}[1]{\smallskip\noindent\textbf{#1.}}
+\newcommand{\todo}[1]{\noindent\textcolor{red}{\small\textbf{Todo: #1}}}
+\newcommand{\remark}[1]{\noindent\textcolor{blue}{\small\textbf{Remark: #1}}}
+
+\begin{document}
+
+\title[Data Security for Configurable Storage Systems: A Systematic Mapping Study]{Data Security for Configurable Storage Systems:\\ A Systematic Mapping Study}
+	
+\author{Richard May}
+\affiliation{%
+	\institution{Harz University Wernigerode, Germany}
+%	\city{Wernigerode}
+	\city{}
+	\country{}}
+\email{rmay@hs-harz.de}
+
+%\author{Andy Kenner}
+%\affiliation{%
+%	\institution{METOP GmbH \& Otto-von-Guericke %University Magdeburg, Germany}
+%	\city{Magdeburg}
+%	\city{}
+%	\country{}}
+%\email{andy.kenner@metop.de}
+
+\author{Jacob Krüger}
+\orcid{0000-0002-0283-248X}
+\affiliation{%
+	\institution{Ruhr University Bochum, Germany}
+%	\city{Magdeburg}
+	\city{}
+	\country{}}
+\email{jacob.krueger@rub.de}
+
+\author{Christian Biermann}
+\affiliation{%
+	\institution{Harz University Wernigerode, Germany}
+%	\city{Wernigerode}
+	\city{}
+	\country{}}
+\email{cbiermann@hs-harz.de}
+
+\author{Thomas Leich}
+\affiliation{
+	\institution{Harz University Wernigerode \& METOP GmbH, Germany}
+%	\city{Wernigerode \& Magdeburg}
+	\city{}
+	\country{}
+}
+\email{tleich@hs-harz.de}
+
+\renewcommand{\shortauthors}{May et al.}
+
+\acrodef{SaS}[S\&S]{Safety and Security}
+\newcommand{\sos}{safety/security\xspace{}}
+\newcommand{\Sos}{Safety/security\xspace{}}
+
+\begin{abstract}
+
+\end{abstract}
+
+\begin{CCSXML}
+	<ccs2012>
+	<concept>
+	<concept_id>10002978.10003006.10011634</concept_id>
+	<concept_desc>Security and privacy~Vulnerability management</concept_desc>
+	<concept_significance>500</concept_significance>
+	</concept>
+	<concept>
+	<concept_id>10011007.10011074.10011092.10011096.10011097</concept_id>
+	<concept_desc>Software and its engineering~Software product lines</concept_desc>
+	<concept_significance>500</concept_significance>
+	</concept>
+	</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Security and privacy~Vulnerability management}
+\ccsdesc[500]{Software and its engineering~Software product lines}
+
+\keywords{Security, Data Storage, Configurable Systems, Software Product Line Engineering, Mapping Study}
+
+\maketitle
+
+\input{introduction}
+
+\input{background}
+
+\input{methodology}
+
+\input{results}
+
+\input{discussion}
+
+\input{relatedWork}
+
+\input{conclusion}
+
+%\begin{acks}
+%\end{acks}
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{shortConf,publishers}
+
+	
+\balance
+\end{document}
