@@ -1,4 +1,4 @@
-\section{Mapping Study Design} \label{sec:methodology}
+\section{Methodology} \label{sec:methodology}
 
 The objective of this study was to identify, classify, and discuss research on configurable storage systems and security.
 To achieve our objective, we conducted a systematic mapping study based on the guidelines of~\citet{Kitchenham2015EvidenceSLR}.
@@ -12,6 +12,20 @@ Therefore, we searched the literature databases \textsc{Scopus}\footnote{www.sco
 \searchString{"security" AND "software product line"} 
 
 Based on the general search string, we found around 1,000 results emphasizing the relevance and research interests regarding security in the context of configurable systems. 
-We note that our previous mapping study on safety and security for configurable systems~\citep{Kenner2021MappingStudy} only focused on configurable software systems but on configurable storage systems. 
-Thus, our research objectives can be considered as valuable enough to initiate the systematic mapping study focusing on security and configurable storage systems.  
+We note that our previous mapping study on safety and security for configurable systems~\citep{Kenner2021MappingStudy} only focused on configurable software systems but did not considered configurable storage systems in a certain way. 
+Thus, our research objectives can be considered as valuable enough for our systematic mapping study focusing on security and configurable storage systems.  
+
+\subsection{Study Design}
+
+Based on the identified research interest, we conducted the systematic mapping study.
+Precisely, we focused on security and configurable storage systems based on SPL.
+We tried to cover a wide range of different storage systems, without any restriction regarding their architecture (e.g., centralized or decentralized), including solutions ranging from databases to service-based cloud storage.
+So, we defined the following search string:
+
+\searchString{("software as a service" OR "SaaS" OR "infrastructure as a service" OR "IaaS" OR "service-based" OR "service-oriented" OR "on-demand" OR "stor*" OR "cloud" OR "database" OR "warehouse" OR "blockchain" OR "edge" OR "fog") AND ("software product line" OR "SPL" OR "product famil*" OR "system famil*" OR “software famil*” OR "variant*rich" OR "config* system") AND ("security" OR "secure")}
+
+Based on the search we employed an automated search on \textsc{Scopus}, \textsc{IEEE Xplore}, and the \textsc{ACM Guide to Computing Literature}.
+These literature databases ensure a certain quality by indexing only peer-reviewed publications from a variety of publishers.
+This way, we also reduced the threat of missing highly relevant publications.
+
 
