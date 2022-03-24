@@ -9,7 +9,7 @@ The individual steps of the methodology are presented in the following.
 In the first step, we employed an initial screening to ensure the need for our research, i.e., there are no recent similar studies and a sufficient and relevant body-of-knowledge.
 Therefore, we searched the literature databases \textsc{Scopus}\footnote{www.scopus.com}, \textsc{IEEE Xplore}\footnote{ieeexplore.ieee.org}, and the \textsc{ACM Guide to Computing Literature}\footnote{dl.acm.org/search/advanced} by using the following search string without any constraints except the thematic focus (e.g., a certain time frame).
 
-\searchString{"security" AND "software product line"} 
+\searchString{"software product line" and "security"} 
 
 Based on the general search string, we found around 1,000 results emphasizing the relevance and research interests regarding security in the context of configurable systems. 
 We note that our previous mapping study on safety and security for configurable systems~\citep{Kenner2021MappingStudy} only focused on configurable software systems but did not considered configurable storage systems in a certain way. 
@@ -26,6 +26,23 @@ So, we defined the following search string:
 
 Based on the search we employed an automated search on \textsc{Scopus}, \textsc{IEEE Xplore}, and the \textsc{ACM Guide to Computing Literature}.
 These literature databases ensure a certain quality by indexing only peer-reviewed publications from a variety of publishers.
-This way, we also reduced the threat of missing highly relevant publications.
+This way, we reduced the threat of missing highly relevant publications, too.
 
+\subsection{Selection Criteria}
+
+For the identification and selection of relevant and suitable publications, we defined the following selection criteria:
+
+\begin{enumerate}[label=IC\textsubscript{\arabic*},leftmargin=*,nosep]
+    \item The publication is written in English.
+    \item The publication has been published between 2013 and 2022.\label{it:icTime}
+    \item The publication is a peer-reviewed conference paper or journal article (e.g., excluding keynote summaries or posters).\label{it:icPaper}
+    \item The publication is longer than three pages.\label{it:icPages}
+    \item The publication deals with security and configurable storage systems.\label{it:icFocus}
+\end{enumerate}\medskip
+
+We intentionally focused on the last decade (\ref{it:icTime}) to cover the most recent advancements in both research and practice.
+In this context, we argue that publications older than ten years have usually already become established practices,  standards, or are no longer relevant.
+Since we did not perform a detailed quality assessment of all selected papers, we tried to ensure a certain quality by relying on the review of publication venues by \textsc{Scopus}, \textsc{IEEE}, and \textsc{ACM} (\ref{it:icPaper}).
+Moreover, by defining a minimum number of pages (\ref{it:icPages}), we assumed that the papers meeting this criterion provide enough details to understand the addressed problem.
+We intentionally excluded approaches that do not address security configurable storage systems based on SPL (\ref{it:icFocus}).
 
