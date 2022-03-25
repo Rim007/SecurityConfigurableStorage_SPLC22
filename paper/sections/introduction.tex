@@ -1,1 +1,41 @@
 \section{Introduction} \label{sec:introduction}
+
+In recent years, the amount of data (e.g., images, audios, logs) massively increases due to the growing complexity, interconnection, and interaction of software systems~\citep{sagiroglu2013big,oussous2018big}.
+To handle this data in an appropriate way, it is stored, managed, or even processed in a variety of different data storage systems, ranging from centralized databases to on-demand software-as-a-service (SaaS) cloud storage to decentralized blockchains~\citep{gabel2017secure,cusumano2010cloud,shafagh2017towards}.
+A growing amount of these systems is configurable, i.e., these solutions are based on variability allowing their adaptation to specific requirements, e.g., customer demands, industry standards, hardware limitations, or legal regulations.
+Moreover, the configurability allows the derivation of families of similar but customized variants by enabling or disabling certain features.
+So, since each variant of a system includes individual functions and potential interactions between them, it contributes to the uniqueness but also the complexity of every solution~\citep{pohl2005software}. 
+
+However, the data to be stored is usually private or security sensitive.
+Consequently, to protect this data, it is essential to process and store it in a secure way by relying on concrete security models or standards (e.g., ISO 26262)~\citep{Sartakov2018STANliteLevel,Popa2011CryptDB:Processing}. 
+Due to the uniqueness and complexity of configurable storage systems as well as their underlying configurable software systems based on a variety of variants, there is a particularly high risk for both configurable systems of becoming the subject of cyber attacks~\citep{Kenner2021MappingStudy}.
+These attacks are often based on the exploitation of certain system vulnerabilities or malicious administrators, leading to unauthorized data access, data loss or even data manipulation~\cite{Gunawi2014WhatCloud, Campanile2017CloudifyingDomain}.
+
+\todo{Ist die Einteilung in configurable software systems und configurable storage systems sinnvoll (mit Oberbegriff configurable systems)?}
+
+Consequently, research on configurable systems, particularly those based on software product lines (SPL), and security has been conducted in recent years.
+This research include both approaches for configurable software systems and configurable storage systems.
+For instance 
+
+\todo{Beispiele}
+
+
+Although there exist extensive research on security and configurable systems, especially involving storage systems, we are missing an overview of current state-of-the-art research.
+Consequently, there is no comprehensive systematization of configurable storage systems, their security and variability concerns, or future research directions.
+By conducting a systematic mapping study, we aim to addressed this research gap~\cite{Kitchenham2015EvidenceSLR}.
+Precisely, we analyzed 53 papers proposing configurable storage systems with a consideration of security concerns that are published on \textsc{Scopus}\footnote{www.scopus.com}, \textsc{IEEE Xplore}\footnote{ieeexplore.ieee.org}, and the \textsc{ACM Guide to Computing Literature}\footnote{dl.acm.org/search/advanced} within the last decade (2013--2022).
+This way, we are able to summarize the current state-of-art research and emphasize research gaps as well as relevant research direction regarding the intersection of security and SPL-related configurable storage systems.
+
+Overall, we contribute the following with our study:
+\begin{itemize}[nosep]
+	\item A systematic and comprehensive overview of recent research on security in the context of configurable storage systems.
+	
+	\item A discussion on what properties are covered and for which properties further investigations is required.
+	
+	\item An open-access repository including the detailed study results to increase the study's overall comprehensibility and to ensure a replicability of our study.\footnote{\url{LINK}\label{ft:repo}}.
+\end{itemize}
+
+
+We argue that our study results and discussion findings can help both researchers and practitioners in understanding the recent state-of-the-art as well as open research directions.
+
+\todo{problem: oft data storage nicht allein, sondern in kombination mit configurable software system beschrieben, teils storage auch nicht konfigurierbar, sondern nur fürs Speichern von variants genutzt? Wie gehen wir damit um?}
