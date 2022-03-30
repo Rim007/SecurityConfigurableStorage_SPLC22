@@ -1,1 +1,127 @@
 \section{Results} \label{sec:results}
+
+\bgroup
+\rowcolors{0}{white}{gray!25}
+\begin{table*}[t]
+	\caption{\todo{ggf. 2 Tabellen draus machen}}
+	\label{tab:security_main}
+	\vspace*{-2ex}
+	\centering \begin{adjustbox}{max width = 0.75\textwidth}
+
+	\begin{tabular}{c*{28}{C{\fixedColWidth}}}
+		\hiderowcolors
+		& & & & & & & & & & & \multicolumn{6}{c}{Security goals} & & & & & & & & & \\\cmidrule[0.4pt](r{0.2em}l{0.1em}){12-17}%
+		 &
+		 &
+		\multicolumn{4}{c}{\tabrotate{Perspectives}} &
+		\multicolumn{4}{c}{\tabrotate{Storage}}
+		&
+		&
+	    \multicolumn{3}{c}{\tabrotate{CIA triad}} &
+		\multicolumn{3}{c}{\tabrotate{\parbox{1.7cm}{Information security}}} &
+		&
+		&
+		&
+		&
+		\multicolumn{3}{c}{\tabrotate{Projection}} &
+		\multicolumn{3}{c}{\tabrotate{Verification}} &
+		&
+		\\
+		\cmidrule[0.4pt](r{0.2em}l{0.1em}){3-6}%
+		\cmidrule[0.4pt](r{0.2em}l{0.1em}){7-10}%
+		\cmidrule[0.4pt](r{0.2em}l{0.1em}){12-14}%
+		\cmidrule[0.4pt](r{0.2em}l{0.1em}){15-17}%
+		\cmidrule[0.4pt](r{0.2em}l{0.1em}){22-24}%
+		\cmidrule[0.4pt](r{0.2em}l{0.1em}){25-27}%
+		
+		\tabrotate{Reference} & 
+		\tabrotate{Domain} &
+		\tabrotate{Security $\rightarrow$ SPL} & 
+		\tabrotate{SPL $\rightarrow$ Security} & 
+		\tabrotate{Storage $\rightarrow$ SPL} & 
+		\tabrotate{SPL $\rightarrow$ Storage} & 
+		\tabrotate{Type of storage} & 
+		\tabrotate{Organization structure} & 
+		\tabrotate{Stored data type} & 
+		\tabrotate{Data access} & 
+		\tabrotate{Standard} & 
+		\tabrotate{Confidentiality} & 
+		\tabrotate{Integrity} & 
+		\tabrotate{Availability} & 
+		\tabrotate{Authorization} & 
+		\tabrotate{Accountability} & 
+		\tabrotate{Non-repudiation} & 
+		\tabrotate{Specification} &
+		\tabrotate{Security threats} &
+		\tabrotate{Security technology} &
+		\tabrotate{Variability focus} &
+		\tabrotate{Problem space} & 
+		\tabrotate{Solution space} & 
+		\tabrotate{Mapping} & 
+		\tabrotate{Product-based} & 
+		\tabrotate{Family-based} & 
+		\tabrotate{Feature-based} & 
+		\tabrotate{Evolution} &
+		\tabrotate{Tool support}
+		\\
+		\toprule
+		\showrowcolors
+		\cite{adjoyan2017reconfigurable} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{alferez2017achieving} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{ali2016requirements} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{aouzal2019policy} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{asadi2016goal} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{assunccao2020variability} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{ataei2017variational} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{azzolini2015evolving} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{baresi2015dynamically} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{benlachgar2013review} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{brisaboa2015reusable} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{butting2018controlled} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{chinnaiah2018fault} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{dig2016cope} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{galindo2015supporting} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{fernandez2015patterns} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{garcia2015software} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{galster2013constraints} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{gey2014feature} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{gherardi2014software} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{heikkila2016dealing} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{jalil2017adapting} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{jumagaliyev2016Evolving} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{krieter2019using} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{krieter2018towards} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{leite2016autonomic} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{leite2017dohko} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{marinho2013mobiline} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{matar2014towards} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{mcgee2016using} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{metzger2016coordinated} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{moens2014feature} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{moens2015allocating} 	& & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{moens2014cost} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{mohamed2017integrated} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{molzam2016learning} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{munoz2017green} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{nguyen2014exploring} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{parra2014soa} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{passos2016coevolution} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{patel2015automated} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{perrouin2016complexity} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{preuveneers2016systematic} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{preuveneers2016feature} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{shaaban2019ontology} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{siegmund2020dimensions} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{sousa2017extending} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{syed2016cloud} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{van2015variability} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{varela2021carmen} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{walraven2014efficient} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{zhang2021evolutionary} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\bottomrule
+		\midrule[-2pt]			
+	\end{tabular}
+	\end{adjustbox}
+\vspace*{-2ex}
+\end{table*}
+\egroup

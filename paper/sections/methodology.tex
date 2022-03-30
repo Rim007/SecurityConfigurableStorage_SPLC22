@@ -1,6 +1,6 @@
 \section{Methodology} \label{sec:methodology}
 
-The objective of this study was to identify, classify, and discuss research on configurable storage systems and security.
+The objective of this study was to identify, classify, and discuss research on SPL-related storage systems and security.
 To achieve our objective, we conducted a systematic mapping study based on the guidelines of~\citet{Kitchenham2015EvidenceSLR}.
 The individual steps of the methodology are presented in the following.
 
@@ -12,13 +12,13 @@ Therefore, we searched the literature databases \textsc{Scopus}, \textsc{IEEE Xp
 \searchString{"software product line" and "security"} 
 
 Based on the general search string, we found around 1,000 results emphasizing the relevance and research interests regarding security in the context of configurable systems. 
-We note that our previous mapping study on safety and security for configurable systems~\citep{Kenner2021MappingStudy} only focused on configurable software systems but did not considered configurable storage systems in a certain way. 
-Thus, our research objectives can be considered as valuable enough for our systematic mapping study focusing on security and configurable storage systems.  
+We note that our previous mapping study on safety and security for configurable systems~\citep{Kenner2021MappingStudy} only focused on configurable software systems but did not considered storage systems in a certain way. 
+Thus, our research objectives can be considered as valuable enough for our systematic mapping study focusing on security and SPL-related storage systems.  
 
 \subsection{Study Design}
 
 Based on the identified research interest, we conducted the systematic mapping study.
-Precisely, we focused on security and configurable storage systems based on SPL.
+Precisely, we focused on security and SPL-related storage systems, including the usually underlying configurable software systems.
 We tried to cover a wide range of different storage systems, without any restriction regarding their architecture (e.g., centralized or decentralized), including solutions ranging from databases to service-based cloud storage.
 So, we defined the following search string:
 
@@ -37,14 +37,14 @@ For the identification and selection of relevant and suitable publications, we d
     \item The publication has been published between 2013 and 2022.\label{it:icTime}
     \item The publication is a peer-reviewed conference paper or journal article (e.g., excluding keynote summaries or posters).\label{it:icPaper}
     \item The publication is longer than three pages.\label{it:icPages}
-    \item The publication deals with security and configurable storage systems.\label{it:icFocus}
+    \item The publication deals with security and SPL-related storage systems.\label{it:icFocus}
 \end{enumerate}\medskip
 
 We intentionally focused on the last decade (\ref{it:icTime}) to cover the most recent advancements in both research and practice.
 In this context, we argue that publications older than ten years have usually already become established practices,  standards, or are no longer relevant.
 Since we did not perform a detailed quality assessment of all selected papers, we tried to ensure a certain quality by relying on the review of publication venues by \textsc{Scopus}, \textsc{IEEE}, and \textsc{ACM} (\ref{it:icPaper}).
 Moreover, by defining a minimum number of pages (\ref{it:icPages}), we assumed that the papers meeting this criterion provide enough details to understand the addressed problem.
-We intentionally excluded approaches that do not address security configurable storage systems based on SPL (\ref{it:icFocus}).
+We intentionally excluded approaches that do not address security SPL-related storage systems based on SPL (\ref{it:icFocus}).
 
 
 \subsection{Data Extraction}
@@ -80,7 +80,7 @@ Overall, we defined the following extraction criteria:
 	\item \textbf{Variability focus} indicating whether the storage is actually configurable or only the underlying software system
 	\item \textbf{Projection} of the product-line indicating whether the problem space, solution space, or the mapping between both is covered~\cite{Apel2013FOSPL}.
 	\item \textbf{Verification} method indicating whether the described system is analyzed based on products, features, or the whole product family~\cite{Thuem2014AnalysisSurvey}.
-	\item \textbf{Evolution} of a configurable storage system
+	\item \textbf{Evolution} of a SPL-related storage system
 	\item \textbf{Tool support} reported in the publication (e.g., FeatureIDE~\cite{Meinicke2017FeatureIDE}, pure::variants~\cite{Beuche2012purevariants}, own prototypes).
 	
 \end{itemize}
