@@ -1,0 +1,10 @@
+*.aux
+*.bbl
+*.blg
+*.cut
+*.log
+*.out
+*.cut
+*.synctex.gz
+*.synctex.gz (busy)
+*/main.pdf
