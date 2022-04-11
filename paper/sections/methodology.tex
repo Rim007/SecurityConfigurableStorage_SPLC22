@@ -61,9 +61,12 @@ We based our criteria on the extraction criteria of our previous mapping study o
 In more detail, these criteria are derived from research and concepts on security or product-line engineering
 So, the criteria regarding security rely on established classifications of security goals.
 However, we extended the criteria to gain more detailed insights, especially regarding the intersection of product-line engineering and storage systems.
-Note that we do not extract typical publication data (e.g., publication communities, publication years) as we focus on a  qualitative, content-related analysis.
-Overall, we defined the following extraction criteria:
+%Note that we do not extract typical publication data (e.g., publication communities, publication years) as we focus on a  qualitative, content-related analysis.
+Overall, we defined the following extraction criteria classified into four thematic categories:\smallskip
+
+\noindent\textbf{Publication:}
 \begin{itemize}[nosep]
+    \item \textbf{Publication year} of a paper
     \item \textbf{Domain} of a solution (e.g., manufacturing, automotive)
     \item \textbf{Perspective} of a publication (indicated by an arrow ($\rightarrow$) read as \enquote{employed to}):
     \begin{itemize}
@@ -72,10 +75,18 @@ Overall, we defined the following extraction criteria:
 		\item \emph{Storage $\rightarrow$ SPL}: publications focusing on storage systems used to support certain SPL tasks (e.g., storing variants)
 		\item \emph{SPL $\rightarrow$ Storage}: publications focusing on storage systems based on product-line techniques
 	\end{itemize}
+	\end{itemize}\smallskip
+	
+\noindent\textbf{Storage:}	
+    \begin{itemize}[nosep]
 	\item \textbf{Type of storage} a publication is concerned with (e.g., database, cloud)
 	\item \textbf{Organization structure} of the proposed storage system (i.e., centralized or decentralized)
-	\item \textbf{Stored data type} indicating whether or which data is (securely) stored in a storage system
-	\item \textbf{Security standard} a publication refers to (e.g., ISO 27001)
+	\item \textbf{Stored data} indicating whether or which data is (securely) stored in a storage system
+    \end{itemize}\smallskip
+
+\noindent\textbf{Security:}	  
+    \begin{itemize}[nosep]
+	\item \textbf{Standard} a publication refers to (e.g., ISO 27001)
 	\item \textbf{Security goals} a publications aims to achieve: 
 	\begin{itemize}
 	    \item \emph{CIA triad}, including confidentiality, integrity, and availability
@@ -84,17 +95,20 @@ Overall, we defined the following extraction criteria:
 	\item \textbf{Specification} indicating how certain security concerns are considered, documented, or managed (e.g., as security goals or non-functional requirements)
 	\item \textbf{Security threats} a publication is concerned with (e.g., concrete system vulnerabilities)
 	\item \textbf{Security technology} implemented or proposed to achieve certain security goals (e.g., Intel Software Guard Extensions~\citep{Costan2016IntelExplained})
+	\end{itemize}\smallskip
+	
+\noindent\textbf{Configurable system:}	  
+    \begin{itemize}[nosep]	
 	\item \textbf{Variability focus} indicating whether the storage is actually configurable or only the underlying software system
 	\item \textbf{Projection} of the product-line indicating whether the problem space, solution space, or the mapping between both is covered~\cite{Apel2013FOSPL}.
 	\item \textbf{Verification} method indicating whether the described system is analyzed based on products, features, or the whole product family~\cite{Thuem2014AnalysisSurvey}.
 	\item \textbf{Evolution} of a SPL-related storage system
 	\item \textbf{Tool support} reported in the publication (e.g., FeatureIDE~\cite{Meinicke2017FeatureIDE}, pure::variants~\cite{Beuche2012purevariants}, own prototypes).
-	
 \end{itemize}
 
 \subsection{Conduct}
 The automated search was conducted on March 15, 2022, resulting in a total of 538 publications (65 from \textsc{Scopus}, 122 from \textsc{IEEE Xplore}, and 351 from the \textsc{ACM Guide to Computing Literature}).
-After integrating the selected papers into the literature review tool Rayyan QCRI\footnote{www.rayyan.ai} where the literature was labeled as included, excluded, or duplicate.
+After integrating the selected papers into the literature review tool Rayyan QCRI\footnote{\url{www.rayyan.ai}} where the literature was labeled as included, excluded, or duplicate.
 In this context, we conducted a duplication removal (i.e., removing 29 papers) as well as a title and abstract selection, resulting in 76 papers for the full-text selection. 
 However, after reading the full-texts, we had to remove 33 paper since they only superficially dealt with SPL and data storage or only mentioned these aspects in the context of related work.
 To increase the number of selected papers, we additionally applied a backward snowballing process (i.e., analyzing the references of the already selected literature).
