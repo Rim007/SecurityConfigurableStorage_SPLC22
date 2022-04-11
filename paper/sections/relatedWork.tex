@@ -1,17 +1,20 @@
 \section{Related Work} \label{sec:relatedwork}
 
-\citet{Kenner2021MappingStudy}: Mapping study safety and security for configurable software systems
+We found six related publications proposing  overviews in terms of literature reviews or mapping studies in the field of configurable systems with a certain consideration of security or security.
+However, security is usually only extracted or mentioned as one of several quality attributes or non-functional requirements from a high-level perspective without analyzing security concerns (e.g., threats, attack mitigation techniques) in detail.
+Moreover, data storage is also often not addressed in the context of configurable systems or security.
+In contrast to the related work we found, none of these papers provide a comprehensive and systematic overview of security of configurable systems and their data storage, focusing on a detailed analysis of these aspects.  
 
-\citet{ahmedConstrainedInteractionTesting2017}: SLR (2005--2016), domain of constraint interaction testing, analyzed 103 publications, of which two involve security concerns (not related to configurable systems)
-
-\citet{hammaniSurveyNonFunctionalRequirements2014b}: survey security concerns as non-functional requirements in the context of modeling and verifying software product lines, high-level overview regarding non-functional requirements, no details on security concerns are missing
-
-\citet{mahdavi-hezavehiVariabilityQualityAttributes2013} SLR (2000--2011) on variability of quality attributes (including security) of service-based software systems, fewer publications (five out of 46) were concerned with security 
-security only generally analyzed from high level as quality attribute
-
-\citet{myllarniemi2012systematically} SLR on the variability of quality attributes (2000--2010) which are subject in a SPL-based system (29 papers), security considered as quality attribute from a high level perspective  
-
-\citet{benlachgar2013review} review of product-line engineering techniques to model SaaS applications, assessment of the relevance of the models, no concrete consideration of security 
-
-\citet{geraldi2020software} review of SPL in the context of the internet of things, reviewed 1039 papers. As cloud systems are usually based on the IoT, it is considered, but not examined in detail. Security is only considered as extracted data of in the context of non-functional requirements
-
+\citet{myllarniemi2012systematically} conducted an SLR of 29 papers (2000--2010) focusing on the variability of quality attributes which are part of product-line-based software system. 
+The authors considered security as a quality attribute from a high-level perspective.  
+\citet{benlachgar2013review} reviewed product-line engineering techniques to model SaaS applications, including an assessment of the models' relevance.
+However, they do not consider certain security aspects. 
+\citet{mahdavi-hezavehiVariabilityQualityAttributes2013} reported an SLR of 46 papers (2000--2011) focusing on the variability of quality attributes of service-based software systems, including security general extraction criteria.
+The authors found out that only a few paper actually consider security in a general way in terms of a quality attribute.
+\citet{hammaniSurveyNonFunctionalRequirements2014b} surveyed security concerns in the context of modeling and verifying SPL.
+However, they only provide a high-level overview regarding non-functional requirements without focusing on details of detailed security concerns.
+\citet{geraldi2020software} reviewed 1039 SPL-related papers which describe IoT-related concepts or applications. 
+As cloud systems are closely associated with the IoT, they are considered as part of the study, but not examined in detail. 
+Security is only generally considered from a high level in the context of non-functional requirements.
+\citet{Kenner2021MappingStudy} presented a systematic mapping study of XY papers (2011--2020) focusing on safety and security for configurable software systems.
+The authors analyze security and safety concerns in detail, but do not consider associated data storage in a certain way.
