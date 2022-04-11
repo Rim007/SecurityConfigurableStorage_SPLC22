@@ -12,8 +12,9 @@ Therefore, we searched the literature databases \textsc{Scopus}, \textsc{IEEE Xp
 \searchString{"software product line" and "security"} 
 
 Based on the general search string, we found around 1,000 results emphasizing the relevance and research interests regarding security in the context of configurable systems. 
-We note that our previous mapping study on safety and security for configurable systems~\citep{Kenner2021MappingStudy} only focused on configurable software systems but did not considered storage systems in a certain way. \todo{SPLC is double blind this year I think? so would be needed to be in third person. but its easy to rephrase, I would basically say that from last year's SPLC we are aware of this paper but our goals are actually different and we cover another body of work (i.e., papers)}
-Thus, our research objectives can be considered as valuable enough for our systematic mapping study focusing on security and SPL-related storage systems.  
+Thus, our research objectives can be considered as valuable enough for our systematic mapping study focusing on security and SPL-related storage systems.
+We note that we are aware of the mapping study on safety and security for configurable systems by~\citet{Kenner2021MappingStudy}. 
+However, our goals differ from this study and we cover another body of literature (i.e., papers) without focusing on safety. 
 
 \todo{would add a concrete goal/objective subsection or at least bullet points. what is the actual intention of the study, why is it really necessary to understand the state of the art to what extent? just getting an overview for the sake of it is also okish, but I don't think that the topic is self-motivational enough and it will be criticized if there is no good motivation on why exactly this study is needed and what its concrete goals are}
 
@@ -21,15 +22,17 @@ Thus, our research objectives can be considered as valuable enough for our syste
 
 Based on the identified research interest, we conducted the systematic mapping study.
 Precisely, we focused on security and SPL-related storage systems, including the usually underlying configurable software systems. \todo{as said, the motivation is not clear enough to me yet}
-We tried \todo{don't try, do or don't ;) We considered keywords that cover a wide range of ... with the goal of obtaining an overview of different types of architectures --- something like this, basically means the same but less attackable} to cover a wide range of different storage systems, without any restriction regarding their architecture (e.g., centralized or decentralized), including solutions ranging from databases to service-based cloud storage.
+We considered keywords that cover a wide range of different storage systems, without any restriction regarding their architecture (e.g., centralized or decentralized), including solutions ranging from databases to service-based cloud storage.
 So, we defined the following search string:
 
-\searchString{("software as a service" OR "SaaS" OR "infrastructure as a service" OR "IaaS" OR "service-based" OR "service-oriented" OR "on-demand" OR "stor*" OR "cloud" OR "database" OR "warehouse" OR "blockchain" OR "edge" OR "fog") AND ("software product line" OR "product famil*" OR "system famil*" OR “software famil*” OR "variant*rich" OR "config* system") AND ("security" OR "secure")}
+\searchString{("software as a service" OR "SaaS" OR "infrastructure as a service" OR "IaaS" OR "service-based" OR "service-oriented" OR "on-demand" OR "stor*" OR "cloud" OR "database" OR "blockchain" OR "edge" OR "fog") AND ("software product line" OR "product famil*" OR "system famil*" OR “software famil*” OR "variant*rich" OR "config* system") AND ("security" OR "secure")}
 
-\todo{hm I think it would be good to have a few details on which keywords have been selected for what purpose (i.e., what do they cover)}
 
-Based on the search we employed an automated search on \textsc{Scopus}, \textsc{IEEE Xplore}, and the \textsc{ACM Guide to Computing Literature}.
-These literature databases ensure a certain quality by indexing only peer-reviewed publications from a variety of publishers \todo{but the last point does not account for IEEE xplore right?}).
+The search string consists of relevant terms in the context of data storage, relevant types, and properties (e.g., "database", "SaaS", or "on-demand"), configurable systems in the context of software product-line engineering (e.g., "software product line" or "system family"), and security in general as we assume that more specific concerns will only rarely be reported (e.g., "secure").
+
+Based on the search string we employed an automated search on \textsc{Scopus}, \textsc{IEEE Xplore}, and the \textsc{ACM Guide to Computing Literature}.
+These literature databases ensure a certain quality by indexing only peer-reviewed publications.
+Moreover, \textsc{Scopus} and the \textsc{ACM Guide to Computing Literature} provide papers from a variety of publishers. 
 This way, we reduced the threat of missing highly relevant publications, too.
 
 \subsection{Selection Criteria}
@@ -44,10 +47,10 @@ For the identification and selection of relevant and suitable publications, we d
     \item The publication deals with security and SPL-related storage systems.\label{it:icFocus} \todo{the notion of SPL related storage system still confuses me xD}
 \end{enumerate}\medskip
 
-We intentionally focused on the last decade (\ref{it:icTime}) to cover the most recent advancements in both research and practice.
-In this context, we argue that publications older than ten years have usually already become established practices,  standards, or are no longer relevant. \todo{hm not sure about the relevancy/... arguments in this case, maybe its better to just say focusing on recent advances and limiting the number of publications, or at least providing some intuition why the argument is likely to be true}
-Since we did not perform a detailed quality assessment of all selected papers, we tried to ensure a certain quality by relying on the review of publication venues by \textsc{Scopus}, \textsc{IEEE}, and \textsc{ACM} (\ref{it:icPaper}). \todo{to hard, would rather say that such criteria are not applicable since we cover a variety of works that cannot be properly compared against each other and only bring this argument as an additional point}
-Moreover, by defining a minimum number of pages (\ref{it:icPages}), we assumed that the papers meeting this criterion provide enough details to understand the addressed problem.
+We intentionally focused on the last decade (\ref{it:icTime}) to limit the number of publications and cover the most recent advancements in both research and practice.
+A detailed quality assessment of all selected papers was not performed by us.
+Since our work covers a variety of works that cannot be properly compared against each other, common quality criteria are not applicable in our case.
+However, by defining a minimum number of pages (\ref{it:icPages}), it is assumed that the papers meeting this criterion provide enough details to understand the addressed problem.
 We intentionally excluded approaches that do not address security SPL-related storage systems based on SPL (\ref{it:icFocus}).
 
 
