@@ -7,17 +7,18 @@ In the following section, we provide relevant background information on \emph{co
 
 \subsection{Data Storage}\label{sec:background:storage}
 
-Data storage, i.e., a medium that is able to store specific data in a certain technological way, is usually generally classified by one of two common organization structures, i.e., centralized or decentralized~\cite{furht2010CloudFundamentals, chowdhury2018BlockchainAnalysis}. 
+Data storage, i.e., a medium that is able to store specific data in a certain technological way, is usually generally classified by one of three main organization structures, i.e., centralized, decentralized, or distributed~\cite{furht2010CloudFundamentals,wu2017distributed}. 
 Centralized storage solutions, e.g., centralized relational SQL databases, are built around one single point (i.e., a server) handling all major processing or storage task.
-Consequently, all clients are connected to the central point where the data is stored~\cite{ramamritham1996RealTimeDatabases,chowdhury2018BlockchainAnalysis}.
-In contrast, decentralized storage solutions, e.g., decentralized NOSQL databases or blockchain applications, rely on the distribution of processing or storage steps among several machines.
-Thus, the dependency on individual processing points is much weaker than in centralized solutions.
-In addition, it guarantees a greater scalability than centralized solutions\cite{ayoade2018DecentralizedEnvironment,mcconaghy2016BigchainDB:Database,Bao2020WhenIssues}.
+Consequently, all machines are connected to the central point where the data is stored~\cite{ramamritham1996RealTimeDatabases,chowdhury2018BlockchainAnalysis}.
+In contrast, decentralized storage solutions, e.g., decentralized NOSQL databases in the context of blockchain applications, rely on the distribution of processing or storage steps among several machines with no or limited coordination~\cite{wu2017distributed,ayoade2018DecentralizedEnvironment}.
+Thus, the dependency on individual processing points is much weaker than in centralized solutions~\cite{ayoade2018DecentralizedEnvironment,mcconaghy2016BigchainDB:Database,Bao2020WhenIssues}.
+If a decentralized system provides a (close) coordination between independent machines, it is called a distributed system~\cite{van2002distributed,wu2017distributed}.
+For instance, intercloud environments relying on a variety of storage mediums are usually associated with this organization structure~\cite{celesti2010security,leite2016autonomic}. 
 
-Data storage can be realized based on self-hosting or outsourcing.
+Data storage mediums usually rely on certain storage environments that are oriented towards self-hosting (i.e., an environment located on a local machine) or outsourcing.
 In the context of outsourcing, which has become increasingly widespread for enterprises in recent years, there are several common technologies, especially cloud, edge, and fog~\cite{gabel2017SecureExecution,correia2020SafeguardingEdge}.
 These environments are created based on a complex combination of software and hardware components able to provide server-based storage space at a high level of efficiency, flexibility, scalability, and on-demand data access based on the Internet of Things~\cite{markovic2013SmartComputing,silva2018SecurityComputing}.  
-Outsourcing solutions often serve as the technology where data storage and data processing can be built on, leading to the creation of service-based storage and software, usually called Software as a service (SaaS)~\cite{lee2009quality,kulkarni2012cloud}.
+Outsourcing solutions often serve as the technology where data storage and data processing can be built on, leading to the creation of service-based systems or infrastructures, usually called Software as a Service (SaaS) or Infrastructure as a Service (IaaS)~\cite{lee2009quality,kulkarni2012cloud,serrano2015infrastructure}.
 
 
 \subsection{Security}\label{sec:background:security}
