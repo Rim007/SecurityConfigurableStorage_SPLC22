@@ -6,7 +6,7 @@ In Table XYZ, an overview of the results is provided.
 
 \subsection{Publication}
 
-First, we describe the results which a more connected to the publications, i.e. typical publication data in terms of the publications years and indicated trends based on them, the domains, and the publications' perspectives regarding storage, security, and configurable systems. 
+First, we describe the results which are connected to the publications, i.e. typical publication data in terms of the publications years and indicated trends based on them, the domains, and the publications' perspectives regarding storage, security, and configurable systems. 
 
 \myPar{Publication Years}
 The analysis of the publication data reveals two relevant trends regarding the research interest.
@@ -31,10 +31,25 @@ In addition, in 18 papers, the perspective regarding the application of product-
 Similar to the first perspective classification, we found publications considering both perspectives (4), e.g., using product-line techniques to configure robotics applications running on a configurable cloud~\cite{gherardi2014software}.
 
 \subsection{Storage}
+Second, we describe the results which are concerned with the data storage of a configurable system, including the type of storage, its organization structure, and the stored data.
 
 \myPar{Type of Storage}
-
+In the context of storage types, we found out that the authors usually mix the storage medium, e.g., a database, with its underlying infrastructure, e.g., an outsourced cloud system.
+In 17 approaches, a database is implemented based on a cloud system. 
+In 13 of these cases, it is explicitly stated that these are considered as SaaS or IaaS environments.
+A combination of a cloud and a fog system with a database was described once~\cite{syed2016cloud}.
+Overall, in 31 approaches a database was implemented where in 14 cases no underlying infrastructure is given.
+In this context, five relational databases are described and in seven cases, SQL (usually MySQL) is given as database language.
+Moreover, we identified eight papers where only a cloud system was generally given as storage system.
+ 
 \myPar{Organization Structure}
+usually centralized, however cloud systems or service-oriented platform (SaaS) are concerned with distributed systems, but consist of databases which are actual centralized
+distribution often considered from the overall software system perspective
+
+Only a few approaches that are actual distribute, e.g. an intercloud system based on resources distributed across multiple clouds~\cite{leite2016autonomic}.
+
+problem - definition of cloud systems (actual medium vs. environment)
+
 
 \myPar{Stored Data}
 
