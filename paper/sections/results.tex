@@ -41,14 +41,16 @@ A combination of a cloud and a fog system with a database was described once~\ci
 Overall, in 31 approaches a database was implemented where in 14 cases no underlying infrastructure is given.
 In this context, five relational databases are described and in seven cases, SQL (usually MySQL) is given as database language.
 Moreover, we identified eight papers where only a cloud system was generally given as storage system.
- 
+
 \myPar{Organization Structure}
-usually centralized, however cloud systems or service-oriented platform (SaaS) are concerned with distributed systems, but consist of databases which are actual centralized
-distribution often considered from the overall software system perspective
+We found all types of organization structures, i.e., centralized (44), distributed (14), and decentralized (1).
+In one paper, no concrete structure could be extracted.
+We note that it is not always clear whether the described or assigned organization is related to the storage medium (e.g., a database), the storage environment (e.g., a cloud), or the software system. 
+There is usually insufficient information about the exact focus of the organizational structures in the papers
+Cloud systems or service-oriented platforms (i.e., SaaS or IaaS) are usually referred as distributed (software) systems by definition.
+However, this does not necessarily apply to the entire data storage system as such storage environments often consist of databases which are actual centralized.
+We argue that only a few approaches are actual distributed in terms of storage, e.g., an intercloud system based on resources distributed across multiple clouds~\cite{leite2016autonomic}.
 
-Only a few approaches that are actual distributed, e.g. an intercloud system based on resources distributed across multiple clouds~\cite{leite2016autonomic}.
-
-problem - definition of cloud systems (actual medium vs. environment)
 
 \myPar{Stored Data}
 We identified a variety of stored data.
