@@ -106,7 +106,7 @@ Other mitigation techniques included data isolation (8), firewalls (4), signatur
 Interestingly, in two papers by Krieter et al.~\cite{krieter2018towards,krieter2019using} the application of product-line techniques based on a detailed described security technology called Intel SGX~\cite{Costan2016IntelExplained} is given, fulfilling all security goals except accountability.
 
 \subsection{Configurable System}
-Fourth, the results which are concerned with the variability of the SPL-based configurable systems are described, including variability foucs, projection, verification, evolution, and tools support of the proposed systems.
+Fourth, the results which are concerned with the variability of the SPL-based configurable systems are described, including variability focus, projection, verification, evolution, and tools support of the proposed systems.
 
 \myPar{Variability Focus}
 Most approaches only focus on the variability of the software system (31) which refers to non-configurable data storage.
@@ -114,27 +114,28 @@ This trend is supported by the fact that the data storage only and not the softw
 In 11 publications, both software and storage are configurable showing the close connection of software systems and storage systems.
 
 \myPar{Projection}
-
-
-gain, a huge majority of the publications covers the
-problem space (20). For example, Mellado and Mouratidis [68] ex-
-tend Tropos to incorporate support for secure product-line engi-
-neering on a formal level. Additionally to the problem space, 11
-publications are also concerned with the solution space as well
-as the mapping between both. For instance, Peldszus et al. [79]
-propose how to perform model-based (i.e., problem space) secu-
-rity analyses of product lines (i.e., solution space), and require a
-consequent mapping between both. We did not assign four publica-
-tions to any projection, mostly because they exemplify or analyze
-potential security problems, but do not aim to address them, yet
-
-
+We found out that the solution space as well as a mapping between problem and solution space is covered by 20 papers, e.g., a configurable robotics system based on a component model~\cite{gherardi2014software}
+In addition, 15 paper address the problem space and the mapping, e.g., the formal definition and verification of security configurations for cyber-physical systems~\cite{varela2020definition}, while in nine papers all three types of projection are described, e.g., modeling policy-driven middleware for SPL-based SaaS application configurations and referring to concrete challenges~\cite{aouzal2019policy}.
+We also identified solutions, that focus on only one projection, including solution space (16), problem space (6), and mapping (2).
+Summing up all papers covering a certain projection, most publication address the solution space (36) while mapping is covered 28 times and the problem space 21 times.
 
 \myPar{Verification}
+Overall, verification is described or mentioned in 18 publications.
+Most papers (17) are concerned with the verification of the whole product, e.g., a whole cloud ERP production model~\cite{jalil2017adapting}.
+In one publication, a family-based verification is proposed~\cite{garcia2015software}.
+However, there is no approach verifying individual features.
 
 \myPar{Evolution}
+Regarding the evolution of the configurable systems and their security concerns, we found 11 publications that mention the evolution or consider it partly.
+For instance, \citet{alferez2017achieving} described the dynamic evolution of service compositions with the aim to deal with unexpected events of the open world.
+In 15 papers, we identified more detailed description on the evolution process.
 
 \myPar{Tool Support}
+In context of tool support, we extracted data from 22 publication classified into 5 categories. 
+Five papers mention FeatureIDE~\cite{Meinicke2017FeatureIDE} as modeling tool.
+In five more publications own prototypes or frameworks are given, e.g., CyberSPL to develop SPL for the verification of security policies according to system configurations~\cite{varela2019cyberspl}.
+Moreover, other tools and languages are mentioned, including UML for feature modeling (3) and eight tools used only one time, e.g., pure::variants~\cite{moens2015allocating}, configuration generator~\cite{alferez2017achieving}, Xfeature~\cite{cao2015constraint}, or HyperFlex Toolchain~\cite{gherardi2014software}.
+
 
 \bgroup
 \rowcolors{0}{white}{gray!25}
