@@ -44,12 +44,12 @@ Moreover, we identified eight papers where only a cloud system was generally giv
 
 \myPar{Organization Structure}
 We found all types of organization structures, i.e., centralized (44), distributed (14), and decentralized (1).
-In one paper, no concrete structure could be extracted.
+In one paper, no concrete structure could be extracted~\cite{siegmund2020dimensions}.
 We note that it is not always clear whether the described or assigned organization is related to the storage medium (e.g., a database), the storage environment (e.g., a cloud), or the software system. 
 There is usually insufficient information about the exact focus of the organizational structures in the papers
-Cloud systems or service-oriented platforms (i.e., SaaS or IaaS) are usually referred as distributed (software) systems by definition.
+Cloud systems or service-oriented platforms (i.e., SaaS or IaaS) are usually referred as large-scale distributed (software) systems by definition~\cite{foster2008cloud,celesti2010security}.
 However, this does not necessarily apply to the entire data storage system as such storage environments often consist of databases which are actual centralized.
-We argue that only a few approaches are actual distributed in terms of storage, e.g., an intercloud system based on resources distributed across multiple clouds~\cite{leite2016autonomic}.
+We argue that only a few approaches are actual distributed in terms of the storage (i.e., regardless of the software infrastructure), e.g., an intercloud system based on resources and storage mediums distributed across multiple clouds~\cite{leite2016autonomic}.
 
 
 \myPar{Stored Data}
@@ -81,10 +81,27 @@ Seven publications each mentioned security as a non-functional requirement, qual
 Four papers refer to security as a system feature.
 
 \myPar{Goals}
+Regarding the security goals described in the publication, most papers mention availability (38) or authorization (36) to certain degree, leading to a mix of a CIA triad and information security goal.
+In 17 cases, accountability, often mentioned in the context of reliability, is addressed. 
+Surprisingly, confidentiality and integrity, which are essential parts of the CIA triad, are only referred to 15 and 13 times.
+Non-repudiation is addressed the least (9). 
+Overall, we could not identify any papers that did not describe goals.
+However, security goals are usually only mentioned and not described further, except integrity.
+Summing up all mentions and concrete descriptions, security goals are only named 105 times in a certain context and described or explained in more detail in 57 times, which is almost a halving.
 
 \myPar{Threats}
+We extracted a variety of concerns that could threaten the security of the proposed systems.
+Most papers (23) mention unauthorized data access and general privacy concerns (17).
+In addition, the overall variability of configurable software systems and their storage (9) as well as the not sufficiently secured communication between clients, clients and software or storage, and software and storage (6) could lead to security issues.
+Four papers mentioned trust in the overall configurable system as security threat, e.g., malicious administrators.
+Other threats include software bugs and untrusted maintenance (3), data manipulation (2), data theft (2), general vulnerabilities (2), insecure hardware (1), and malware (1).
 
 \myPar{Mitigation Techniques}
+Mitigation techniques were usually given in a quite general way without details. 
+Thus, most publications refer to encryption mechanisms or security protocols (26), e.g., symmetric encryption algorithms such as AES~\cite{varela2021carmen}, or network secrity protocols such as SSH~\cite{leite2016autonomic}, SSL~\cite{preuveneers2016systematic}, or TLS as successor technology to SSL~\cite{varela2020definition}.
+In 18 papers, access controls mechanisms are proposed, e.g., account systems~\cite{mohamed2017integrated}.
+Other mitigation techniques included data isolation (8), firewalls (4), signature (2), software misuse patterns (2), security measure models (1), and parallel variant execution (1).
+Interestingly, in two papers by Krieter et al.~\cite{krieter2018towards,krieter2019using} the application of product-line techniques based on a detailed described security technology called Intel SGX~\cite{Costan2016IntelExplained} is given, fulfilling all security goals except accountability.
 
 \subsection{Configurable System}
 
