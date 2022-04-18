@@ -26,19 +26,29 @@ Outsourcing solutions often serve as the technology where data storage and data 
 
 \subsection{Security}\label{sec:background:security}
 
-According to the established norms and standards (i.e., the ISO/IEC 27000 series, ISO/IEC 25010, ...), security is a characteristic of a software system aimed to protect its stored or processed data or information against threats of attacks, vulnerabilities, errors, or even nature (e.g., in the context of safety-critical systems)~\cite{ISOIEC250102011}.
+To consider security from a practice-oriented perspective, it is essential to rely on established as well as pertinent norms and standards, e.g., the ISO/IEC 27000 series~\cite{ISOIEC270002018}, ISO/IEC 25010~\cite{ISOIEC250102011}, ISO/IEC 29100~\cite{ISOIEC291002011}, or the NIST Guide for Conducting Risk Assessments~\cite{guidegonductingrisk2012}.
+According to these established standards, security is a characteristic of a software system aimed to protect its stored or processed data or information against a wide range of threats regarding caused by attacks, vulnerabilities, errors, or even nature (e.g., in the context of safety-critical systems)~\cite{ISOIEC250102011,ISOIEC270002018}.
+In this context, a threat is defined as an unwanted, but possible event or incident, resulting in a harm of a system.
+If there is a concrete possibility of exploiting such a threat, e.g. in terms of vulnerabilities, this condition is referred to as a security risk~\cite{ISOIEC270002018,guidegonductingrisk2012}.
+To minimize such risks as much as possible, the regular assessment of them in terms of defined monitoring, measurement, and analysis processes according to the data lifecycle of the individual system is essential~\cite{ISOIEC270012013,ISOIEC270042016}.
+Furthermore, risks are also minimized by fulfilling defined security goals as relevant security subcharacteristics~\cite{ISOIEC270002018,guidegonductingrisk2012}.
+According to the ISO/IEC 27000 series~\cite{ISOIEC270002018} and ISO/IEC 25010~\cite{ISOIEC250102011} these typically include three goals which are known as the CIA triad~\cite{lundgren2019defining,samonasCIAStrikesBack2014}:
 
-subcharacteristics or security goals called confidentiality~\cite{ISOIEC250102011,ISOIEC270002018}: property that information is not made available or disclosed to unauthorized individuals, entities, or processes~\cite{ISOIEC270002018} integrity~\cite{ISOIEC250102011,ISOIEC270002018}, availability~\cite{ISOIEC270002018}: property of being accessible and usable on demand by an authorized entity~\cite{ISOIEC270002018} non-repudiation~\cite{ISOIEC250102011,ISOIEC270002018}: ability to prove the occurrence of a claimed event (3.21) or action and its originating entities~\cite{ISOIEC270002018} accountability~\cite{ISOIEC250102011,ISOIEC270002018} and authenticity~\cite{ISOIEC250102011,ISOIEC270002018}: property that an entity is what it claims to be --> compare authentication: provision of assurance that a claimed characteristic of an entity is correct~\cite{ISOIEC270002018}
+\begin{description}
+    \item\textbf{Confidentiality:} The data is only available for authorized entities.
+	\item\textbf{Integrity:} The data can only be modified by an authorized entity.
+	\item\textbf{Availability:} The system ensures timely and reliable access to its data for authorized entities.
+\end{description}
 
+\noindent In the context of information security, these are usually extended by accountability, authenticity, and non-repudiation~\cite{ISOIEC250102011,ISOIEC270002018,guidegonductingrisk2012}.
 
+\begin{description}
+    \item\textbf{Accountability:} Any action can be traced to a unique entity.
+	\item\textbf{Authenticity:} The identity of a person can be clearly proven to be the one claimed.
+	\item\textbf{Non-repudiation:} It is possible to prove the occurrence of every action and what entities were involved.
+\end{description}
 
-risk as an effect of uncertainty on objectives, threat as a potential cause of an unwanted incident, which can result in harm to a system or organization. Information security risk is associated with the potential that threats will exploit vulnerabilities of an information asset or group of information assets and thereby cause harm to an organization~\cite{ISOIEC270002018}
+\noindent Information security is also often associated with further goals, e.g. authentication, reliability, or privacy~\cite{ISOIEC270002018,ISOIEC291002011}.
+However, these are usually subordinated to the six goals we described, or their fulfillment is significantly supported by the fulfillment of the six goals, e.g., privacy of personal data.
 
-
-
-information security aims to consider a wide range of threats~\cite{ISOIEC270002018}
-
-attack: attempt to destroy, expose, alter, disable, steal or gain unauthorized access to or make unauthorized use of an asset~\cite{ISOIEC270002018}
-		
-\todo{security background based on security standards}
 		
