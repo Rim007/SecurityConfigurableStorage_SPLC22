@@ -27,12 +27,12 @@ Outsourcing solutions often serve as the technology where data storage and data 
 \subsection{Security}\label{sec:background:security}
 
 To consider security from a practice-oriented perspective, it is essential to rely on established as well as pertinent, generally applicable norms and standards, e.g., the ISO/IEC 27000 series~\cite{ISOIEC270002018}, ISO/IEC 25010~\cite{ISOIEC250102011}, ISO/IEC 29100~\cite{ISOIEC291002011}, or the NIST Guide for Conducting Risk Assessments~\cite{guidegonductingrisk2012}.
-According to these established standards, security is a characteristic of a software system aimed to protect its stored or processed data or information against a wide range of threats regarding caused by attacks, vulnerabilities, errors, or even nature (e.g., in the context of safety-critical systems)~\cite{ISOIEC250102011,ISOIEC270002018}.
-In this context, a threat is defined as an unwanted, but possible event or incident, resulting in a harm of a system.
+According to these established standards, security is a characteristic of a software system aimed to protect its stored or processed data or information against a wide range of threats caused by attacks, vulnerabilities, errors (i.e., bugs), or even nature (e.g., in the context of hardware)~\cite{ISOIEC250102011,ISOIEC270002018}.
+In this context, a threat is defined as an unwanted, but possible event, resulting in a harm of a system.
 If there is a concrete possibility of exploiting such a threat, e.g. in terms of vulnerabilities, this condition is referred to as a security risk~\cite{ISOIEC270002018,guidegonductingrisk2012}.
-To minimize such risks as much as possible, the regular assessment of them in terms of defined monitoring, measurement, and analysis processes according to the data lifecycle of the individual system is essential~\cite{ISOIEC270012013,ISOIEC270042016}.
-Furthermore, risks are also minimized by fulfilling defined security goals by implementing mitigation techniques, e.g., cryptographic control mechanisms~\cite{ISOIEC270002018,ISOIEC270012013,guidegonductingrisk2012}.
-According to the ISO/IEC 27000 series~\cite{ISOIEC270002018} and ISO/IEC 25010~\cite{ISOIEC250102011} these typically include three goals which are known as the CIA triad~\cite{lundgren2019defining,samonasCIAStrikesBack2014}:
+To minimize such risks as much as possible, the regular assessment of them in terms of defined monitoring, measurement, and analysis processes according to the data lifecycle of the individual systems is essential~\cite{ISOIEC270012013,ISOIEC270042016}.
+Furthermore, risks are also reduced by fulfilling defined security goals through the implementation of mitigation techniques, e.g., cryptographic control mechanisms~\cite{ISOIEC270002018,ISOIEC270012013,guidegonductingrisk2012}.
+According to the ISO/IEC 27000 series~\cite{ISOIEC270002018} and ISO/IEC 25010~\cite{ISOIEC250102011} three goals are particularly relevant which are known as the CIA triad~\cite{lundgren2019defining,samonasCIAStrikesBack2014}:
 \begin{description}
     \item\textbf{Confidentiality:} The data is only available for authorized entities.
 	\item\textbf{Integrity:} The data can only be modified by an authorized entity.
@@ -45,6 +45,6 @@ According to the ISO/IEC 27000 series~\cite{ISOIEC270002018} and ISO/IEC 25010~\
 	\item\textbf{Non-repudiation:} It is possible to prove the occurrence of every action and what entities were involved.
 \end{description}
 \noindent Information security is also often associated with further goals, e.g. authentication, reliability, or privacy~\cite{ISOIEC270002018,ISOIEC291002011}.
-However, these are usually subordinated to the six goals we described, or their fulfillment is significantly supported by the fulfillment of the six goals, e.g., privacy of personal data.
+However, these are usually subordinated to the six goals we described, or their fulfillment is significantly related or even supported by the fulfillment of the six goals, e.g., privacy.
 
 		
