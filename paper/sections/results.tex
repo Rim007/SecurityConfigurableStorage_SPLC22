@@ -141,22 +141,24 @@ Moreover, other tools and languages are mentioned, including UML for feature mod
 \bgroup
 \rowcolors{0}{white}{gray!25}
 \begin{table*}[t]
-	\caption{\todo{@Jacob: Not sure, maybe two or three smaller tables are better (nah, if it fits, its fine, I actually think this table is good, provides one concise overview, but the papers should be ordered by something :)}}
+	\caption{}
 	\label{tab:security_main}
 	\vspace*{-2ex}
 	\centering \begin{adjustbox}{max width = 0.75\textwidth}
 
 	\begin{tabular}{c*{28}{C{\fixedColWidth}}}
 		\hiderowcolors
-		& & & & & & & & & & & \multicolumn{6}{c}{Security goals} & & & & & & & & & \\\cmidrule[0.4pt](r{0.2em}l{0.1em}){12-17}%
+		& & & & & & & & & & &  \multicolumn{6}{c}{Security goals} & & & & & & & & & \\\cmidrule[0.4pt](r{0.2em}l{0.1em}){12-17}%
 		 &
 		 &
-		\multicolumn{4}{c}{\tabrotate{Perspectives}} &
-		\multicolumn{4}{c}{\tabrotate{Storage}}
+		 &
+		\multicolumn{4}{c}{\tabrotate{Perspectives}}
+		&
+		\multicolumn{3}{c}{\tabrotate{Storage}}
 		&
 		&
 	    \multicolumn{3}{c}{\tabrotate{CIA triad}} &
-		\multicolumn{3}{c}{\tabrotate{\parbox{1.7cm}{Information security}}} &
+		\multicolumn{3}{c}{\tabrotate{\parbox{1.6cm}{Additional information security}}} &
 		&
 		&
 		&
@@ -165,14 +167,15 @@ Moreover, other tools and languages are mentioned, including UML for feature mod
 		\multicolumn{3}{c}{\tabrotate{Verification}} &
 		&
 		\\
-		\cmidrule[0.4pt](r{0.2em}l{0.1em}){3-6}%
-		\cmidrule[0.4pt](r{0.2em}l{0.1em}){7-10}%
+		\cmidrule[0.4pt](r{0.2em}l{0.1em}){4-7}%
+		\cmidrule[0.4pt](r{0.2em}l{0.1em}){8-10}%
 		\cmidrule[0.4pt](r{0.2em}l{0.1em}){12-14}%
 		\cmidrule[0.4pt](r{0.2em}l{0.1em}){15-17}%
 		\cmidrule[0.4pt](r{0.2em}l{0.1em}){22-24}%
 		\cmidrule[0.4pt](r{0.2em}l{0.1em}){25-27}%
 		
 		\tabrotate{Reference} & 
+		\tabrotate{Publication year} &
 		\tabrotate{Domain} &
 		\tabrotate{Security $\rightarrow$ SPL} & 
 		\tabrotate{SPL $\rightarrow$ Security} & 
@@ -181,7 +184,6 @@ Moreover, other tools and languages are mentioned, including UML for feature mod
 		\tabrotate{Type of storage} & 
 		\tabrotate{Organization structure} & 
 		\tabrotate{Stored data type} & 
-		\tabrotate{Data access} & 
 		\tabrotate{Standard} & 
 		\tabrotate{Confidentiality} & 
 		\tabrotate{Integrity} & 
@@ -204,56 +206,56 @@ Moreover, other tools and languages are mentioned, including UML for feature mod
 		\\
 		\toprule
 		\showrowcolors
-		\cite{benlachgar2013review} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{galster2013constraints} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{marinho2013mobiline} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{gherardi2014software} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{matar2014towards} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{moens2014feature} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{moens2014cost} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{nguyen2014exploring} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{parra2014soa} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{walraven2014efficient} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{azzolini2015evolving} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{baresi2015dynamically} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{brisaboa2015reusable} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{galindo2015supporting} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{fernandez2015patterns} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{fernandez2015cloud} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{fernandez2015patterns} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{garcia2015software} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{moens2015allocating} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{tizzei2015architecting} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{van2015variability} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{cao2015constraint} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{ali2016requirements} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{dig2016cope} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{jumagaliyev2016Evolving} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{leite2016autonomic} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{metzger2016coordinated} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{passos2016coevolution} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{perrouin2016complexity} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{preuveneers2016systematic} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{preuveneers2016feature} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{syed2016cloud} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{arrieta2015cyber}	& & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{alferez2017achieving} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{jalil2017adapting} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{leite2017dohko} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{mohamed2017integrated} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{munoz2017green} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{khan2017variability} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{butting2018controlled} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{krieter2018towards} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{aouzal2019policy} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{krieter2019using} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{shaaban2019ontology} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{varela2019cyberspl} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{assunccao2020variability} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{siegmund2020dimensions} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{varela2020definition} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{varela2021carmen} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
-		\cite{zhang2021evolutionary} & & & & & & & & & & & & & & & & & & & & & & & & & & & & \\
+		\cite{benlachgar2013review} & 2013 & & \harveyBallNone & \harveyBallFull & \harveyBallFull & \harveyBallNone & C,D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{galster2013constraints} & 2013 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & D & D & & \harveyBallNone & & & & & & & & & & & & & & & & & & \\
+		\cite{marinho2013mobiline} & 2013 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & C,D & D & & \harveyBallNone & & & & & & & & & & & & & & & & & & \\
+		\cite{gherardi2014software} & 2014 & & \harveyBallNone & \harveyBallFull & \harveyBallHalf & \harveyBallHalf & C,D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{matar2014towards} & 2014 & & \harveyBallNone & \harveyBallFull & \harveyBallFull & \harveyBallNone & C,D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & & \\
+		\cite{moens2014feature} & 2014 & &\harveyBallNone & \harveyBallFull & \harveyBallFull & \harveyBallNone & C & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{moens2014cost} & 2014 & & \harveyBallNone & \harveyBallFull & \harveyBallFull & \harveyBallNone & C & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{nguyen2014exploring} & 2014 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{parra2014soa} & 2014 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & D & D & & \harveyBallNone & & & & & & & & & & & & & & & & & & \\
+		\cite{walraven2014efficient} & 2014 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & C & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{azzolini2015evolving} & 2015 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & D & C & & \harveyBallNone& & & & & & & & & & & & & & & & & &  \\
+		\cite{baresi2015dynamically} & 2015 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & C & D & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{brisaboa2015reusable} & 2015 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{galindo2015supporting} & 2015 & & \harveyBallHalf & \harveyBallHalf & \harveyBallNone & \harveyBallFull & D & D & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{fernandez2015patterns} & 2015 & & \harveyBallFull & \harveyBallNone & \harveyBallFull & \harveyBallNone & C & C & & \harveyBallFull & & & & & & & & & & & & & & & & & &  \\
+		\cite{fernandez2015cloud} & 2015 & & \harveyBallFull & \harveyBallNone & \harveyBallFull & \harveyBallNone & C & C & & \harveyBallFull & & & & & & & & & & & & & & & & & &  \\
+		\cite{fernandez2015patterns} & 2015 & & \harveyBallFull & \harveyBallNone & \harveyBallFull & \harveyBallNone & C & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{garcia2015software} & 2015 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & D & D & & \harveyBallFull & & & & & & & & & & & & & & & & & &  \\
+		\cite{moens2015allocating} & 2015 & & \harveyBallNone & \harveyBallFull & \harveyBallFull & \harveyBallNone & C & D & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{tizzei2015architecting} & 2015 & & \harveyBallNone & \harveyBallFull & \harveyBallFull & \harveyBallNone & C,D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{van2015variability} & 2015 & & \harveyBallNone & \harveyBallFull & \harveyBallFull & \harveyBallNone & C & D & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{cao2015constraint} & 2015 & & \harveyBallNone & \harveyBallFull & \harveyBallFull & \harveyBallNone & D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{ali2016requirements} & 2016 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & C & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{dig2016cope} & 2016 & & \harveyBallHalf & \harveyBallHalf & \harveyBallNone & \harveyBallFull & C & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{jumagaliyev2016Evolving} & 2016 & & \harveyBallNone & \harveyBallFull & \harveyBallFull & \harveyBallNone & C,D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{leite2016autonomic} & 2016 & & \harveyBallNone & \harveyBallFull & \harveyBallFull & \harveyBallNone & C,D & D & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{metzger2016coordinated} & 2016 & & \harveyBallNone & \harveyBallFull & \harveyBallFull & \harveyBallNone & C,D & D & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{passos2016coevolution} & 2016 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{perrouin2016complexity} & 2016 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{preuveneers2016systematic} & 2016 & & \harveyBallFull & \harveyBallNone & \harveyBallHalf & \harveyBallHalf & C,D & D & & \harveyBallFull & & & & & & & & & & & & & & & & & &  \\
+		\cite{preuveneers2016feature} & 2016 & & \harveyBallFull & \harveyBallNone & \harveyBallHalf & \harveyBallHalf & C,D & D & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{syed2016cloud} & 2016 & & \harveyBallFull & \harveyBallNone & \harveyBallFull & \harveyBallNone & F,D & D & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{arrieta2015cyber} & 2016 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & C & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{alferez2017achieving} & 2017 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{jalil2017adapting} & 2017 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & C & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{leite2017dohko} & 2017 & & \harveyBallNone & \harveyBallFull & \harveyBallFull & \harveyBallNone & C,D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{mohamed2017integrated} & 2017 & & \harveyBallNone & \harveyBallFull & \harveyBallHalf & \harveyBallHalf & C,D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{munoz2017green} & 2017 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & C,D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{khan2017variability} & 2017 & & \harveyBallNone & \harveyBallFull & \harveyBallFull & \harveyBallNone & C,D & C & & \harveyBallFull & & & & & & & & & & & & & & & & & &  \\
+		\cite{butting2018controlled} & 2018 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & C & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{krieter2018towards} & 2018 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & C & D & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{aouzal2019policy} & 2019 & & \harveyBallHalf & \harveyBallHalf & \harveyBallFull & \harveyBallNone & C & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{krieter2019using} & 2019 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & C & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{shaaban2019ontology} & 2019 & & \harveyBallFull & \harveyBallNone & \harveyBallNone & \harveyBallFull & C & C & & \harveyBallFull & & & & & & & & & & & & & & & & & &  \\
+		\cite{varela2019cyberspl} & 2019 & & \harveyBallFull & \harveyBallNone & \harveyBallNone & \harveyBallFull & D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{assunccao2020variability} & 2020 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & C & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{siegmund2020dimensions} & 2020 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & C,D & -- & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
+		\cite{varela2020definition} & 2020 & & \harveyBallFull & \harveyBallNone & \harveyBallNone & \harveyBallFull & D & C & & \harveyBallNone& & & & & & & & & & & & & & & & & &  \\
+		\cite{varela2021carmen} & 2021 & & \harveyBallFull & \harveyBallNone & \harveyBallNone & \harveyBallFull & D & C & & \harveyBallFull & & & & & & & & & & & & & & & & & &  \\
+		\cite{zhang2021evolutionary} & 2021 & & \harveyBallNone & \harveyBallFull & \harveyBallNone & \harveyBallFull & C,D & C & & \harveyBallNone & & & & & & & & & & & & & & & & & &  \\
 		\bottomrule
 		\midrule[-2pt]			
 	\end{tabular}
