@@ -6,8 +6,14 @@ In the following section, we provide relevant background information on \emph{co
 \subsection{Configurable Systems}\label{sec:background:configsystems}
 
 A configurable system is characterized by a number of (diverse) features (i.e., user-visible functions) that are customizable to meet customer needs, e.g., specific customer or user requirements, hardware constraints, or even legal regulations.
+In this study, we classify configurable systems into two categories: configurable software systems (e.g., plugin-based systems) and configurable storage systems (e.g., cloud-based systems).
 Usually, such systems rely on concepts, methods, or techniques related to SPL~\cite{Apel2013FOSPL,pohl2005software}.
 Variability in product-line engineering is managed through the implementation of mechanisms (i.e., mainly variability models such as feature models) to organize and document variability and existing relationships~\cite{Kang1990FODA,Apel2013FOSPL,Czarnecki2012CoolFeatures,Schaefer2012SoftwareDiversity}.
+The representation of such mechanisms can be supported by tools only allowing valid configurations, propagating decisions regarding configurations~\cite{Krieter2016ModelSlicing,Apel2013FOSPL}, and derive configured variants in an automated way allow valid configurations, e.g., FeatureIDE~\cite{Meinicke2017FeatureIDE} or pure::variants~\cite{Beuche2012purevariants}.
+
+Every configurable systems can be verified based on certain attributes following one of three established strategies, including feature-based (i.e., analyzing each feature in isolation without considering configurations or interactions), product-based (i.e., analyzing the system configuration based on code or an abstraction), and family-based (i.e., analyzing a whole system family, including valid configurations)~\cite{Thuem2014AnalysisSurvey}.
+In addition, configurable systems based on SPL techniques can be defined as a projection onto the problem space (i.e., a domain abstraction), the solution space (i.e., a concrete implementation, and a mapping between both spaces (i.e., the connection between both spaces allowing the derivation of the configurable system) ~\cite{Apel2013FOSPL}.
+
 
 \subsection{Data Storage}\label{sec:background:storage}
 
