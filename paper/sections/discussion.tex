@@ -16,20 +16,45 @@ Precisely, we assume that there exist four possible layers (i.e., perspectives) 
 \begin{enumerate}[nosep]
 	\item the storage medium, e.g., a database,
 	\item the storage environment, e.g., a cloud system, 
-	\item the software system, e.g. a robotics system, and
+	\item the software system, e.g. a medical system, and
 	\item storage hardware, e.g., the server infrastructure.
 \end{enumerate}
 Each layer might contain systems that are either centralized, decentralized or distributed.
 Since such (\textbf{LG\textsubscript{2}}) \emph{uniform definitions regarding the perspective of the organization structure} were not given in any of the papers, comparable assignments are not possible at the moment.
 However, we assume that the organizational structure described in the publications usually refers to the storage environment in combination with the software system (e.g., distributed, multi-tenant systems).
 
+Our results also highlight that usually only the software system or software system and storage are actually variable. 
+This finding shows the great dependency and interactions of storage systems and software systems in the context of variability, i.e., both should be considered together if possible.
+In addition, the actual configurability of the storage mediums, at least the storage environments which are configurable and scalable by definition, is rarely addressed.
+This may be due to an insufficient relevance of these systems in the field of product-line engineering or due to a lack of concrete solutions and research in this area.
+Nevertheless, we argue that \textbf{(LG\textsubscript{3})} \emph{more research is needed regarding the variability of storage mediums and storage environment taking into account their interactions with configurable software systems}.
 
 \myPar{Security}
-Usually no standard is addressed, In only two cases the most relevant standards of the ISO/IEC 27000 series are described, Furthermore, only in one case legal regulations (e.g., medical) are addressed leading to the issue that the solutions hardly provide any practical orientation and can hardly be transferred into practice in their described form
-possible reasons for not referring to standard: they don't use it, don't understand it, or not important enough for application (i.e., assume that their applications automatically rely on ISO/IEC 27000 series as it is the most established standard), ggf. kulturelle Einflüsse, abhängigkeit von Verbeitung des Systems (ggf., Industry 4.0 noch nicht weit genug verbreitet, noch nicht interessant genug für Hacker)
+Based on the individual fulfillment of all security-related criteria, we state the \textbf{(LG\textsubscript{4})} \emph{general need for security-related considerations for configurable software systems and their storage}.
+This need is particularly relevant in the context of addressed norms, standards, or legal regulations. 
+Unsurprisingly, usually no security standard is addressed by the publications, although there exist a variety of international standards published by the NIST, ISO, or IEC. 
+In only two cases, the most relevant standards of the ISO/IEC 27000 series~\cite{ISOIEC270002018} are described which provide essential definitions (ISO/IEC 27000~\cite{ISOIEC270002018}), requirements (ISO/IEC 27001~\cite{ISOIEC270012013}), or ways of monitoring, measuring, analyzing, and evaluating security concerns (ISO/IEC 27004~\cite{ISOIEC270042016}).
+Moreover, relevant legal regulations (usually in the context of privacy for personal (medical) data) are only given in one paper.
+Thus, we state that \textbf{(LG\textsubscript{5})} \emph{security for configurable software systems and their storage systems is lacking practice orientation}, leading to a major hurdle in the context of the transfer of theoretical knowledge into business practice.
+Possible reasons for not referring to established standards could be the missing need for a practical standard in the context of purely theoretical considerations or the assumption that the configurable applications automatically rely on ISO/IEC 27000 series as it is one of the most established security standards.
+Even the limited distribution of certain systems and variability mechanisms in practice (e.g., configurable robotics cloud applications in Industry 4.0~\cite{gherardi2014software}) may result in a insufficient need for protecting these systems against potential cyber attacks based on established standards.
 
-security and privacy is lagging behind the technological advances regarding configurable systems and their data storage. Problem in the context of data storage is not new~\cite{strohbach2016big}, differentiated perspectives on security is relevant, i.e., considering system, environment or medium external, internal. usually no focused consideration of individual component, e.g., database. application often rely on security measure for overall system, e.g., firewall, IDS IPS...
-no detailed description of concrete encryption, not clear what is encrypted and how (medium with data, communication)
+Our findings also emphasize that \textbf{(LG\textsubscript{6})} \emph{there is a lack of concrete specifications of mitigation techniques} (e.g., concrete encryption algorithms such as AES-256 or RSA-2048).
+For instance, in the context of encryption it is not clear what is encrypted (e.g., only storage medium or only its communication) and how it is encrypted (e.g., using 1024 or 2048 Bit in the context of asymmetric RSA encryption).
+Such measures are often described in a general way (e.g., firewalls~\cite{syed2016cloud} or access control~\cite{moens2015allocating}) resulting in no or only limited practical relevance in the context of actual cyber attacks (e.g., man-in-the-middle or brute force attacks). 
+Especially in the case of configurable systems, i.e. software systems, their storage systems, and the communication between both, a specification that is as precise as possible is essential because of the increased attack surface due to variability~\cite{Kenner2021MappingStudy}.
+However, we suggest not only specifying mitigation techniques, but also assigning them to concrete threats or risks (i.e., cyber attacks) to increase the practical relevance.
+
+Similar to data storage, the perspective of the security technique implementations differs in the analyzed papers.
+In detail, some measures refer to the software system (e.g., firewall) while others focus on the storage environment (e.g., access control) or storage medium (e.g., encryption).
+
+
+differentiated perspectives on security is relevant, usually no focused consideration of individual component, e.g., database. application often rely on security measure for overall system, e.g., firewall, IDS IPS...
+no detailed description of concrete encryption,
+
+However, we argue that \textbf{(LG\textsubscript{6})} \emph{security (including privacy) is lagging behind the technological advances regarding configurable systems and their data storage}, which is a know problem in the context of data storage~\cite{strohbach2016big}.
+
+
 
 verschiedene Schutzbereiche, je nachdem welche Daten geschützt werden (bspw. persönliche Daten oder medizinische Daten, verschiedene Prioritäten von Daten (z.B. sensoren in Industry 4.0))
 
