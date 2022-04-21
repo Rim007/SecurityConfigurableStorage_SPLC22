@@ -6,10 +6,22 @@ The overall discussion section is oriented towards the three topics of this pape
 Moreover, these three topics are discussed in concert.
 
 \myPar{Storage}
-database nicht genau definiert (SQL, NO SQL), müssen die einzeln gesichert werden oder entsprechende Anforderungen je nach Datenbanktyp betrachtet werden.
-wie relevant ist die Version oder Art einer Datenbank, was passiert, wenn geupdated wird, welchen Einfluss hat Variabilität, Unterscheidung DBMS und DB, inwiefern sind automatismen in DB eine Gefärdung, wie verhält sich das bei variablen Systemen, wie sieht das aus im Kontext der Variabilität (SQLite)
-Organisationsstruktur (centralized, decentralized, distributed)
-Unterscheidung medium, environment (Cloud ist nicht gleich speichermedium) --> storage wird als überbegriff aufgefasst
+Interestingly, we found out that the concrete understanding of what storage actually is, varies heavily between the selected publications.
+In detail, storage is either referred to as concrete medium (e.g., a database), the environment of the medium (e.g., a configurable cloud system), or the cooperation of both, usually with a focus on the environment. 
+Our understanding refers to storage as a medium embedded into an environment, which has actually no concrete storing abilities without implementing the medium.
+However, we assume that storage is usually used as a generic term for systems which are concerned with certain storage goals or functionalities, leading to \textbf{LG\textsubscript{1}}: \emph{A uniform definition and understanding of storage, especially in the area of configurable systems, is needed} in order to ensure comparable analyses and considerations of storage and the stored data (e.g., in the context of security).
+
+Surprisingly, the uniform assignment of the storage organization structure (i.e., centralized, decentralized, distributed) was hardly possible since the concrete perspective of the publications was not clear.
+Precisely, we assume that there exist four possible layers (i.e., perspectives) regarding the organization structure of a system with storage abilities:
+\begin{enumerate}[nosep]
+	\item the storage medium, e.g., a database,
+	\item the storage environment, e.g., a cloud system, 
+	\item the software system, e.g. a robotics system, and
+	\item storage hardware, e.g., the server infrastructure.
+\end{enumerate}
+Each layer might contain systems that are either centralized, decentralized or distributed.
+Since such (\textbf{LG\textsubscript{2}}) \emph{uniform definitions regarding the perspective of the organization structure} were not given in any of the papers, comparable assignments are not possible at the moment.
+However, we assume that the organizational structure described in the publications usually refers to the storage environment in combination with the software system (e.g., distributed, multi-tenant systems).
 
 
 \myPar{Security}
@@ -27,11 +39,17 @@ manche security goals angenommen, weil DB das mit sich bringt (Integrity, Non-re
 Unterscheidung von Authorization, Authentification --> ist aber genormt!
 
 \myPar{Configurable Systems}
+domains diverse meaning that its usually fundamental research which is not domain specific, more research in collaboration with practitioners is needed
 viel implementierung (solution space) 
 
 
 \myPar{Configurable Systems, Data Storage and Security in Concert}
-domains diverse meaning that its usually fundamental research which is not domain specific, more research in collaboration with practitioners is needed
+
+Moreover, we identified that the databases described in the publications are usually not explained in detail, e.g. whether they are SQL or NoSQL databases or how variable they actually are.
+We argue that every type or even variant of a database can possibly lead to new requirements which are relevant for systems, models, or patterns interacting with them, e.g., the underlying software system or concrete security measures such against SQL injection attacks~\cite{humayun2020cyber}.
+In addition, it is not clear what impact the general type of databases (e.g., relational), their variability (e.g., in terms of version updates), or the automation of certain database back-end processes (e.g., SQLite for mobile devices) have regarding potential security risks.
+This is why we argue that \textbf{(LG\textsubscript{2})} \emph{more research is needed in the context of variable storage mediums, i.e., databases, to understand relevant relationships and to minimize security risks cause by storage variability}.
+
 ggf. security as a feature, um security nicht mehr zu vergessen (z.B. modellierung in FeatureIDE) --> awareness, Sicherheit als konfigurierbar betrachten, wie high-level wird security angesetzt und betrachtet
 
 
