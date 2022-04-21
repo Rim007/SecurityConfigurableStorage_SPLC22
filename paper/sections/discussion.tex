@@ -22,7 +22,7 @@ Precisely, we assume that there exist several possible layers (i.e., perspective
 Each layer might contain systems that are either centralized, decentralized or distributed.
 Since such (\textbf{LG\textsubscript{2}}) \emph{uniform definitions regarding the perspective of the organization structure} were not given in any of the papers, comparable assignments are not possible at the moment.
 However, we assume that the organizational structure described in the publications usually refers to the storage environment in combination with the software system (e.g., distributed, multi-tenant systems).
-Nevertheless, we recommend to do more further research in the context of the organizational structure of configurable systems and their storage.
+Nevertheless, we recommend to do more further research in the context of the organizational structure of configurable systems and their storage, e.g. defining the layers in terms of a framework.
 
 Our results also highlight that usually only the software system or software system and storage are actually variable. 
 This finding shows the great dependency and interactions of storage systems and software systems in the context of variability, i.e., both should be considered together if possible.
@@ -60,20 +60,52 @@ In the context of databases, both can be assumed to be automatically fulfilled b
 However, we emphasize that \textbf{(LG\textsubscript{8})} \emph{concrete security goals (e.g., according to the definitions given in ISO/IEC 27000~\cite{ISOIEC270002018} are usually missing in the context of configurable systems}, implying a lack of practical orientation.
 
 
-
 \subsection{Configurable Systems}
-domains diverse meaning that its usually fundamental research which is not domain specific, more research in collaboration with practitioners is needed
-viel implementierung (solution space) 
 
+We identified a variety of diverse domains, implying that most the of selected research is not domain specific. 
+Thus, a large number of the analyzed solutions can also be transferred and applied to a large number of cases.
+However, we note that this might be a hurdle for actually implementing these approaches in practice, since these solutions are not yet specified for a specific domain or use case. 
+Nevertheless, we identified a trend regarding the production domain, more specifically cyber-physical systems and robotics applications.
+Consequently, a high application potential for variability in terms of configurable systems that are usually based on cloud environments can be derived for Industry 4.0.
+
+Referring to the projection of the examined systems, most publications seem to focus on the mapping between problem space and solution space or the problem space, meaning that actual (implemented) configurable systems are not published sufficiently.
+However, if the solution space is not sufficiently addressed, \textbf{(LG\textsubscript{9})} \emph{there are not enough concrete approaches that can serve as working examples for practice are missing}. 
+Furthermore, we could hardly find any publications that were published with industry partners (e.g., in the production domain).
+However, these would significantly increase the practical relevance of the configurable systems as well as their value for actual implementation, especially regarding domain-specific requirements.
+Therfore, we argue that \textbf{(LG\textsubscript{10})} \emph{there is a lack of research in collaboration with practitioners (e.g., industry partners)}.
+
+Interestingly, the configurable systems we examined are mostly not verified or only verified in the context of the product, leading to \textbf{(LG\textsubscript{11})} \emph{a lack of feature-based or family-based verifications}.
+We argue that it would be valuable to verify these systems also in these ways, especially in order to fulfill domain-specific requirements and security demands in a verified manner.
+Addressing this issue could lead to an increasing the confidence in configurable systems and their data storage, including a higher trust in feature interactions.
+Moreover, costs could be avoided by avoiding potential system adaptions~\cite{Kenner2021MappingStudy}, e.g., in terms of updates, which could also lead to new security risks.
+
+Surprisingly, about half of the publications are concerned with the evolution of the systems, which is more than in previous studies (e.g.,~\citet{Kenner2021MappingStudy})
+We assume that this fact is maybe due to the papers' focus on cloud systems which are possibly subject of more modifications due to their high scalability according to the systems' requirements.
+\todo{@Jacob: maybe you have a nice thought regarding evolution..}
+
+Furthermore, we found out that \textbf{(LG\textsubscript{13})} \emph{tools to support the product-line engineering process are usually missing}.
+This issues results in the problem that especially publications serving the solution space and thus would be most predestined for practice, lack the assignment of tools allowing the adoption of the proposed configurable systems. 
+Thus, it is recommend to at least name the tool or tools used (e.g., FeatureIDE~\cite{Meinicke2017FeatureIDE}), to facilitate the overall comprehensibility and transferability of the systems.
 
 \subsection{Configurable Systems, Data Storage and Security in Concert}
 
-Moreover, we identified that the databases described in the publications are usually not explained in detail, e.g. whether they are SQL or NoSQL databases or how variable they actually are.
+Not surprisingly, most of the analyzed systems consider security as non-functional requirement, quality attribute, or overall system goal. 
+Nevertheless, these considerations also lead to the issue that \textbf{(LG\textsubscript{14})} \emph{security is usually only addressed from a high-level perspective}, leading to a lack of concrete security measures.
+However, in four cases security is addressed as one relevant feature of the configurable system and/or its storage.
+We argue that considering security as a feature could help to create more awareness and add more attention to security, i.e., relevant threats, risks, and mitigation techniques.
+Consequently, security would no longer be one of many goals, but part of the overall system, which is configurable.
+Security measures resulting in concrete features (e.g., access control mechanisms based on strong encryption algorithms to avoid brute force attacks) should be modeled nearly equivalent to other features (e.g., in tools such as FeatureIDE~\cite{Meinicke2017FeatureIDE}).
+
+
+We identified that the databases described in the publications are usually not explained in detail, e.g. whether they are SQL or NoSQL databases or how variable they actually are.
 We argue that every type or even variant of a database can possibly lead to new requirements which are relevant for systems, models, or patterns interacting with them, e.g., the underlying software system or concrete security measures such against SQL injection attacks~\cite{humayun2020cyber}.
 In addition, it is not clear what impact the general type of databases (e.g., relational), their variability (e.g., in terms of version updates), or the automation of certain database back-end processes (e.g., SQLite for mobile devices) have regarding potential security risks.
-This is why we argue that \textbf{(LG\textsubscript{2})} \emph{more research is needed in the context of variable storage mediums, i.e., databases, to understand relevant relationships and to minimize security risks cause by storage variability}.
+This is why we argue that \textbf{(LG\textsubscript{15})} \emph{more research is needed in the context of variable storage mediums, i.e., databases, to understand relevant relationships and to minimize security risks cause by storage variability}.
 
-ggf. security as a feature, um security nicht mehr zu vergessen (z.B. modellierung in FeatureIDE) --> awareness, Sicherheit als konfigurierbar betrachten, wie high-level wird security angesetzt und betrachtet
+Interestingly, some publications stated variability as one issue that could threaten the security of a configurable system or its storage.
+However, although this threat was recognized, only in one case a concrete mitigation technique was proposed, precisely the parallel execution variants~\cite{nguyen2014exploring}).
+Nevertheless, this issue shows that \textbf{(LG\textsubscript{16})} \emph{the treatment  of security threats or risks caused by variability and the relationship between variability and the emergence of vulnerabilities seems underexplored}.
+
 
 
 \subsection{Threats to Validity}
