@@ -28,17 +28,17 @@ This may be due to an insufficient relevance of these systems in the field of pr
 Nevertheless, we argue that \textbf{(LG\textsubscript{3})} \emph{more research is needed regarding the variability of storage mediums and storage environment, taking into account their interactions with configurable software systems}.
 
 \subsection{Security}
-Based on the individual fulfillment of all security-related criteria, we state the \textbf{(LG\textsubscript{4})} \emph{general need for security-related considerations for configurable software systems and their storage} as research in security (including privacy) is lagging behind the technological advances regarding configurable systems and their data storage.
+Based on the individual fulfillment of all security-related criteria, there is a general need for security-related considerations for configurable software systems and their storage as research in security (including privacy) is lagging behind the technological advances regarding configurable systems and their data storage.
 However, this is a already known problem in the context of data storage~\cite{strohbach2016big}.
 Furthermore, this need is particularly relevant in the context of addressed norms, standards, or legal regulations. 
 Unsurprisingly, usually no security standard is addressed by the publications, although there exist a variety of international standards published by the NIST, ISO, or IEC. 
 In only two cases, the most relevant standards of the ISO/IEC 27000 series~\cite{ISOIEC270002018} are described which provide essential definitions (ISO/IEC 27000~\cite{ISOIEC270002018}), requirements (ISO/IEC 27001~\cite{ISOIEC270012013}), or ways of monitoring, measuring, analyzing, and evaluating security concerns (ISO/IEC 27004~\cite{ISOIEC270042016}).
 Moreover, relevant legal regulations (usually in the context of privacy for personal (medical) data) are only given in one paper.
-Thus, we state that \textbf{(LG\textsubscript{5})} \emph{security for configurable software systems and their storage systems is lacking practice orientation based on established norms, standards, and legal regulations}, leading to a major hurdle in the context of the transfer of theoretical knowledge into business practice.
+Thus, we argue that \textbf{(LG\textsubscript{4})} \emph{security for configurable software systems and their storage systems is lacking practice orientation based on established norms, standards, and legal regulations}, leading to a major hurdle in the context of the transfer of theoretical knowledge into business practice.
 Possible reasons for not referring to established standards could be the missing need for a practical standards in the context of purely theoretical considerations or the assumption that the configurable applications automatically rely on the ISO/IEC 27000 series as it is one of the most established security standards.
 Even the limited distribution of certain systems and variability mechanisms in practice (e.g., configurable robotics cloud applications in Industry 4.0~\cite{gherardi2014software}) may result in an insufficient need for protecting these systems against potential cyber attacks based on established standards.
 
-Our findings also emphasize that \textbf{(LG\textsubscript{6})} \emph{there is a lack of concrete specifications of mitigation techniques} (e.g., concrete encryption algorithms, such as AES-256 or RSA-2048).
+Our findings also emphasize that \textbf{(LG\textsubscript{5})} \emph{there is a lack of concrete specifications of mitigation techniques} (e.g., concrete encryption algorithms, such as AES-256 or RSA-2048).
 For instance, in the context of encryption it is not clear what is encrypted (e.g., data, storage medium, or its communication) and how it is encrypted (e.g., using 1024 or 2048 bit in the context of asymmetric RSA encryption).
 We propose the definition of different protection levels and assigned security measures, depending on which data, medium, environment, or system (including variants) need to be protected.
 For instance, there is a different need for the protection of personal data such as the birthdate or medical data such as the medical history of a person.
@@ -49,14 +49,14 @@ However, we suggest not only specifying mitigation techniques, but also assignin
 Interestingly, the perspective of the security technique implementations differ in the analyzed papers similar to data storage.
 In detail, some measures refer to the overall software system (e.g., firewall~\cite{siegmund2020dimensions}) while others focus on the storage environment (e.g., access control of cloud users~\cite{moens2015allocating}) or the storage medium (e.g., encryption of a database and its communication~\cite{preuveneers2016systematic}).
 However, it is not always clear what exactly a security measure refers to.
-Thus, we state that \textbf{(LG\textsubscript{7})} \emph{a concrete assignment of mitigation techniques to their target area (i.e., its perspective) is usually missing}, leading to a decreasing comparability of existing approaches.
+Thus, we state that \textbf{(LG\textsubscript{6})} \emph{a concrete assignment of mitigation techniques to their target area (i.e., its perspective) is usually missing}, leading to a decreasing comparability of existing approaches.
 
 Surprisingly, the security goals of the CIA triad (confidentiality, integrity, availability) were not addressed the most (see Figure~\ref{fig:taxonomy}), as stated in related work, e.g.,~\cite{Kenner2021MappingStudy}.
 Instead, availability and authorization were usually referred to.
 We assume that this is due to the fact that both goals are subjects of typical goals for databases, probably not within the scope of certain security concerns.
 Furthermore, we assume that security goals that are relevant but nevertheless have not been mentioned are regarded as given (e.g. integrity and non-repudiation).
 In the context of databases, both can be assumed to be automatically fulfilled by the general properties of databases. 
-However, we emphasize that \textbf{(LG\textsubscript{8})} \emph{concrete security goals (e.g., according to the definitions given in ISO/IEC 27000~\cite{ISOIEC270002018}) are usually missing in the context of configurable systems}, implying a lack of practical orientation.
+However, we emphasize that \textbf{(LG\textsubscript{7})} \emph{concrete security goals (e.g., according to the definitions given in ISO/IEC 27000~\cite{ISOIEC270002018}) are usually missing in the context of configurable systems}, implying a lack of practical orientation.
 
 
 \subsection{Configurable Systems}
@@ -68,10 +68,10 @@ Nevertheless, we identified a trend regarding the production domain, more specif
 Consequently, a high application potential for variability in terms of configurable systems that are usually based on cloud environments can be derived for Industry 4.0.
 
 Referring to the projection of the examined systems, most publications seem to focus on the mapping between problem space and solution space or the problem space, meaning that actual (implemented) configurable systems could published more often.
-However, if the solution space is not sufficiently addressed, \textbf{(LG\textsubscript{9})} \emph{sufficient concrete approaches that can serve as working examples for practice are missing}. 
+However, if the solution space is not sufficiently addressed, \textbf{(LG\textsubscript{8})} \emph{sufficient concrete approaches that can serve as working examples for practice are missing}. 
 Furthermore, we could hardly find any publications published with industry partners (e.g., in the production domain).
 However, these would significantly increase the practical relevance of the configurable systems as well as their value for actual implementation, especially regarding domain-specific requirements.
-Therfore, we argue that \textbf{(LG\textsubscript{10})} \emph{there is a lack of research in collaboration with practitioners (e.g., industry partners)}.
+Therfore, we argue that \textbf{(LG\textsubscript{9})} \emph{there is a lack of research in collaboration with practitioners (e.g., industry partners)}.
 
 Interestingly, the configurable systems we examined are mostly not verified or only verified in the context of the product, leading to \textbf{(LG\textsubscript{11})} \emph{a lack of feature-based or family-based verifications}.
 We argue that it would be valuable to verify these systems also in these ways, especially in order to fulfill domain-specific requirements and security demands in a verified manner.
@@ -82,14 +82,14 @@ Surprisingly, about half of the publications are concerned with the evolution of
 We assume that this fact is maybe due to the papers' focus on cloud systems which are possibly subject of more evolution-related modifications due to their high scalability according to the systems' requirements.
 \todo{@Jacob: maybe you have a nice thought regarding evolution..}
 
-Furthermore, we found out that \textbf{(LG\textsubscript{13})} \emph{tools to support the product-line engineering process are usually missing}.
+Furthermore, we found out that \textbf{(LG\textsubscript{12})} \emph{tools to support the product-line engineering process are usually missing}.
 This issues results in the problem that especially publications serving the solution space and thus would be most predestined for practice, lack the assignment of tools allowing the adoption of the proposed configurable systems. 
 Thus, it is recommend to at least name the tool or tools used (e.g., FeatureIDE~\cite{Meinicke2017FeatureIDE}) to facilitate the overall comprehensibility and transferability of the systems.
 
 \subsection{Configurable Systems, Data Storage and Security in Concert}
 
 Not surprisingly, most of the analyzed systems consider security as a non-functional requirement, a quality attribute, or an overall system goal. 
-Nevertheless, these considerations also lead to the issue that \textbf{(LG\textsubscript{14})} \emph{security is usually only addressed from a high-level perspective}, leading to a lack of concrete security measures.
+Nevertheless, these considerations also lead to the issue that \textbf{(LG\textsubscript{13})} \emph{security is usually only addressed from a high-level perspective}, leading to a lack of concrete security measures.
 However, in four cases security is addressed as one relevant feature of the configurable system and/or its storage.
 We argue that considering security as a feature could help to create more awareness and add more attention to security, i.e., relevant threats, risks, and mitigation techniques.
 Consequently, security would no longer be one of many goals, but part of the overall system, which is configurable.
@@ -105,20 +105,19 @@ Security measures resulting in concrete features (e.g., access control mechanism
 
 In addition, we identified that the databases described in the publications are usually not explained in detail, e.g., whether they are SQL or NoSQL databases or how variable they actually are.
 We argue that every type or even variant of a database can possibly lead to new requirements which are relevant for systems, models, or patterns interacting with them, e.g., the underlying software system or concrete security measures, e.g. against SQL injection attacks~\cite{humayun2020cyber}.
-Moreover, it is not clear what impact the general type of databases (e.g., relational), their variability (e.g., in terms of version updates), or the automation of certain database back-end processes (e.g., SQLite for mobile devices) have regarding potential security risks.
-This is why we argue that \textbf{(LG\textsubscript{15})} \emph{more research is needed in the context of variable storage mediums, i.e., databases, to understand relevant relationships and to minimize security risks cause by storage variability}.
+Moreover, it is not clear what impact the type of databases (e.g., relational) together with certain variability aspects (e.g., version updates) have regarding potential security risks.
+Specifically, there only exist reports or recommendations regarding general storage systems without considering variability, e.g., overviews of concrete security challenges of (big) data storage~\cite{CSA2012}.
+This is why we argue that \textbf{(LG\textsubscript{14})} \emph{more research is needed in the context of variable storage mediums, i.e., databases, to understand relevant relationships and to minimize security risks cause by storage variability}.
 
 Interestingly, some publications stated variability as one issue that could compromise the security of a configurable system or its storage.
 However, although this threat was recognized, only in one case a concrete mitigation technique was proposed, precisely the parallel execution of variants~\cite{nguyen2014exploring}).
-Nevertheless, this issue shows that \textbf{(LG\textsubscript{16})} \emph{the treatment of security threats or risks caused by variability and the relationship between variability and the emergence of vulnerabilities need more research}.
+Nevertheless, this issue shows that \textbf{(LG\textsubscript{15})} \emph{the treatment of security threats or risks caused by variability and the relationship between variability and the emergence of vulnerabilities need more research}.
 
 Referring to Figure ~\ref{fig:taxonomy}, most of the analyzed configurable systems do not provide actual configurable storages.
 Instead, the systems are more concerned with configurable system that also include storage (e.g., to store user data or variability-related data).
 Surprisingly, the number of publications in research area of configurable systems that also consider security or privacy is decreasing since 2018.
-However, \textbf{(LG\textsubscript{17})} \emph{the research area of configurable systems, especially configurbable storages, and security seems under-explored} since storage is usually interpreted as a part of a system rather than as an individual system with requirements regarding variability.
+However, \textbf{(LG\textsubscript{16})} \emph{the research area of configurable systems, especially configurbable storages, and security seems under-explored} since storage is usually interpreted as a part of a system rather than as an individual system with requirements regarding variability.
 Consequently, security concepts are often related to the overall system instead of considering the storages themselves.
-
-\todo{Richard: more examples}
 
 
 \subsection{Threats to Validity}
