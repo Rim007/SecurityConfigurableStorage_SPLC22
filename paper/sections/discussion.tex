@@ -54,7 +54,7 @@ In detail, some measures refer to the overall software system (e.g., firewall~\c
 However, it is not always clear what exactly a security measure refers to.
 Thus, we state that \textbf{(LG\textsubscript{7})} \emph{a concrete assignment of mitigation techniques to their target area (i.e., its perspective) is usually missing}, leading to a decreasing comparability of existing approaches.
 
-Surprisingly, the security goals of the CIA triad (confidentiality, integrity, availability) were not addressed the most, as in the mapping study of \citet{Kenner2021MappingStudy}.
+Surprisingly, the security goals of the CIA triad (confidentiality, integrity, availability) were not addressed the most (see Figure~\ref{fig:taxonomy}), as stated in related work, e.g.,~\cite{Kenner2021MappingStudy}.
 Instead, availability and authorization were usually referred to.
 We assume that this is due to the fact that both goals are subjects of typical goals for databases, probably not within the scope of certain security concerns.
 Furthermore, we assume that security goals that are relevant but nevertheless have not been mentioned are regarded as given (e.g. integrity and non-repudiation).
@@ -98,6 +98,13 @@ We argue that considering security as a feature could help to create more awaren
 Consequently, security would no longer be one of many goals, but part of the overall system, which is configurable.
 Security measures resulting in concrete features (e.g., access control mechanisms based on strong encryption algorithms to avoid brute force attacks) should be modeled nearly equivalent to other features (e.g., in tools such as FeatureIDE~\cite{Meinicke2017FeatureIDE}).
 
+\begin{figure}
+	\includegraphics[width=\linewidth]{img/taxonomy.pdf}
+	\vspace*{-4ex}
+	\caption{Publication overview regarding security goals according to perspectives, numbers indicate amount of publications, middle numbers refer to the overall amount (not a certain sum, since publications can serve multiple perspectives).}
+	\label{fig:taxonomy}
+	\vspace*{-2ex}
+\end{figure}
 
 In addition, we identified that the databases described in the publications are usually not explained in detail, e.g., whether they are SQL or NoSQL databases or how variable they actually are.
 We argue that every type or even variant of a database can possibly lead to new requirements which are relevant for systems, models, or patterns interacting with them, e.g., the underlying software system or concrete security measures, e.g. against SQL injection attacks~\cite{humayun2020cyber}.
@@ -106,17 +113,14 @@ This is why we argue that \textbf{(LG\textsubscript{15})} \emph{more research is
 
 Interestingly, some publications stated variability as one issue that could compromise the security of a configurable system or its storage.
 However, although this threat was recognized, only in one case a concrete mitigation technique was proposed, precisely the parallel execution of variants~\cite{nguyen2014exploring}).
-Nevertheless, this issue shows that \textbf{(LG\textsubscript{16})} \emph{the treatment  of security threats or risks caused by variability and the relationship between variability and the emergence of vulnerabilities seems underexplored}.
+Nevertheless, this issue shows that \textbf{(LG\textsubscript{16})} \emph{the treatment of security threats or risks caused by variability and the relationship between variability and the emergence of vulnerabilities need more research}.
 
-\begin{figure}
-	\includegraphics[width=\linewidth]{img/taxonomy.pdf}
-	\vspace*{-4ex}
-	\caption{Publication overview regarding security goals according to perspectives, numbers indicate amount of publications, middle numbers refer to the overall amount (not a certain sum, since publications can serve multiple perspectives).}
-	\label{fig:perspectives}
-	\vspace*{-2ex}
-\end{figure}
+Referring to Figure ~\ref{fig:taxonomy}, we state that most of the analyzed configurable systems do not provide actual configurable storages.
+Instead, the systems are more concerned with configurable system that also include storage (e.g., to store user data or variability-related data).
+Thus, \textbf{(LG\textsubscript{17})} \emph{the research area of configurable storages seems under-explored} since storage is usually interpreted as a part of a system rather than as an individual system with requirements regarding variability.
+Consequently, security concepts are often related to the overall system instead of considering the storages themselves.
 
-\todo{Richard: more examples + figure showing perspectives}
+\todo{Richard: more examples}
 
 
 \subsection{Threats to Validity}
@@ -127,7 +131,7 @@ This threat is particularly relevant in the context of security goals (e.g., dif
 Second, there is  a lack of completeness in depth of content and consistency in the context of the analyzed papers.
 In detail, some authors described their work in great detail, while others only mentioned actually essential properties (e.g., concrete encryption algorithms) or described them only briefly.
 However, this is probably due to the fact that we considered both conference papers and journal articles in our study.
-Although we aimed to mitigate potential issues in our data analysis, we cannot ensure that this did not impair the comparability or led to misinterpretations on our side.
+Although we aimed to mitigate potential issues in our data analysis, we cannot ensure that this did not impair the comparability or led to misinterpretations on our side (e.g., in the context of assignments).
 Third, we found a few issues regarding the fulfillment of certain criteria, e.g., several publications did not provide any description or even a name of tools supporting their work leading to a decreasing comprehensibility and replicability of their work.
 Fourth, besides these threats to the internal validity, the external validity could be impaired by the number of included publications (50) in our study.
 Although we already considered three databases (i.e., \textsc{Scopus}, \textsc{IEEE Xplore}, and the \textsc{ACM Guide to Computing Literature}), we are aware of the fact that the smaller the number of included literature, the higher the potential of the impact of misclassifications.
