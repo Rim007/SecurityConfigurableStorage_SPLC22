@@ -1,138 +1,57 @@
 \section{Results} \label{sec:results}
 
-In this section, we describe the data extracted from the 50 selected papers.
+In this section, we describe the data we extracted from the 50 selected papers.
 Note that this section is generally structured based on the four thematic categories (i.e., publication, storage, security, and configurable system) as well as the individual extraction criteria.
-In Table \ref{tab:security}, an overview of the results is provided.
+We provide an overview of our data in \autoref{tab:security}.
 
-\subsection{Publication}
+\subsection{Publications}
 
-First, we describe the results which are connected to the publications, i.e., typical publication data in terms of the publications years and indicated trends based on them, the domains, and the publications' perspectives regarding storage, security, and configurable systems. 
+First, we describe the results connected to the papers themselves, providing a general overview of our data.
+Namely, we discuss what domains and aspects of configurable data storages the papers cover.
 
 \myPar{Publication Years}
-The analysis of the publication data reveals two relevant trends regarding the research interest.
-First, after three publications in 2013, the majority of the selected publications was published between 2014 and 2017 (in total 36 papers, on average nine papers per year). 
-Second, between 2018 and 2021, the number of published papers decreases (in total 11 papers, on average three papers per year). 
-We did not identify a paper published in 2022.
+When analyzing our data, we recognized that most papers in our dataset have been published between 2014 and 2017.
+In total, 36 out of 50 papers stem from this period, with an average of nine papers each year.
+Before and after this period, we identified considerably fewer publications (e.g., none 2022).
+Between 2018 and 2021, the number of published papers in our dataset is considerably lower compared to the previous period (i.e., 11 papers, around three per year).
 
 \myPar{Domains}
-The publications cover a variety of domains. 
-In 28 paper, the domain was explicitly mentioned where 22 papers only describe SPL-based approaches for universal or unspecified domains.  
-Most publications (8) are concerned with the production domains, i.e. they usually describe configurable systems or configurations to support certain production systems, machines, or processes such as cyber-physical systems~\cite{arrieta2015cyber,varela2020definition}.
+The papers we selected cover a variety of domains.
+In 28 papers, the domain was explicitly mentioned whereas 22 papers only describe SPL-based research for universal or unspecified domains.  
+Most papers (8) are concerned with the production domain, they usually describe configurable systems or configurations to support certain production systems, machines, or processes, such as cyber-physical systems~\cite{arrieta2015cyber,varela2020definition}.
 Moreover, we identified publications focusing on retail (8 papers, e.g., an ERP system~\cite{ali2016requirements}), administration and management services (5 papers, e.g., an eGovernment tool~\cite{galster2013constraints}), general web applications (4 papers, e.g., an online survey tool~\cite{jumagaliyev2016Evolving}), and payment (4 papers, e.g., an ePayment system~\cite{preuveneers2016feature}). 
-Other domains which we found only once each include mobile services~\cite{marinho2013mobiline}, medical systems~\cite{moens2014cost}, geographic systems~\cite{brisaboa2015reusable}, tourism systems~\cite{benlachgar2013review}, and general Linux-based systems~\cite{passos2016coevolution}.
+Other domains we found occurred only once, for instance, mobile services~\cite{marinho2013mobiline}, medical systems~\cite{moens2014cost}, geographic systems~\cite{brisaboa2015reusable}, tourism systems~\cite{benlachgar2013review}, and general Linux-based systems~\cite{passos2016coevolution}.
 
 \myPar{Perspectives} 
-Regarding the first perspective classification (security and SPL), we identified that most publications (37) are concerned with security for configurable systems (security $\rightarrow$ SPL), e.g., an adaptive Software Guards extension-enabled configurable system~\cite{krieter2019using}.
-Ten publications focus on the application of product-line techniques to realize certain security concerns (SPL $\rightarrow$ security), e.g., security configurations of cyber-physical systems~\cite{varela2020definition}.
-Moreover, we found three papers where a classification was hardly possible, as they consider both perspectives, e.g., a security policy-driven software for SaaS service configurations~\cite{aouzal2019policy}.
-Regarding the second perspective classification (storage and SPL), 28 publications deal with storage for configurable systems (Storage $\rightarrow$ SPL), e.g., a configurable eCommerce software system including a database~\cite{azzolini2015evolving}.
-In addition, in 18 papers, the perspective regarding the application of product-line techniques to assure a configurable storage system is described (SPL $\rightarrow$ Storage), e.g., SPL models used to model cloud applications~\cite{benlachgar2013review}.
-Similar to the first perspective classification, we found publications considering both perspectives (4), e.g., using product-line techniques to configure robotics applications running on a configurable cloud~\cite{gherardi2014software}.
+Regarding the first perspective category (security and SPL), we identified that most papers (37) are concerned with security for configurable systems (security $\rightarrow$ SPL), such as configurable systems extended with adaptive Intel Software Guards~\cite{krieter2019using}.
+Ten publications focus on the application of SPL concepts to implement certain security concerns (SPL $\rightarrow$ security), such as security configurations of cyber-physical systems~\cite{varela2020definition}.
+We found three papers for which a distinct classification is not possible, since they consider both perspectives, for instance, a security-policy-driven system for SaaS configurations~\cite{aouzal2019policy}.
+Regarding our second perspective category (storage and SPL), 28 papers deal with storages for configurable systems (Storage $\rightarrow$ SPL), for instance, a configurable eCommerce software system including a database~\cite{azzolini2015evolving}.
+In addition, in 18 papers, the perspective regarding the application of SPL concepts to assure a configurable storage system is described (SPL $\rightarrow$ Storage), for example, variability models used to model cloud applications~\cite{benlachgar2013review}.
+Similar to the first perspective category, we found papers considering both perspectives (4), for example, for using SPL concepts to configure robotics applications running on a configurable cloud~\cite{gherardi2014software}.
 
-\subsection{Storage}
-Second, we describe the results which are concerned with the data storage of a configurable system, including the type of storage, its organization structure, and the stored data.
+\subsection{Storages}
+
+Second, we describe the results that are concerned with the data storages of a configurable system in more detail, including the type of storage, its structural organization, and the stored data.
 
 \myPar{Type of Storage}
-In the context of storage types, we found out that the authors usually mix the storage medium, e.g., a database, with its underlying infrastructure, e.g., an outsourced cloud system.
-In 17 approaches, a database is implemented based on a cloud system. 
+Regarding storage types, we found that the authors usually mix storage mediums, for instance, a database with its underlying infrastructure, such as an outsourced cloud system.
+Interestingly, in 17 papers, a database is implemented based on a cloud system. 
 In 13 of these cases, it is explicitly stated that these are considered as SaaS or IaaS environments.
 A combination of a cloud and a fog system with a database was described once~\cite{syed2016cloud}.
-Overall, in 31 approaches a database was implemented where in 14 cases no underlying infrastructure is given.
-In this context, five relational databases are described and in seven cases, SQL (usually MySQL) is given as database language.
-Moreover, we identified eight papers where only a cloud system was generally given as storage system.
+Overall, in 31 papers, a database was implemented with 14 cases providing no details on the underlying infrastructure.
+In this context, five relational databases are described, and in seven other papers SQL (usually MySQL) is stated to be the database language (i.e., also relational).
+Moreover, we identified eight papers where only a cloud system was generally defined as storage system.
 
-\myPar{Organization Structure}
-We found all types of organization structures, i.e., centralized (44), distributed (14), and decentralized (1).
-In one paper, no concrete structure could be extracted~\cite{siegmund2020dimensions}.
-We note that it is not always clear whether the described or assigned organization is related to the storage medium (e.g., a database), the storage environment (e.g., a cloud), or the software system. 
-There is usually insufficient information about the exact focus of the organizational structures in the papers.
+\myPar{Structural Organization}
+We found all types of structural organization of data storages within our dataset, namely centralized (44), distributed (14), and decentralized (1).
+For one paper, we could not extract a concrete structure~\cite{siegmund2020dimensions}.
+We remark that it is not always clear whether the described or assigned organization is related to the storage medium (e.g., a database), the storage environment (e.g., a cloud), or the overarching software system. 
+Unfortunately, there is usually insufficient information about the exact focus of the organizational structure in the papers.
 Cloud systems or service-oriented platforms (i.e., SaaS or IaaS) are usually referred to as large-scale distributed (software) systems by definition~\cite{foster2008cloud,celesti2010security}.
-However, this does not necessarily apply to the entire data storage system as such storage environments often consist of databases which are actual centralized.
-We argue that only a few approaches are actual distributed in terms of the storage (i.e., regardless of the software infrastructure), e.g., an intercloud system based on resources and storage mediums distributed across multiple clouds~\cite{leite2016autonomic}.
-
-
-\myPar{Stored Data}
-We identified a variety of stored data.
-However, three types of data seem most dominant: 17 times certain data (strongly) related to the variability of a system, including concrete features (5), variability models including feature models (10), or variants (2), 14 times general application data (e.g., data of sensors~\cite{varela2020definition}), and 14 times source of the (configurable) software (e.g., parts of source code of a robotics system~\cite{gherardi2014software}). 
-Other stored data include user data such as documents (5), application meta data (3), plugins (1), or software patches (1).
-In five papers, the type of data was unspecified (4) or related to certain data models (1).
-In addition, we assessed whether only the system or both system and user can access the stored data.
-Overall, in 41 paper both system and user can access the data.
-Accordingly, in 9 cases only the system can access the data.
-
-
-\subsection{Security}
-Third, the results regarding the security concerns of the configurable systems are described, including specification, standards, security goals, security threats, and proposed mitigation techniques.
-
-\myPar{Standards}
-We found five publications that mention or consider security standards or legal regulations in a certain way.
-The ISO/IEC 27000 series, precisely ISO/IEC 27000~\cite{ISOIEC270002018} and ISO/IEC 27001~\cite{ISOIEC270012013}, are mentioned in two publications~\cite{fernandez2015patterns,garcia2015software}.
-The NIST Cloud Computing Security Reference Architecture~\cite{nist2013nist} is also referenced by two papers~\cite{fernandez2015patterns,khan2017variability}.
-Other standards are only addressed once and are quite diverse.
-\citet{preuveneers2016systematic} referred to the secure payment standards PCI DSS and PA DSS~\cite{calderPCIDSS2011}. 
-\citet{fernandez2015cloud} described SAML~\cite{hughes2005security} to securely exchange authentication and authorization data.
-Moreover, \citet{shaaban2019ontology} referenced the industry communication-related standard IEC 62443~\cite{IEC62443} and IEEE 1686~\cite{IEEE1686} in the context of their configurable production system.
-Only one publication~\cite{fernandez2015patterns} focus on the compliance with privacy regulations, precisely the HIPAA.
-
-\myPar{Specification}
-In most cases, security is considered as a general but important system goal (25). 
-However, this was usually not described in detail, but assigned by us based on the overall context.
-Seven publications each mentioned security as a non-functional requirement, quality attribute, or a system requirement.
-Four papers refer to security as a system feature.
-
-\myPar{Goals}
-Regarding the security goals described in the publication, most papers mention availability (38) or authorization (36) to certain degree, leading to a mix of a CIA triad and information security goal.
-In 17 cases, accountability, often mentioned in the context of reliability, is addressed. 
-Surprisingly, confidentiality and integrity, which are essential parts of the CIA triad, are only referred to 15 and 13 times.
-Non-repudiation is addressed the least (9). 
-Overall, we could not identify any papers that did not describe goals.
-However, security goals are usually only mentioned and not described further, except integrity.
-Summing up all mentions and concrete descriptions, security goals are only named 105 times in a certain context and described or explained in more detail in 57 times, which is almost a halving.
-
-\myPar{Threats}
-We extracted a variety of concerns that could threaten the security of the proposed systems.
-Most papers (23) mention unauthorized data access and general privacy concerns (17).
-In addition, the overall variability of configurable software systems and their storage (9) as well as the not sufficiently secured communication between clients, clients and software or storage, and software and storage (6) could lead to security issues.
-Four papers mentioned trust in the overall configurable system as security threat, e.g., malicious administrators.
-Other threats include software bugs and untrusted maintenance (3), data manipulation (2), data theft (2), general vulnerabilities (2), insecure hardware (1), and malware (1).
-
-\myPar{Mitigation Techniques}
-Mitigation techniques were usually given in a quite general way without details. 
-Thus, most publications refer to encryption mechanisms or security protocols (26), e.g., symmetric encryption algorithms such as AES~\cite{varela2021carmen}, or network secrity protocols such as SSH~\cite{leite2016autonomic}, SSL~\cite{preuveneers2016systematic}, or TLS as successor technology to SSL~\cite{varela2020definition}.
-In 18 papers, access controls mechanisms are proposed, e.g., account systems~\cite{mohamed2017integrated}.
-Other mitigation techniques included data isolation (8), firewalls (4), signature (2), software misuse patterns (2), security measure models (1), and parallel variant execution (1).
-Interestingly, in two papers by Krieter et al.~\cite{krieter2018towards,krieter2019using} the application of product-line techniques based on a detailed described security technology called Intel SGX~\cite{Costan2016IntelExplained} is given, fulfilling all security goals except accountability.
-
-\subsection{Configurable System}
-Fourth, the results which are concerned with the variability of the SPL-based configurable systems are described, including variability focus, projection, verification, evolution, and tools support of the proposed systems.
-
-\myPar{Variability Focus}
-Most approaches only focus on the variability of the software system (31) which refers to non-configurable data storage.
-This trend is supported by the fact that the data storage only and not the software system is configurable in only eight papers.
-In 11 publications, both software and storage are configurable showing the close connection of software systems and storage systems.
-
-\myPar{Projection}
-We found out that the solution space as well as a mapping between problem and solution space is covered by 20 papers, e.g., a configurable robotics system based on a component model~\cite{gherardi2014software}
-In addition, 15 paper address the problem space and the mapping, e.g., the formal definition and verification of security configurations for cyber-physical systems~\cite{varela2020definition}, while in nine papers all three types of projection are described, e.g., modeling policy-driven middleware for SPL-based SaaS application configurations and referring to concrete challenges~\cite{aouzal2019policy}.
-We also identified solutions, that focus on only one projection, including solution space (16), problem space (6), and mapping (2).
-Summing up all papers covering a certain projection, most publication address the solution space (36) while mapping is covered 28 times and the problem space 21 times.
-
-\myPar{Verification}
-Overall, verification is described or mentioned in 18 publications.
-Most papers (17) are concerned with the verification of the whole product, e.g., a whole cloud ERP production model~\cite{jalil2017adapting}.
-In one publication, a family-based verification is proposed~\cite{garcia2015software}.
-However, there is no approach verifying individual features.
-
-\myPar{Evolution}
-Regarding the evolution of the configurable systems and their security concerns, we found 11 publications that mention the evolution or consider it partly.
-For instance, \citet{alferez2017achieving} described the dynamic evolution of service compositions with the aim to deal with unexpected events of the open world.
-In 15 papers, we identified more detailed description on the evolution process.
-
-\myPar{Tool Support}
-In context of tool support, we extracted data from 22 publication classified into 5 categories. 
-Five papers mention FeatureIDE~\cite{Meinicke2017FeatureIDE} as modeling tool.
-In five more publications own prototypes or frameworks are given, e.g., CyberSPL to develop SPL for the verification of security policies according to system configurations~\cite{varela2019cyberspl}.
-Moreover, other tools and languages are mentioned, including UML for feature modeling (3) and eight tools used only one time, e.g., pure::variants~\cite{moens2015allocating}, configuration generator~\cite{alferez2017achieving}, Xfeature~\cite{cao2015constraint}, or HyperFlex Toolchain~\cite{gherardi2014software}.
+However, this does not necessarily apply to the entire data storage, since such storage environments often consist of databases that are centralized.
+We argue that only a few papers are actually likely to refer to distributed in terms of the storage (i.e., regardless of the software infrastructure).
+For instance, one paper explicitly mentions an inter-cloud system based on resources and storage mediums distributed across multiple clouds~\cite{leite2016autonomic}.
 
 \rowcolors{0}{white}{gray!25}
 \begin{table*}[t]
@@ -311,3 +230,91 @@ Moreover, other tools and languages are mentioned, including UML for feature mod
 	\end{adjustbox}
 \vspace*{-2ex}
 \end{table*}
+
+
+\myPar{Stored Data}
+The papers in our dataset mention a variety of data to be stored.
+However, three types of data seem most dominant: 17 papers mention data (strongly) related to the variability of a system, such as concrete features (5), variability models (10), or variants (2).
+14 papers refer to general application data (e.g., data of sensors~\cite{varela2020definition}), and 14 other papers to the source code of the (configurable) software (e.g., parts of source code of a robotics system~\cite{gherardi2014software}). 
+Other stored data include user data, such as documents (5), application meta data (3), plugins (1), or software patches (1).
+In five papers, the type of data was unspecified (4) or related to a specific data model (1).
+Additionally, we assessed whether only the system, or both system and user, can access the stored data.
+Overall, in 41 papers the system and user can access the data.
+Accordingly, in nine papers only the system can access the data.
+
+
+\subsection{Security}
+
+Third, we describe our results regarding the security concerns of configurable data storages, including specification, standards, security goals, security threats, and proposed mitigation techniques.
+
+\myPar{Standards}
+We found five papers that mention or consider security standards or legal regulations.
+The ISO/IEC 27000 series, precisely ISO/IEC 27000~\cite{ISOIEC270002018} and ISO/IEC 27001~\cite{ISOIEC270012013}, are mentioned in two papers~\cite{fernandez2015patterns,garcia2015software}.
+The NIST Cloud Computing Security Reference Architecture~\cite{nist2013nist} is also referenced by two papers~\cite{fernandez2015patterns,khan2017variability}.
+Other standards are only addressed once and are quite diverse.
+\citet{preuveneers2016systematic} referred to the secure payment standards PCI DSS and PA DSS~\cite{calderPCIDSS2011}. 
+\citet{fernandez2015cloud} described SAML~\cite{hughes2005security} to securely exchange authentication and authorization data.
+Moreover, \citet{shaaban2019ontology} referenced the industry communication-related standard IEC 62443~\cite{IEC62443} and IEEE 1686~\cite{IEEE1686} in the context of their configurable production system.
+Only one publication~\cite{fernandez2015patterns} focuses on the compliance with privacy regulations, precisely the HIPAA.
+
+\myPar{Specification}
+In most cases, security is considered as a general, but important system goal (25). 
+However, this is usually not described in detail, but assigned by us based on the overall context.
+Seven papers each mention security as a non-functional requirement, quality attribute, or a system requirement.
+Four papers refer to security as a system feature.
+
+\myPar{Goals}
+Regarding the security goals described in the papers, most mention availability (38) or authorization (36) to a certain degree, leading to a mix of a CIA triad and information security goal.
+In 17 papers, accountability, often mentioned in the context of reliability, is addressed. 
+Surprisingly, confidentiality and integrity, which are essential parts of the CIA triad, are only referred to 15 and 13 times, respectively.
+Non-repudiation is addressed the least (9). 
+Overall, we could not identify any papers that did not describe security goals.
+However, these goals are usually only mentioned and not described further, except for integrity.
+Summing up all mentions and concrete descriptions, security goals are named 105 times in a certain context and described or explained in more detail in 57 instances, which is just above half of all their mentions.
+
+\myPar{Security Threats}
+We extracted a variety of concerns that could threaten the security of the studied systems.
+Most papers (23) mention unauthorized data access and general privacy concerns (17).
+In addition, the overall variability of configurable systems and their storages (9) as well as the not sufficiently secured communication between clients, clients and software or storage, and software and storage (6) could lead to security issues.
+Four papers mention trust in the overall configurable system as a security threat, for instance, malicious administrators.
+Other threats include software bugs and untrusted maintenance (3), data manipulation (2), data theft (2), general vulnerabilities (2), insecure hardware (1), and malware (1).
+
+\myPar{Mitigation Techniques}
+Mitigation techniques are usually described in a quite general way without details. 
+Most publications refer to encryption mechanisms or security protocols (26), such as symmetric encryption algorithms like AES~\cite{varela2021carmen}, or network security protocols like SSH~\cite{leite2016autonomic}, SSL~\cite{preuveneers2016systematic}, or TLS as successor technology to SSL~\cite{varela2020definition}.
+In 18 papers, access-control mechanisms are proposed, for instance, through account management~\cite{mohamed2017integrated}.
+Other mitigation techniques include data isolation (8), firewalls (4), signatures (2), software-misuse patterns (2), security-measure models (1), and parallel variant execution (1).
+Interestingly, in two papers by~\citet{krieter2018towards,krieter2019using}, the use of SPL concepts based on a security technology described in detail and called Intel SGX~\cite{Costan2016IntelExplained} is given, fulfilling all security goals except accountability.
+
+\subsection{Configurable Systems}
+
+Fourth, we describe our data concerned with the variability of the configurable data storage and its surrounding system, including the variability focus, projection, verification, evolution, and tool support of the studied system.
+
+\myPar{Variability Focus}
+Unfortunately, most papers focus only on the variability of the software system itself (31), and refer to (apparently) non-configurable data storages.
+This observation is further supported by the fact that the data storage only---and not the software system---is configurable in only eight papers.
+In 11 papers, both software and storage are configurable, showing the close connection of the software system and its data storage.
+
+\myPar{Projection}
+We found that the solution space as well as a mapping between problem and solution space are covered by 20 papers, for instance, a configurable robotics system based on a component model~\cite{gherardi2014software}.
+Furthermore, 15 papers address the problem space and the mapping, for example, the formal definition and verification of security configurations for cyber-physical systems~\cite{varela2020definition}.
+In nine papers, all three types of projection are considered, for instance, modeling policy-driven middleware for SPL-based SaaS application configurations and referring to concrete challenges~\cite{aouzal2019policy}.
+We also identified solutions that focus on only one projection, either solution space (16), problem space (6), or the mapping (2).
+Summing up all papers covering a certain projection, most papers address the solution space (36), while the mapping is covered in 28 papers and the problem space in 21.
+
+\myPar{Verification}
+Within our dataset, verification is described or mentioned in 18 papers.
+Most papers (17) are concerned with the verification of a whole system, for example, a cloud ERP production model~\cite{jalil2017adapting}.
+In one paper, a family-based verification is proposed~\cite{garcia2015software}.
+However, we could not identify any technique verifying individual features.
+
+\myPar{Evolution}
+Regarding the evolution of the configurable data storages and their security concerns, we found 11 papers that mention evolution or consider it partly.
+For instance, \citet{alferez2017achieving} describe the dynamic evolution of service compositions with the aim to deal with unexpected events of the open world.
+In another 15 papers, we found more detailed descriptions on the evolution.
+
+\myPar{Tool Support}
+Regarding tool support, we extracted data from 22 papers related to five tools. 
+Five papers mention FeatureIDE~\cite{Meinicke2017FeatureIDE} as a modeling tool.
+In five more papers, own prototypes or frameworks are described, for instance, CyberSPL for developing an SPL for the verification of security policies according to system configurations~\cite{varela2019cyberspl}.
+Moreover, other tools and languages are mentioned, including UML for feature modeling (3) and eight tools used only one time, such as pure::variants~\cite{moens2015allocating}, configuration generator~\cite{alferez2017achieving}, Xfeature~\cite{cao2015constraint}, or HyperFlex Toolchain~\cite{gherardi2014software}.
