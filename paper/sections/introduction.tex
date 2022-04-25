@@ -1,38 +1,31 @@
 \section{Introduction} \label{sec:introduction}
 
-In recent years, the amount of data (e.g., images, audios, logs) massively increases due to the growing complexity, interconnection, and interaction of software systems~\citep{sagiroglu2013big,oussous2018big}.
-To handle this data in an appropriate way, it is stored, managed, or even processed in a variety of different data storage systems, ranging from centralized databases to on-demand software-as-a-service (SaaS) cloud storage to decentralized blockchains~\citep{gabel2017secure,cusumano2010cloud,shafagh2017towards}.
-A growing amount of these systems, but also their underlying software systems, is configurable, i.e., these systems are based on variability allowing their adaptation to specific requirements, e.g., customer demands, industry standards, hardware limitations, or legal regulations.
-Moreover, the configurability allows the derivation of families of similar but customized variants by enabling or disabling certain features.
-So, since each variant of a system includes individual functions and potential interactions between them, it contributes to the uniqueness but also the complexity of every solution~\citep{pohl2005software}. 
+In recent years, the amount of data (e.g., recordings, data logs, datasets) has massively increased, due to the growing complexity, interconnection, and interaction of software systems~\citep{sagiroglu2013big,oussous2018big}.
+To handle this data in an appropriate way, it is stored, managed, and processed using a variety of different data-storage systems, ranging from centralized databases over on-demand software-as-a-service (SaaS) cloud storages to decentralized blockchains~\citep{gabel2017secure,cusumano2010cloud,shafagh2017towards}.
+A growing number of such storages and the software systems they are part of is configurable, meaning that such systems comprise variability so that they can be configured to specific requirements, such as customer demands, industry standards, hardware limitations, or legal regulations.
+So, configurability allows developers to derive a set of similar, but adapted variants of a system by enabling or disabling certain features.
+While each feature ideally provides a functionality that increases the value of a system, it is also more complex to manage such configurable systems~\citep{pohl2005software,Apel2013FOSPL}. 
 
-However, the data to be stored is usually private or security sensitive (e.g., personal data).
-Consequently, to protect this data, it is essential to process and store it in a secure way by relying on concrete security patterns, models, or standards (e.g., the ISO/IEC 27000 series~\cite{ISOIEC270002018})~\citep{Sartakov2018STANliteLevel,Popa2011CryptDB:Processing}. 
-Due to the uniqueness and complexity of configurable systems based on a variety of variants, there is a particularly high risk for both configurable systems of becoming the subject of cyber attacks~\citep{Kenner2021MappingStudy}.
-These attacks are often based on the exploitation of certain system vulnerabilities or malicious administrators and users, leading to unauthorized data access, data loss, or even data manipulation~\cite{Gunawi2014WhatCloud, Campanile2017CloudifyingDomain}.
+Typically, the data stored in a software system involves private or security sensitive entries (e.g., personal data, company secrets).
+Consequently, to protect this data, it is essential to process and store it in a secure way by relying on security patterns, models, and standards (e.g., the ISO/IEC 27000 series~\cite{ISOIEC270002018})~\citep{Sartakov2018STANliteLevel,Popa2011CryptDB:Processing}. 
+Due to the uniqueness and complexity of configurable systems, there is a particularly high risk of becoming the subject of cyber attacks or simply revealing sensitive data~\citep{Kenner2021MappingStudy,Acher2015JeopardizeSecretsSPL}.
+Attacks are often based on the exploitation of certain system vulnerabilities or malicious administrators and users, leading to unauthorized data access, data loss, or even data manipulation~\cite{Gunawi2014WhatCloud,Campanile2017CloudifyingDomain,Kenner2020SecurityFMs}.
 
-Consequently, research on configurable systems, particularly those based on software product lines (SPL), and potential security concerns or requirements has been conducted in recent years.
-Within this research, there are several approaches which also include data storage (e.g., a database in cloud environments), e.g., configurable cloud robotics applications~\citep{gherardi2014software} or secure dynamic SPL in cloud environments~\citep{krieter2018towards}.
-Such publications are of particular interest for our study since not only the software system themselves but also the storage is a major target of cyber attacks~\citep{gamundani2018review,bamrara2015evaluating}.
+Not surprisingly, immense research in the intersection of configurable systems, particularly work based on software product lines (SPLs), and security concerns has been conducted in recent years~\cite{Kenner2021MappingStudy,hammaniSurveyNonFunctionalRequirements2014b,mahdavi-hezavehiVariabilityQualityAttributes2013}.
+There are several works that also investigate configurable data storages, for instance, in cloud robotics applications~\citep{gherardi2014software} or secure dynamic SPLs in cloud environments~\citep{krieter2018towards}.
+In this paper, we are particularly interested in such publications, since the data storage of a configurable system is also a major target for cyber attacks and feature interactions may reveal secrets~\citep{gamundani2018review,bamrara2015evaluating}.
 
-
-\todo{so, just for me to be clear, the goal is to investigate to what extent security concerns are considered/represented/... within the configuration space of data storage systems? I think we should be a bit clearer on the definitions. Also, I would change the title to not be too redundant with the previous paper ;) --- but I think I recall you said its a working title only}
-
-
-Although there exist extensive research on security and configurable systems, especially involving storage systems, we are missing an overview of current state-of-the-art research.
-Consequently, there is no comprehensive systematization of such storage systems, their security and variability concerns, or future research directions.
-By conducting a systematic mapping study, we aim to addressed this research gap~\cite{Kitchenham2015EvidenceSLR}.
-Precisely, we analyzed 53 papers which are concerned with security, and SPL-related storage systems published on \textsc{Scopus}\footnote{\url{www.scopus.com}}, \textsc{IEEE Xplore}\footnote{\url{ieeexplore.ieee.org}}, and the \textsc{ACM Guide to Computing Literature}\footnote{\url{dl.acm.org/search/advanced}} within the last decade (2013--2022).
-This way, we are able to summarize the current state-of-art research and emphasize research gaps as well as relevant research direction regarding the intersection of security and SPL-related storage systems.
-
-Overall, we contribute the following with our study:
-\begin{itemize}[nosep]
-	\item A systematic and comprehensive overview of recent research on security in the context of SPL-related storage systems.
+Despite the extensive research on security and configurable systems, \textbf{we are not aware of a systematic overview that focuses on the security of configurable data storages.}
+Consequently, there is no comprehensive systematization of such storages, their security and variability concerns, or of future research directions.
+We conducted a systematic mapping study~\cite{Kitchenham2015EvidenceSLR}, aiming to addresse this research gap.
+Precisely, we analyzed 50 papers that are concerned with security and configurable data storages by searching through \textsc{Scopus},\footnote{\url{www.scopus.com}} \textsc{IEEE Xplore},\footnote{\url{ieeexplore.ieee.org}} and the \textsc{ACM Guide to Computing Literature}\footnote{\url{dl.acm.org/search/advanced}} for the last decade (2013--2022).
+Based on this dataset, we are able to summarize the state-of-art research and emphasize research gaps regarding the intersection of security and configurable storage systems.
+In detail, we contribute the following:
+\begin{itemize}[nosep,leftmargin=*]
+	\item A systematic and comprehensive overview of recent research on security in the context of configurable data storages.
 	
-	\item A discussion on what properties are covered and for which properties further investigations is required.
+	\item A discussion of what properties have been researched and what properties require further investigations.
 	
-	\item An open-access repository including the detailed study results to increase the study's overall comprehensibility and to ensure a replicability of our study.\footnote{\url{https://github.com/Rim007/replicationPackage_splc22}\label{ft:repo}}
+	\item An open-access repository including our detailed study results to increase the overall comprehensibility and ensure replicability.\footnote{\url{https://github.com/Rim007/replicationPackage_splc22}\label{ft:repo}}
 \end{itemize}
-
-
-We argue that our study results and discussion findings can help both researchers and practitioners in understanding the recent state-of-the-art as well as open research directions.
+We argue that our contributions help researchers and practitioners in identifying and understanding security concerns of configurable data storages more easily.

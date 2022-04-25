@@ -1,61 +1,60 @@
 \section{Background} \label{sec:background}
 
-In the following section, we provide relevant background information on \emph{configurable systems}, \emph{data storage}, and \emph{security}.
+In the following section, we provide relevant background information on \emph{configurable systems}, \emph{data storages}, and \emph{security}.
 
 
 \subsection{Configurable Systems}\label{sec:background:configsystems}
 
-A configurable system is characterized by a number of (diverse) features (i.e., user-visible functions) that are customizable to meet customer needs, e.g., specific customer or user requirements, hardware constraints, or even legal regulations.
-In this study, we classify configurable systems into two categories: configurable software systems (e.g., plugin-based systems) and configurable storage systems (e.g., cloud-based systems).
-Usually, such systems rely on concepts, methods, or techniques related to SPL~\cite{Apel2013FOSPL,pohl2005software}.
-Variability in product-line engineering is managed through the implementation of mechanisms (i.e., mainly variability models such as feature models) to organize and document variability and existing relationships~\cite{Kang1990FODA,Apel2013FOSPL,Czarnecki2012CoolFeatures,Schaefer2012SoftwareDiversity}.
-The representation of such mechanisms can be supported by tools only allowing valid configurations, propagating decisions regarding configurations~\cite{Krieter2016ModelSlicing,Apel2013FOSPL}, and derive configured variants in an automated way allow valid configurations, e.g., FeatureIDE~\cite{Meinicke2017FeatureIDE} or pure::variants~\cite{Beuche2012purevariants}.
+A configurable system is characterized by a number of features (i.e., user-visible functionalities~\cite{Apel2013FOSPL}) that can be configured to meet customer needs, such as user requirements, hardware constraints, or legal regulations.
+We classify configurable systems into two categories: configurable software systems (e.g., plugin-based systems) and configurable storage systems (e.g., cloud-based systems).
+Usually, such systems rely on concepts, methods, and techniques related to SPLs~\cite{Apel2013FOSPL,pohl2005software}.
+Configurable features in an SPL are managed through variability mechanisms (e.g., variability models, such as feature models) to organize, implement, and document features with their dependencies~\cite{Kang1990FODA,Apel2013FOSPL,Czarnecki2012CoolFeatures,Schaefer2012SoftwareDiversity,Nesic2019Principles}.
+Such mechanisms are typically supported by tools that check whether a configuration is valid, propagate configuration decisions~\cite{Krieter2016ModelSlicing,Apel2013FOSPL}, and derive valid variants automatically (e.g., FeatureIDE~\cite{Meinicke2017FeatureIDE}, pure::variants~\cite{Beuche2012purevariants}).
+Consequently, configurable systems can be defined using the definitions of problem space (i.e., a domain abstraction), solution space (i.e., the implementation), and a mapping between both spaces (i.e., connection between both spaces allowing to derive variants automatically)~\cite{Apel2013FOSPL}.
+Moreover, every configurable system can be verified based on certain attributes.
+For this purpose, three established strategies exist: feature-based (i.e., analyzing each feature in isolation without considering configurations or dependencies), product-based (i.e., analyzing a system configuration based on its code or an abstraction), and family-based (i.e., analyzing the whole configurable system including valid configurations)~\cite{Thuem2014AnalysisSurvey}.
 
-Every configurable systems can be verified based on certain attributes following one of three established strategies, including feature-based (i.e., analyzing each feature in isolation without considering configurations or interactions), product-based (i.e., analyzing the system configuration based on code or an abstraction), and family-based (i.e., analyzing a whole system family, including valid configurations)~\cite{Thuem2014AnalysisSurvey}.
-In addition, configurable systems based on SPL techniques can be defined as a projection onto the problem space (i.e., a domain abstraction), the solution space (i.e., a concrete implementation, and a mapping between both spaces (i.e., the connection between both spaces allowing the derivation of the configurable system) ~\cite{Apel2013FOSPL}.
 
+\subsection{Data Storages}\label{sec:background:storage}
 
-\subsection{Data Storage}\label{sec:background:storage}
+A data storage, a medium that is able to store specific data in a certain way, is usually classified according to one of three structures it employs, namely centralized, decentralized, or distributed~\cite{furht2010CloudFundamentals,wu2017distributed}. 
+Centralized storages (e.g., centralized relational SQL databases) are built around one single unit handling all major processing or storage tasks (e.g., one server).
+Consequently, all machines are connected to the central unit where the data is stored~\cite{ramamritham1996RealTimeDatabases,chowdhury2018BlockchainAnalysis}.
+In contrast, decentralized storages (e.g., decentralized NOSQL databases in the context of blockchain applications) rely on the distribution of processing or storage steps among several units with no or limited coordination~\cite{wu2017distributed,ayoade2018DecentralizedEnvironment}.
+So, the dependency on an individual processing unit is much weaker than in centralized solutions~\cite{ayoade2018DecentralizedEnvironment,mcconaghy2016BigchainDB:Database,Bao2020WhenIssues}.
+If a decentralized storage provides (close) coordination between independent units, it is called a distributed storage~\cite{van2002distributed,wu2017distributed}.
+For instance, inter-cloud environments relying on a variety of storages are usually associated with this structure~\cite{celesti2010security,leite2016autonomic}. 
 
-Data storage, i.e., a medium that is able to store specific data in a certain technological way, is usually generally classified by one of three main organization structures, i.e., centralized, decentralized, or distributed~\cite{furht2010CloudFundamentals,wu2017distributed}. 
-Centralized storage solutions, e.g., centralized relational SQL databases, are built around one single point (i.e., a server) handling all major processing or storage task.
-Consequently, all machines are connected to the central point where the data is stored~\cite{ramamritham1996RealTimeDatabases,chowdhury2018BlockchainAnalysis}.
-In contrast, decentralized storage solutions, e.g., decentralized NOSQL databases in the context of blockchain applications, rely on the distribution of processing or storage steps among several machines with no or limited coordination~\cite{wu2017distributed,ayoade2018DecentralizedEnvironment}.
-Thus, the dependency on individual processing points is much weaker than in centralized solutions~\cite{ayoade2018DecentralizedEnvironment,mcconaghy2016BigchainDB:Database,Bao2020WhenIssues}.
-If a decentralized system provides a (close) coordination between independent machines, it is called a distributed system~\cite{van2002distributed,wu2017distributed}.
-For instance, intercloud environments relying on a variety of storage mediums are usually associated with this organization structure~\cite{celesti2010security,leite2016autonomic}. 
-
-Data storage mediums usually rely on certain storage environments that are oriented towards self-hosting (i.e., an environment located on a local machine) or outsourcing.
-In the context of outsourcing, which has become increasingly widespread for enterprises in recent years, there are several common technologies, especially cloud, edge, and fog~\cite{gabel2017secure,correia2020SafeguardingEdge}.
-These environments are created based on a complex combination of software and hardware components able to provide server-based storage space at a high level of efficiency, flexibility, scalability, and on-demand data access based on the Internet of Things~\cite{markovic2013SmartComputing,silva2018SecurityComputing}.  
-Outsourcing solutions often serve as the technology where data storage and data processing can be built on, leading to the creation of service-based systems or infrastructures, usually called SaaS or Infrastructure as a Service (IaaS)~\cite{lee2009quality,kulkarni2012cloud,serrano2015infrastructure}.
+Data storages usually operate in certain environments that are oriented towards self-hosting (i.e., an environment located on a local machine) or outsourcing.
+In the context of outsourcing, which has become increasingly widespread for enterprises in recent years, there are several common technologies, such as cloud, edge, and fog computing~\cite{gabel2017secure,correia2020SafeguardingEdge}.
+Such environments use a complex combination of software and hardware components, and are able to provide server-based storage space at a high level of efficiency, flexibility, scalability, and on-demand availability~\cite{markovic2013SmartComputing,silva2018SecurityComputing}.  
+Outsourcing solutions often serve as an underlying technology based on which data storing and processing functionalities can be implemented, leading to service-based systems or infrastructures; usually called SaaS or Infrastructure as a Service (IaaS)~\cite{lee2009quality,kulkarni2012cloud,serrano2015infrastructure}.
 
 
 \subsection{Security}\label{sec:background:security}
 
-To consider security from a practice-oriented perspective, it is essential to rely on established as well as pertinent, generally applicable norms and standards, e.g., the ISO/IEC 27000 series~\cite{ISOIEC270002018}, ISO/IEC 25010~\cite{ISOIEC250102011}, ISO/IEC 29100~\cite{ISOIEC291002011}, or the NIST Guide for Conducting Risk Assessments~\cite{guidegonductingrisk2012}.
-According to these standards, security is a characteristic of a software system aimed to protect its stored or processed data or information against a wide range of threats caused by attacks, vulnerabilities, errors (i.e., bugs), or even nature (e.g., in the context of hardware)~\cite{ISOIEC250102011,ISOIEC270002018}.
-In this context, a threat is defined as an unwanted, but possible event, resulting in a harm of a system.
-If there is a concrete possibility of exploiting such a threat, e.g. in terms of vulnerabilities, this condition is referred to as a security risk~\cite{ISOIEC270002018,guidegonductingrisk2012}.
-To minimize such risks as much as possible, the regular assessment of them in terms of defined monitoring, measurement, and analysis processes according to the data lifecycle of the individual systems is essential~\cite{ISOIEC270012013,ISOIEC270042016}.
-Furthermore, risks are also reduced by fulfilling defined security goals through the implementation of mitigation techniques, e.g., cryptographic control mechanisms~\cite{ISOIEC270002018,ISOIEC270012013,guidegonductingrisk2012}.
-According to the ISO/IEC 27000 series~\cite{ISOIEC270002018} and ISO/IEC 25010~\cite{ISOIEC250102011}, three goals are particularly relevant which are known as the CIA triad~\cite{lundgren2019defining,samonasCIAStrikesBack2014}:\medskip
-
-\noindent\textbf{Confidentiality:} The data is only available for authorized entities.
-
-\noindent\textbf{Integrity:} The data can only be modified by an authorized entity.
-
-\noindent\textbf{Availability:} The system ensures timely and reliable access to its data for authorized entities.\medskip
-
-\noindent In the context of information security, these are usually extended by accountability, authenticity, and non-repudiation~\cite{ISOIEC250102011,ISOIEC270002018,guidegonductingrisk2012}.\medskip
-
-\noindent\textbf{Accountability:} Any action can be traced to a unique entity.
+According to norms and standards established in practice (e.g., ISO/IEC 27000 series~\cite{ISOIEC270002018}, ISO/IEC 25010~\cite{ISOIEC250102011}, ISO/IEC 29100~\cite{ISOIEC291002011}, NIST Guide for Conducting Risk Assessments~\cite{guidegonductingrisk2012}), security is a property of a software system aimed at protecting stored or processed data against a wide range of threats caused by attacks, vulnerabilities, errors (i.e., bugs), or nature (e.g., in the context of hardware).
+A threat is defined as an unwanted, but possible, event that results in a harm to a system.
+If there is a concrete possibility of exploiting such a threat, for instance, in terms of vulnerabilities, the threat poses a security risk~\cite{ISOIEC270002018,guidegonductingrisk2012}.
+To minimize such risks, a regular risk assessment using defined monitoring, measurement, and analysis processes according to the data lifecycle of the individual system is essential~\cite{ISOIEC270012013,ISOIEC270042016}.
+Furthermore, risks are also reduced by fulfilling defined security goals implemented via mitigation techniques, such as cryptographic control mechanisms~\cite{ISOIEC270002018,ISOIEC270012013,guidegonductingrisk2012}.
+According to the ISO/IEC 27000 series~\cite{ISOIEC270002018} and ISO/IEC 25010~\cite{ISOIEC250102011}, three security goals are particularly important, which are also known as the CIA triad~\cite{lundgren2019defining,samonasCIAStrikesBack2014}:
+\begin{itemize}[nosep,leftmargin=*]
+	\item\emph{Confidentiality:} The data is only available to authorized entities.
+	
+	\item\emph{Integrity:} The data can only be modified by an authorized entity.
+	
+	\item\emph{Availability:} The system ensures timely and reliable access to its data for authorized entities.
+\end{itemize}
+In the context of information security, these three goals are usually extended by~\cite{ISOIEC250102011,ISOIEC270002018,guidegonductingrisk2012}:
+\begin{itemize}[nosep,leftmargin=*]
+	\item\emph{Accountability:} Any action can be traced to a unique entity.
     
-\noindent\textbf{Authenticity:} The identity of a person can be clearly proven to be the one claimed.
+	\item\emph{Authenticity:} The identity of an entity can be clearly proven to be the one claimed.
 	
-\noindent\textbf{Non-repudiation:} It is possible to prove the occurrence of every action and what entities were involved.\medskip
-	
-\noindent Information security is also often associated with further goals, e.g., authentication, reliability, or privacy~\cite{ISOIEC270002018,ISOIEC291002011}.
-However, these are usually subordinated to the six goals we described, have particular legal dependencies (e.g., legal regulations such as GDPR or HIPAA~\cite{tovino2017hipaa}), or their fulfillment is significantly related or even supported by the fulfillment of the six goals, e.g., privacy.
+	\item\emph{Non-repudiation:} It is possible to prove the occurrence of every action and what entities were involved.
+\end{itemize}
+Information security is often associated with further security goals, such as reliability or privacy~\cite{ISOIEC270002018,ISOIEC291002011}.
+However, such goals are usually subordinated to the six we described, have particular legal dependencies (e.g., legal regulations such as GDPR or HIPAA~\cite{tovino2017hipaa}), or their fulfillment is significantly related to or supported by the fulfillment of the six goals.
 
 		
