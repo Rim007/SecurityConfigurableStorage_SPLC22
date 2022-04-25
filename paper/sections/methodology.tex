@@ -1,137 +1,135 @@
 \section{Methodology} \label{sec:methodology}
 
-The objective of this study was to identify, classify, and discuss research on SPL-related storage systems and security.
-To achieve our objective, we conducted a systematic mapping study based on the guidelines of~\citet{Kitchenham2015EvidenceSLR}.
-The individual steps of the methodology are presented in the following.
+Our objective for this study was to identify, classify, and discuss research in the intersection of configurable data storages and security.
+To achieve this objective, we conducted a systematic mapping study based on the guidelines of~\citet{Kitchenham2015EvidenceSLR}.
+In the following, we describe the individual steps of our study, for which we display an overview in \autoref{fig:methodology}.
 
 \subsection{Initial Screening}
 
-In the first step, we employed an initial screening to ensure the need for our research, i.e., there are no recent similar studies and a sufficient and relevant body-of-knowledge.
-Therefore, we searched the literature databases \textsc{Scopus}, \textsc{IEEE Xplore}, and the \textsc{ACM Guide to Computing Literature} by using the following search string without any constraints except the thematic focus (e.g., a certain time frame).
+At first, we employed an initial screening to ensure the need for our study.
+Precisely, we aimed to ensure that there are no recent studies addressing our objective, and that a sufficient and relevant number of papers exists.
+Therefore, we searched the literature databases \textsc{Scopus}, \textsc{IEEE Xplore}, and the \textsc{ACM Guide to Computing Literature} using the following search string without any other constraints (e.g., a certain time frame):
 
-\searchString{"software product line" and "security"} 
-
-Based on the general search string, we found around 1,000 results emphasizing the relevance and research interests regarding security in the context of configurable systems. 
-Thus, our research objectives can be considered as valuable enough for our systematic mapping study focusing on security and SPL-related storage systems.
+\searchString{\enquote{software product line} and \enquote{security}} 
+%
+Based on this general search string, we obtained around 1,000 papers emphasizing the relevance and research interest for security in the context of configurable systems. 
+Thus, we considered our research objective valuable for conducting a systematic mapping study.
 We note that we are aware of the mapping study on safety and security for configurable systems by~\citet{Kenner2021MappingStudy}. 
-However, our goals differ from this study and we cover another body of literature (i.e., papers) without focusing on safety. 
-
-\todo{would add a concrete goal/objective subsection or at least bullet points. what is the actual intention of the study, why is it really necessary to understand the state of the art to what extent? just getting an overview for the sake of it is also okish, but I don't think that the topic is self-motivational enough and it will be criticized if there is no good motivation on why exactly this study is needed and what its concrete goals are}
+However, our goals differ from this and other studies referenced therein, since we cover another body of research (cf. \autoref{sec:relatedwork}).
+We focus on the intersection of security and data storages, which has not been the subject of previous mapping studies. 
 
 \subsection{Study Design}
 
-Based on the identified research interest, we conducted the systematic mapping study.
-Precisely, we focused on security and SPL-related storage systems, including the usually underlying configurable software systems. \todo{as said, the motivation is not clear enough to me yet}
-We considered keywords that cover a wide range of different storage systems, without any restriction regarding their architecture (e.g., centralized or decentralized), including solutions ranging from databases to service-based cloud storage.
+Building on the identified research interest, we decided to conduct a systematic mapping study.
+Precisely, we focused on security and configurable data storages, also considering potentially underlying configurable software systems that may be the actual focus of a paper.
+We considered keywords that cover a wide range of storage systems, without any restrictions regarding their architecture (e.g., centralized or decentralized), including solutions ranging from databases to service-based cloud storages.
+Moreover, we built on the experiences we obtained during the initial screening and considered the previous studies we identified to derive synonyms.
 So, we defined the following search string:
 
-\searchString{("software as a service" OR "SaaS" OR "infrastructure as a service" OR "IaaS" OR "service-based" OR "service-oriented" OR "on-demand" OR "stor*" OR "cloud" OR "database" OR "blockchain" OR "edge" OR "fog") AND ("software product line" OR "product famil*" OR "system famil*" OR “software famil*” OR "variant*rich" OR "config* system") AND ("security" OR "secure")}
+\searchString{(\enquote{software as a service} OR \enquote{SaaS} OR \enquote{infrastructure as a service} OR \enquote{IaaS} OR \enquote{service-based} OR \enquote{service-oriented} OR \enquote{on-demand} OR \enquote{stor*} OR \enquote{cloud} OR \enquote{database} OR \enquote{blockchain} OR \enquote{edge} OR \enquote{fog}) AND 
+\newline
+(\enquote{software product line} OR \enquote{product famil*} OR \enquote{system famil*} OR \enquote{software famil*} OR \enquote{variant*rich} OR \enquote{config* system}) AND 
+\newline
+(\enquote{security} OR \enquote{secure})}
+%
+This search string comprises relevant terms in the context of data storages, types, and properties (e.g., \enquote{database,} \enquote{SaaS,} \enquote{on-demand}), configurable systems in the context of SPLs (e.g., \enquote{software product line,} \enquote{system family}), and security in general (e.g., \enquote{secure})---since we assumed that more specific security concerns are rarely reported in the primary search fields.
 
-
-The search string consists of relevant terms in the context of data storage, relevant types, and properties (e.g., "database", "SaaS", or "on-demand"), configurable systems in the context of software product-line engineering (e.g., "software product line" or "system family"), and security in general as we assume that more specific concerns will only rarely be reported (e.g., "secure").
-
-Based on the search string we employed an automated search on \textsc{Scopus}, \textsc{IEEE Xplore}, and the \textsc{ACM Guide to Computing Literature}.
+Using this search string, we employed an automated search on \textsc{Scopus}, \textsc{IEEE Xplore}, and the \textsc{ACM Guide to Computing Literature}; searching within the typical fields title, abstract, and keywords.
 These literature databases ensure a certain quality by indexing only peer-reviewed publications.
 Moreover, \textsc{Scopus} and the \textsc{ACM Guide to Computing Literature} provide papers from a variety of publishers. 
-This way, we reduced the threat of missing highly relevant publications, too.
+This way, we reduced the threat of missing highly relevant publications from other publishers.
+To further improve the completeness of our dataset, we additionally applied a backwards snowballing (i.e., analyzing the references of the already selected papers)~\cite{Wohlin2014Snowballing}.
+Note that we performed only one iteration of snowballing to limit the effort of our study.
 
-\subsection{Selection Criteria}
 
-For the identification and selection of relevant and suitable publications, we defined the following selection criteria:
-
-\begin{enumerate}[label=IC\textsubscript{\arabic*},leftmargin=*,nosep]
-    \item The publication is written in English.
-    \item The publication has been published between 2013 and 2022.\label{it:icTime}
-    \item The publication is a peer-reviewed conference paper or journal article (e.g., excluding keynote summaries or posters).\label{it:icPaper}
-    \item The publication is longer than three pages.\label{it:icPages}
-    \item The publication deals with security and SPL-related storage systems.\label{it:icFocus} \todo{the notion of SPL related storage system still confuses me xD}
-\end{enumerate}\medskip
-
-We intentionally focused on the last decade (\ref{it:icTime}) to limit the number of publications and cover the most recent advancements in both research and practice.
-A detailed quality assessment of all selected papers was not performed by us.
-Since our work covers a variety of works that cannot be properly compared against each other, common quality criteria are not applicable in our case.
-However, by defining a minimum number of pages (\ref{it:icPages}), it is assumed that the papers meeting this criterion provide enough details to understand the addressed problem.
-We intentionally excluded papers that do not address security, product-line engineering, or a data storage medium (\ref{it:icFocus}), e.g., publications proposing actual configurable SaaS systems, including a storage medium or detailed security concerns but without building on product-line techniques~\cite{liu2014towards,khan2019dynamically}.
-
-\subsection{Data Extraction}
-
-To extract data in a comprehensive and comparable way, we defined criteria covering the two relevant areas of security and product-line engineering.
-We based our criteria on the extraction criteria of our previous mapping study on safety and security of configurable software systems~\citep{Kenner2021MappingStudy} as the topic was basically similar to our study.
-In more detail, these criteria are derived from research and concepts on security or product-line engineering
-So, the criteria regarding security rely on established classifications of security goals.
-However, we extended the criteria to gain more detailed insights, especially regarding the intersection of product-line engineering and storage systems.
-%Note that we do not extract typical publication data (e.g., publication communities, publication years) as we focus on a  qualitative, content-related analysis.
-Overall, we defined the following extraction criteria classified into four thematic categories:
-
-\noindent\textbf{Publication:}
-\begin{itemize}[nosep]
-    \item \textbf{Publication year} of a paper.
-    \item \textbf{Domain} of a solution (e.g., production, automotive).
-    \item \textbf{Perspective} of a publication (indicated by an arrow ($\rightarrow$) read as \enquote{employed to}):
-    \begin{itemize}
-	    \item \emph{Security $\rightarrow$ SPL}: publications focusing on the security of a configurable system.
-		\item \emph{SPL $\rightarrow$ security}: publications addressing a security concern based on product-line techniques.
-		\item \emph{Storage $\rightarrow$ SPL}: publications focusing on storage systems used to support certain SPL tasks (e.g., storing variants).
-		\item \emph{SPL $\rightarrow$ Storage}: publications focusing on storage systems based on product-line techniques.
-	\end{itemize}
-	\end{itemize}
-	
-\noindent\textbf{Storage:}	
-    \begin{itemize}[nosep]
-	\item \textbf{Type of storage medium} a publication is concerned with (e.g., a relational database in a SaaS cloud environment~\cite{curino2011relational}).
-	\item \textbf{Organization structure} of the proposed storage system (i.e., centralized or decentralized~\cite{hugoson2007centralized}).
-	\item \textbf{Stored data} indicating whether or which data is (securely) stored by a storage system (e.g., feature models~\cite{shaaban2019ontology}, source code~\cite{leite2017dohko})
-    \end{itemize}
-    
-\noindent\textbf{Security:}	  
-    \begin{itemize}[nosep]
-	\item \textbf{Standard} a publication refers to (e.g., standards of the ISO/IEC 27000 series, such as ISO/IEC 27001~\cite{ISOIEC270012013}, ISO/IEC 27002~\cite{ISOIEC270022013}).
-	\item \textbf{Security goals} a publications aims to achieve~\cite{anderson2003we,guidegonductingrisk2012,samonasCIAStrikesBack2014}: 
-	\begin{itemize}
-	    \item \emph{CIA triad}, including confidentiality, integrity, and availability.
-	    \item \emph{Information security}, including authorization, accountability, and non-repudiation.
-	\end{itemize}
-	\item \textbf{Specification} indicating how certain security concerns are considered, documented, or managed (e.g., as quality attribute~\cite{peruma2018security} or non-functional requirements~\cite{ragab2015software}).
-	\item \textbf{Security threats} a publication is concerned with (e.g., credential reuse or SQL injection attacks~\cite{humayun2020cyber}).
-	\item \textbf{Mitigation techniques} proposed or implemented to mitigate the impact of cyber-attacks and to achieve certain security goals (e.g., encryption techniques such as AES~\cite{varela2021carmen} or concrete technologies Intel SGX~\citep{Costan2016IntelExplained}).
-	\end{itemize}
-	
-\noindent\textbf{Configurable system:}	  
-    \begin{itemize}[nosep]	
-	\item \textbf{Variability focus} indicating whether the storage is actually configurable or only the underlying software system.
-	\item \textbf{Projection} of the product-line indicating whether the problem space, solution space, or the mapping between both is covered~\cite{Apel2013FOSPL}.
-	\item \textbf{Verification} method indicating whether the described system is analyzed based on products, features, or the whole product family~\cite{Thuem2014AnalysisSurvey}.
-	\item \textbf{Evolution} of a SPL-related storage system~\cite{bosch2002maturity}.
-	\item \textbf{Tool support} reported in the publication. (e.g., FeatureIDE~\cite{Meinicke2017FeatureIDE}, pure::variants~\cite{Beuche2012purevariants}).
-\end{itemize}
-
-\subsection{Conduct}
-The automated search was conducted on March 15, 2022, resulting in a total of 538 publications (65 from \textsc{Scopus}, 122 from \textsc{IEEE Xplore}, and 351 from the \textsc{ACM Guide to Computing Literature}).
-After integrating the selected papers into the literature review tool Rayyan QCRI\footnote{\url{www.rayyan.ai}} where the literature was labeled as included, excluded, or duplicate.
-In this context, we conducted a duplication removal (i.e., removing 29 papers) as well as a title and abstract selection, resulting in 76 papers for the full-text selection. 
-However, after reading the full-texts, we had to remove 32 paper since they only superficially dealt with SPL and data storage or only mentioned these aspects in the context of related work.
-To increase the number of selected papers, we additionally applied a backward snowballing process (i.e., analyzing the references of the already selected literature).
-Finally, 50 publications were selected for the extraction of data based on the defined criteria.
-The data extraction was performed in an Excel spreadsheet in the context of an open coding-like process based category labels (i.e., identifying and classifying the information found numerous times). 
-The methodological process including the exact numbers of publications is illustrated in Figure~\ref{fig:methodology}.
-		
-\todo{why 50 papers are enough?}
-		
 \begin{figure}
 	\includegraphics[width=\linewidth]{img/methodology.pdf}
 	\vspace*{-4ex}
-	\caption{Methodological overview of the systematic mapping study (numbers indicate the exact amount of selected publications}
+	\caption{Methodological overview of our systematic mapping study. The numbers indicate the exact amount of papers that we considered relevant after the previous step.}
 	\label{fig:methodology}
 	\vspace*{-2ex}
 \end{figure}
-		
-		
 
-	
-	
-		
-		
-		
-		
-		
+\subsection{Selection Criteria}
 
+To identify and select relevant papers, we defined the following selection criteria:
+\begin{enumerate}[label=IC\textsubscript{\arabic*},leftmargin=*,nosep]
+    \item The paper is written in English.
+    \item The paper has been published between 2013 and 2022.\label{it:icTime}
+    \item The paper is a peer-reviewed conference paper or journal article (e.g., excluding keynote summaries or posters).\label{it:icPaper}
+    \item The paper is longer than three pages.\label{it:icPages}
+    \item The paper deals with security and configurable data storages in the context of SPLs.\label{it:icFocus}
+\end{enumerate}
+%
+%\looseness=-1
+We intentionally focused on the last decade (\ref{it:icTime}) of research to limit the number of papers and cover the most recent advancements in both research and practice.
+Note that we did not perform a detailed quality assessment of all selected papers.
+In fact, since our study was likely to cover a variety of research methods that cannot be properly compared against each other, common quality criteria are not applicable.
+However, by defining a minimum number of pages (\ref{it:icPages}) and considering only peer-reviewed papers (\ref{it:icPaper}), we assume that each paper meets a certain quality that allows us to understand the addressed problem.
+We intentionally excluded papers that do not address security and data storages in the context of SPLs (\ref{it:icFocus}), for instance, papers proposing a configurable SaaS system including a data storage or discussing security concerns, but without building on concepts from product-line engineering~\cite{liu2014towards,khan2019dynamically}.
+
+\subsection{Data Extraction}\label{sec:extraction}
+
+To extract data in a comprehensive and systematic way, we defined categories covering the two relevant areas security and configurable data storages.
+We derived our extraction categories from related papers, particularly the related mapping study of \citet{Kenner2021MappingStudy} we identified during out initial screening and the papers referenced therein.
+In more detail, we defined the categories based on concepts established in research on security as well as product-line engineering.
+Particularly, the categories regarding security rely on established classifications of security goals (cf. \autoref{sec:background:security}).
+However, we extended the criteria to gain more detailed insights, especially with respect to the intersection of security and configurable storages.
+%Note that we do not extract typical publication data (e.g., publication communities, publication years) as we focus on a  qualitative, content-related analysis.
+
+Overall, we defined the following extraction categories classified into four thematic topics:
+\begin{enumerate}[nosep,leftmargin=*]
+	\item \textbf{Publication}
+	\begin{itemize}[nosep,leftmargin=*]
+		\item \emph{Publication year} of a paper.
+		\item \emph{Domain} of the research (e.g., production, automotive).
+		\item \emph{Perspective} of a paper (indicated by an arrow ($\rightarrow$), which reads as \enquote{employed to}):
+		\begin{itemize}[nosep,leftmargin=*]
+			\item \emph{Security $\rightarrow$ SPL}: the paper focuses on the security of a configurable system.
+			\item \emph{SPL $\rightarrow$ security}: the paper focuses on a security concern based on product-line concepts.
+			\item \emph{Storage $\rightarrow$ SPL}: the paper focuses on a data storage used to support certain SPL tasks (e.g., storing variants).
+			\item \emph{SPL $\rightarrow$ Storage}: the paper focuses on a storage system based on product-line concepts.
+		\end{itemize}
+	\end{itemize}
+
+	\item \textbf{Storage}	
+	\begin{itemize}[nosep,leftmargin=*]
+		\item \emph{Type of storage medium} a paper is concerned with (e.g., a relational database in a SaaS cloud environment~\cite{curino2011relational}).
+		\item \emph{Structural organization} of the proposed storage system (i.e., centralized or decentralized~\cite{hugoson2007centralized}).
+		\item \emph{Stored data} indicating whether data is (securely) stored (e.g., feature models~\cite{shaaban2019ontology}, source code~\cite{leite2017dohko}).
+	\end{itemize}
+
+	\item \textbf{Security}	  
+	\begin{itemize}[nosep,leftmargin=*]
+		\item \emph{Standard} a publication refers to (e.g., standards of the ISO/IEC 27000 series, such as ISO/IEC 27001~\cite{ISOIEC270012013}, ISO/IEC 27002~\cite{ISOIEC270022013}).
+		\item \emph{Security goals} a publications aims to achieve~\cite{anderson2003we,guidegonductingrisk2012,samonasCIAStrikesBack2014}: 
+		\begin{itemize}[nosep,leftmargin=*]
+			\item \emph{CIA triad:} \emph{confidentiality}, \emph{integrity}, and \emph{availability}.
+			\item \emph{Information security:} \emph{authorization}, \emph{accountability}, and \emph{non-repudiation}.
+		\end{itemize}
+		\item \emph{Specification}, indicating how certain security goals are considered, documented, or managed (e.g., as quality attribute~\cite{peruma2018security} or non-functional requirements~\cite{ragab2015software}).
+		\item \emph{Security threats} a paper is concerned with (e.g., credential reuse or SQL injection attacks~\cite{humayun2020cyber}).
+		\item \emph{Mitigation techniques} proposed or implemented to mitigate the impact of cyber-attacks and to achieve certain security goals (e.g., encryption techniques, such as AES~\cite{varela2021carmen}, or technologies, such as Intel SGX~\citep{Costan2016IntelExplained}).
+	\end{itemize}
+
+	\item \textbf{Configurable system}	  
+	\begin{itemize}[nosep,leftmargin=*]	
+		\item \emph{Variability focus}, indicating whether the storage itself is configurable or only the surrounding software system.
+		\item \emph{Projection} of an SPL considered in the paper, namely problem space, solution space, or the mapping between both~\cite{Apel2013FOSPL}.
+		\item \emph{Verification}, indicating whether the described method follows a product-, feature-, or family-based analysis strategy~\cite{Thuem2014AnalysisSurvey}.
+		\item \emph{Evolution}, indicating whether storage evolution is considered in the paper~\cite{bosch2002maturity}.
+		\item \emph{Tool support} reported in the paper (e.g., FeatureIDE~\cite{Meinicke2017FeatureIDE}).
+	\end{itemize}
+\end{enumerate}
+Based on this data, we aim to synthesize a detailed overview on configurable data storages.
+
+\subsection{Conduct}
+
+The first author of this paper conducted the automated search on March \nth{15}, 2022, resulting in a total of 538 papers (65 from \textsc{Scopus}, 122 from \textsc{IEEE Xplore}, and 351 from the \textsc{ACM Guide to Computing Literature}).
+After integrating the found papers into the literature review tool Rayyan QCRI,\footnote{\url{www.rayyan.ai}} the first author labeled each paper as included, excluded, or duplicate.
+In this context, we conducted a duplicate removal (i.e., removing 29 papers) and employed our selection criteria on titles and abstracts, resulting in 76 papers for the full-text analysis. 
+After reading the full-texts, we had to remove 32 more papers, since they only superficially dealt with configurable data storages or mentioned these aspects only in the context of related work.
+Then, we employed one iteration of backwards snowballing on the remaining 44 papers.
+Finally, we identified 50 papers to be relevant for our objectives, and we started with extracting data based on the defined categories.
+For this data extraction, we used an Excel spreadsheet and performed an open-coding-like process to identify concrete instances of data fitting to our data.
+Then, we employed an open-card-sorting-like methodology to classify recurring information and synthesize common themes for each data category.
