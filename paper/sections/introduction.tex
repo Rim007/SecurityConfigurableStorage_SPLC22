@@ -1,10 +1,10 @@
 \section{Introduction} \label{sec:introduction}
 
 In recent years, the amount of data (e.g., recordings, data logs, datasets) has massively increased, due to the growing complexity, interconnection, and interaction of software systems~\citep{sagiroglu2013big,oussous2018big}.
-To handle this data in an appropriate way, it is stored, managed, and processed using a variety of different data-storage systems, ranging from centralized databases over on-demand software-as-a-service (SaaS) cloud storages to decentralized blockchains~\citep{gabel2017secure,cusumano2010cloud,shafagh2017towards}.
+To handle this data in an appropriate way, it is stored, managed, and processed using a variety of different data storage systems, ranging from centralized databases over on-demand software-as-a-service (SaaS) cloud storages to decentralized blockchains~\citep{gabel2017secure,cusumano2010cloud,shafagh2017towards}.
 A growing number of such storages and the software systems they are part of is configurable, meaning that such systems comprise variability so that they can be configured to specific requirements, such as customer demands, industry standards, hardware limitations, or legal regulations.
 So, configurability allows developers to derive a set of similar, but adapted variants of a system by enabling or disabling certain features.
-While each feature ideally provides a functionality that increases the value of a system, it is also more complex to manage such configurable systems~\citep{pohl2005software,Apel2013FOSPL}. 
+While each feature ideally provides a functionality that increases the value of a system, it is also more complex to manage such configurable systems~\citep{pohl2005software,Apel2013FOSPL,Kenner2021MappingStudy}. 
 
 Typically, the data stored in a software system involves private or security sensitive entries (e.g., personal data, company secrets).
 Consequently, to protect this data, it is essential to process and store it in a secure way by relying on security patterns, models, and standards (e.g., the ISO/IEC 27000 series~\cite{ISOIEC270002018})~\citep{Sartakov2018STANliteLevel,Popa2011CryptDB:Processing}. 
@@ -17,14 +17,14 @@ In this paper, we are particularly interested in such papers, since the data sto
 
 Despite the extensive research on security and configurable systems, \textbf{we are not aware of a systematic overview that focuses on the security of configurable data storages.}
 Consequently, there is no comprehensive systematization of such storages, their security and variability concerns, or of future research directions.
-We conducted a systematic mapping study~\cite{Kitchenham2015EvidenceSLR}, aiming to addresse this research gap.
+We conducted a systematic mapping study~\cite{Kitchenham2015EvidenceSLR}, aiming to address this research gap.
 Precisely, we analyzed 50 papers that are concerned with security and configurable data storages by searching through \textsc{Scopus},\footnote{\url{www.scopus.com}} \textsc{IEEE Xplore},\footnote{\url{ieeexplore.ieee.org}} and the \textsc{ACM Guide to Computing Literature}\footnote{\url{dl.acm.org/search/advanced}} for the last decade (2013--2022).
 Based on this dataset, we are able to summarize the state-of-art research and emphasize research gaps regarding the intersection of security and configurable storage systems.
 In detail, we contribute the following:
 \begin{itemize}[nosep,leftmargin=*]
 	\item A systematic and comprehensive overview of recent research on security in the context of configurable data storages.
 	
-	\item A discussion of what properties have been researched and what 14 opportunities for future research.
+	\item A discussion of what properties have been researched and 14 opportunities for future research.
 	
 	\item An open-access repository including our detailed study results to increase the overall comprehensibility and ensure replicability.\footnote{\url{https://www.dropbox.com/s/igfx11nwyz8autd/analysis_sheet_SPLC22.csv?dl=0}\label{ft:repo}}
 \end{itemize}
