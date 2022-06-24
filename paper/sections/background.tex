@@ -19,16 +19,15 @@ For this purpose, three established strategies exist: feature-based (i.e., analy
 
 A data storage, a medium that is able to store specific data in a certain way, is usually classified according to one of three structures it employs, namely centralized, decentralized, or distributed~\cite{furht2010CloudFundamentals,wu2017distributed}. 
 Centralized storages (e.g., centralized relational SQL databases) are built around one single unit handling all major processing or storage tasks (e.g., one server).
-Consequently, all machines are connected to the central unit where the data is stored~\cite{ramamritham1996RealTimeDatabases,chowdhury2018BlockchainAnalysis}.
-In contrast, decentralized storages (e.g., decentralized NOSQL databases in the context of blockchain applications) rely on the distribution of processing or storage steps among several units with no or limited coordination~\cite{wu2017distributed,ayoade2018DecentralizedEnvironment}.
+Consequently, all machines are connected to the central unit where the data is stored~\cite{ramamritham1996RealTimeDatabases}.
+In contrast, decentralized storages (e.g., decentralized NOSQL databases in a blockchain) rely on the distribution of processing or storage steps among several units with no or limited coordination~\cite{wu2017distributed,ayoade2018DecentralizedEnvironment}.
 So, the dependency on an individual processing unit is much weaker than in centralized solutions~\cite{ayoade2018DecentralizedEnvironment,mcconaghy2016BigchainDB:Database,Bao2020WhenIssues}.
-If a decentralized storage provides (close) coordination between independent units, it is called a distributed storage~\cite{van2002distributed,wu2017distributed}.
-For instance, inter-cloud environments relying on a variety of storages are usually associated with this structure~\cite{celesti2010security,leite2016autonomic}. 
+If a decentralized storage provides (close) coordination between independent units, it is called a distributed storage~\cite{van2002distributed,wu2017distributed}, e.g., inter-cloud environments relying on a variety of storages~\cite{celesti2010security,leite2016autonomic}. 
 
 Data storages usually operate in certain environments that are oriented towards self-hosting (i.e., an environment located on a local machine) or outsourcing.
 In the context of outsourcing, which has become increasingly widespread for enterprises in recent years, there are several common technologies, such as cloud, edge, and fog computing~\cite{gabel2017secure,correia2020SafeguardingEdge,de2019foundations}.
 Such environments use a complex combination of software and hardware components, and are able to provide server-based storage space at a high level of efficiency, flexibility, scalability, and on-demand availability~\cite{markovic2013SmartComputing,silva2018SecurityComputing}.  
-Outsourcing solutions often serve as an underlying technology based on which data storing and processing functionalities can be implemented, leading to service-based systems or infrastructures; usually called SaaS or Infrastructure as a Service (IaaS)~\cite{lee2009quality,kulkarni2012cloud,serrano2015infrastructure}.
+Outsourcing solutions often serve as an underlying technology based on which data storing and processing functionalities can be implemented, leading to service-based systems or infrastructures; usually called Software as a Service (SaaS) or Infrastructure as a Service (IaaS)~\cite{lee2009quality,kulkarni2012cloud,serrano2015infrastructure}.
 
 
 \subsection{Security}\label{sec:background:security}
