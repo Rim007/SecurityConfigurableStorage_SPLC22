@@ -7,10 +7,10 @@ In the following section, we provide relevant background information on \emph{co
 
 A configurable system is characterized by a number of features (i.e., user-visible functionalities~\cite{Apel2013FOSPL}) that can be configured to meet customer needs, such as user requirements, hardware constraints, or legal regulations.
 We classify configurable systems into two categories: configurable software systems (e.g., plugin-based systems) and configurable storage systems (e.g., cloud-based systems).
-Usually, such systems rely on concepts, methods, and techniques related to SPLs~\cite{Apel2013FOSPL,pohl2005software}.
+Usually, such systems rely on concepts, methods, and techniques related to SPLs~\cite{Apel2013FOSPL,pohl2005software,Rosenmueller2009TailorMadeDB,Krueger2018FeatureC}.
 Configurable features in an SPL are managed through variability mechanisms (e.g., variability models, such as feature models) to organize, implement, and document features with their dependencies~\cite{Kang1990FODA,Apel2013FOSPL,Czarnecki2012CoolFeatures,Schaefer2012SoftwareDiversity,Nesic2019Principles}.
 Such mechanisms are typically supported by tools that check whether a configuration is valid, propagate configuration decisions~\cite{Krieter2016ModelSlicing,Apel2013FOSPL}, and derive valid variants automatically (e.g., FeatureIDE~\cite{Meinicke2017FeatureIDE}, pure::variants~\cite{Beuche2012purevariants}).
-Consequently, configurable systems can be defined using the definitions of problem space (i.e., a domain abstraction), solution space (i.e., the implementation), and a mapping between both spaces (i.e., connection between both spaces allowing to derive variants automatically)~\cite{Apel2013FOSPL}.
+Consequently, configurable systems can be described using the definitions of problem space (i.e., the domain abstraction), solution space (i.e., the implementation), and a mapping between both spaces (i.e., connection between both spaces allowing to derive variants automatically)~\cite{Apel2013FOSPL}.
 Moreover, every configurable system can be verified based on certain attributes.
 For this purpose, three established strategies exist: feature-based (i.e., analyzing each feature in isolation without considering configurations or dependencies), product-based (i.e., analyzing a system configuration based on its code or an abstraction), and family-based (i.e., analyzing the whole configurable system including valid configurations)~\cite{Thuem2014AnalysisSurvey}.
 
@@ -22,12 +22,12 @@ Centralized storages (e.g., centralized relational SQL databases) are built arou
 Consequently, all machines are connected to the central unit where the data is stored~\cite{ramamritham1996RealTimeDatabases}.
 In contrast, decentralized storages (e.g., decentralized NOSQL databases in a blockchain) rely on the distribution of processing or storage steps among several units with no or limited coordination~\cite{wu2017distributed,ayoade2018DecentralizedEnvironment}.
 So, the dependency on an individual processing unit is much weaker than in centralized solutions~\cite{ayoade2018DecentralizedEnvironment,mcconaghy2016BigchainDB:Database,Bao2020WhenIssues}.
-If a decentralized storage provides (close) coordination between independent units, it is called a distributed storage~\cite{van2002distributed,wu2017distributed}, e.g., inter-cloud environments relying on a variety of storages~\cite{celesti2010security,leite2016autonomic}. 
+If a decentralized storage provides (close) coordination between independent units, it is called a distributed storage~\cite{van2002distributed,wu2017distributed}, for instance, inter-cloud environments relying on a variety of storages~\cite{celesti2010security,leite2016autonomic}. 
 
 Data storages usually operate in certain environments that are oriented towards self-hosting (i.e., an environment located on a local machine) or outsourcing.
 In the context of outsourcing, which has become increasingly widespread for enterprises in recent years, there are several common technologies, such as cloud, edge, and fog computing~\cite{gabel2017secure,correia2020SafeguardingEdge,de2019foundations}.
 Such environments use a complex combination of software and hardware components, and are able to provide server-based storage space at a high level of efficiency, flexibility, scalability, and on-demand availability~\cite{markovic2013SmartComputing,silva2018SecurityComputing}.  
-Outsourcing solutions often serve as an underlying technology based on which data storing and processing functionalities can be implemented, leading to service-based systems or infrastructures; usually called Software as a Service (SaaS) or Infrastructure as a Service (IaaS)~\cite{lee2009quality,kulkarni2012cloud,serrano2015infrastructure}.
+Outsourced solutions often serve as underlying technologies based on which data storing and processing functionalities can be implemented, leading to service-based systems or infrastructures; usually called Software as a Service (SaaS) or Infrastructure as a Service (IaaS)~\cite{lee2009quality,kulkarni2012cloud,serrano2015infrastructure}.
 
 
 \subsection{Security}\label{sec:background:security}

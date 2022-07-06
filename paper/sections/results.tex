@@ -12,7 +12,7 @@ Namely, we discuss what domains and aspects of configurable data storages the pa
 \myPar{Publication Years}
 Most papers in our dataset have been published between 2014 and 2017.
 In total, 36 out of 50 papers stem from this period, with an average of nine papers each year.
-Before and after this period, we identified considerably fewer publications (e.g., none 2022).
+Before and after this period, we identified considerably fewer publications (e.g., none in 2022).
 Between 2018 and 2021, the number of published papers in our dataset is considerably lower compared to the previous period (i.e., 11 papers, around three per year).
 
 \myPar{Domains}
@@ -32,16 +32,16 @@ Similar to the first perspective, we found papers considering both perspectives 
 
 \subsection{Storages}
 
-Second, we describe the results that are concerned with the data storages of a configurable system in more detail, including the type of storage, its structural organization, and the stored data.
+Second, we describe the results that are concerned with the data storages of a configurable system in more detail, including the type of storage, the structural organization, and the stored data.
 
 \myPar{Type of Storage}
-Regarding storage types, we found that the authors usually mix storage mediums, for instance, a database with its underlying infrastructure, such as an outsourced cloud system.
+Regarding storage types, we found that authors usually mix storage mediums (e.g., a database) with underlying infrastructure (e.g., an outsourced cloud system).
 Interestingly, in 17 papers, a database is implemented based on a cloud system. 
 In 13 of these cases, it is explicitly stated that these are considered as SaaS or IaaS environments.
 A combination of a cloud and a fog system with a database was described once~\cite{syed2016cloud}.
-Overall, in 31 papers, a database was implemented with 14 cases providing no details on the underlying infrastructure.
+Overall, in 31 papers a database was implemented with 14 cases providing no details on the underlying infrastructure.
 In this context, five relational databases are described, and in seven other papers SQL (usually MySQL) is stated to be the database language (i.e., also relational).
-Moreover, we identified eight papers where only a cloud system was generally defined as storage system.
+Moreover, we identified eight papers in which only a cloud system was generally defined as storage system.
 
 \myPar{Structural Organization}
 We found all types of structural organization of data storages within our dataset, namely centralized (44), distributed (14), and decentralized (1).
@@ -73,7 +73,7 @@ For instance, one paper explicitly mentions an inter-cloud system based on resou
 		&
 		&
 	    \multicolumn{3}{c}{{CIA triad}} &
-		\multicolumn{3}{c}{{\parbox{1.6cm}{Information security}}} &
+		\multicolumn{3}{c}{{\parbox{1.6cm}{\centering Information security}}} &
 		&
 		&
 		&
@@ -224,7 +224,7 @@ For instance, one paper explicitly mentions an inter-cloud system based on resou
 		\bottomrule
 		\midrule[-2pt]		
 		\multicolumn{29}{c}{\cellcolor{white} \textbf{General:} \; \harveyBallFull \, Completely fulfilled; \; \harveyBallHalf \, Partly fulfilled or subsequently assigned by the authors; \; \harveyBallNone \, Not fulfilled}\\
-		\multicolumn{29}{c}{\cellcolor{white} \textbf{Domain:} \, A: Administration and Management; P\textsubscript{1}: Production; P\textsubscript{2}: Payment; R: Retail; W: Webapplications; U: Unspecified SPL; O: Other}\\
+		\multicolumn{29}{c}{\cellcolor{white} \textbf{Domain:} \, A: Administration and Management; P\textsubscript{1}: Production; P\textsubscript{2}: Payment; R: Retail; W: Web Applications; U: Unspecified SPL; O: Other}\\
 		\multicolumn{29}{c}{\cellcolor{white} \textbf{Type of storage:} \, C: Cloud; F: Fog; D: Database -- \textbf{Structural organization:} \, C: Centralized; D\textsubscript{1}: Distributed; D\textsubscript{2}: Decentralized -- \textbf{Variability focus:} \, S\textsubscript{1}: Software; S\textsubscript{2}: Storage}\\
 	\end{tabular}
 	\end{adjustbox}
@@ -245,22 +245,22 @@ Accordingly, in nine papers only the system can access the data.
 
 \subsection{Security}
 
-Third, we describe our results regarding the security concerns of configurable data storages, including specification, standards, security goals, security threats, and proposed mitigation techniques.
+Third, we describe our results regarding the security concerns of configurable data storages, including standards, specification, security goals, security threats, and proposed mitigation techniques.
 
 \myPar{Standards}
 We found five papers that mention or consider security standards or legal regulations.
 The ISO/IEC 27000 series, precisely ISO/IEC 27000~\cite{ISOIEC270002018} and ISO/IEC 27001~\cite{ISOIEC270012013}, are mentioned in two papers~\cite{fernandez2015patterns,garcia2015software}.
 The NIST Cloud Computing Security Reference Architecture~\cite{nist2013nist} is also referenced by two papers~\cite{fernandez2015patterns,khan2017variability}.
-Other standards are only addressed once and are quite diverse.
-\citet{preuveneers2016systematic} referred to the secure payment standards PCI DSS and PA DSS~\cite{calderPCIDSS2011}. 
-\citet{fernandez2015cloud} described SAML~\cite{hughes2005security} to securely exchange authentication and authorization data.
-Moreover, \citet{shaaban2019ontology} referenced the industry communication-related standard IEC 62443~\cite{IEC62443} and IEEE 1686~\cite{IEEE1686} in the context of their configurable production system.
+Other standards are mentioned only once and are quite diverse.
+\citet{preuveneers2016systematic} refer to the secure payment standards PCI DSS and PA DSS~\cite{calderPCIDSS2011}. 
+\citet{fernandez2015cloud} describe SAML~\cite{hughes2005security} to securely exchange authentication and authorization data.
+Moreover, \citet{shaaban2019ontology} reference the industry communication-related standard IEC 62443~\cite{IEC62443} and IEEE 1686~\cite{IEEE1686} in the context of their configurable production system.
 Only one publication~\cite{fernandez2015patterns} focuses on the compliance with privacy regulations, precisely the HIPAA.
 
 \myPar{Specification}
-In most cases, security is considered as a general, but important system goal (25). 
+In most cases, security is considered as a general, but important, system goal (25). 
 However, this is usually not described in detail, but assigned by us based on the overall context.
-Seven papers each mention security as a non-functional requirement, quality attribute, or a system requirement.
+Seven papers mention security as a non-functional requirement, quality attribute, or a system requirement.
 Four papers refer to security as a system feature.
 
 \myPar{Goals}
@@ -291,7 +291,7 @@ Interestingly, in two papers by~\citet{krieter2018towards,krieter2019using}, the
 Fourth, we describe our data concerned with the variability of the configurable data storage and its surrounding system, including the variability focus, projection, verification, evolution, and tool support of the studied system.
 
 \myPar{Variability Focus}
-Most papers focus only on the variability of the software system itself (31), and refer to (apparently) non-configurable data storages.
+Most papers focus only on the variability of the software system itself (31), and refer to (apparently) non-con{\-}fig{\-}urable data storages.
 This observation is further supported by the fact that the data storage only---and not the software system---is configurable in only eight papers.
 In 11 papers, both software and storage are configurable, showing the close connection of the software system and its data storage.
 
@@ -305,8 +305,8 @@ Summing up all papers covering a certain projection, most papers address the sol
 \myPar{Verification}
 Within our dataset, verification is described or mentioned in 18 papers.
 Most papers (17) are concerned with the verification of a whole system, for example, a cloud ERP production model~\cite{jalil2017adapting}.
-In one paper, a family-based verification is proposed~\cite{garcia2015software}.
-However, we could not identify any technique verifying individual features.
+Within one paper, a family-based verification is proposed~\cite{garcia2015software}.
+In contrast, we could not identify any technique verifying individual features.
 
 \myPar{Evolution}
 Regarding the evolution of the configurable data storages and their security concerns, we found 11 papers that mention evolution or consider it partly.

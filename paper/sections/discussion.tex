@@ -2,7 +2,7 @@
 
 After describing the data we extracted, we now discuss the core insights we obtained from our analysis.
 For this purpose, we provide an overview of our synthesis and describe open \textbf{research opportunities (ROs)} that we derived from the results through collaborative analyses and discussions among this paper's authors.
-We argue that these objectives require more intensive research, since they are not sufficiently described in our sample of papers---which we consider representative of our research community, seeing the diverse set of researchers involved as well as domains and research reported.
+We argue that these ROs require more intensive research, since they are not sufficiently described in our sample of papers---which we consider representative of our research community, seeing the diverse set of researchers involved as well as domains and research reported.
 
 
 \subsection{Configurable Storages}
@@ -13,14 +13,14 @@ Our understanding refers to data storage as a medium embedded into an environmen
 However, we assume that data storage is usually used as a generic term for systems that are concerned with certain storage goals or functionalities, leading to our argument \textbf{(RO\textsubscript{1})}: \emph{A uniform definition and understanding of data storages, especially in the area of configurable systems, is needed} to ensure comparable analyses and research on data storages and the data stored (e.g., in the context of security).
 
 Surprisingly, a uniform assignment of each storage's structural organization (i.e., centralized, decentralized, distributed) was hardly possible, since the concrete perspective of a paper was often unclear.
-Precisely, we assume that there exist several possible layers (i.e., perspectives) regarding the structure of a system with a data storage, for instance:
+We assume that there exist several possible layers (i.e., perspectives) regarding the structure of a system with a data storage, such as:
 \begin{enumerate}[nosep,leftmargin=*]
 	\item the storage medium (e.g., a database),
 	\item the storage environment (e.g., a cloud system), 
 	\item the software system (e.g. a medical system), and
 	\item the storage hardware (e.g., the server system infrastructure).
 \end{enumerate}
-Each layer might contain systems that are either centralized, decentralized, or distributed.
+Each layer may contain systems that are either centralized, decentralized, or distributed.
 Since \textbf{(RO\textsubscript{2})} \emph{uniform definitions regarding the perspectives of the structural organization are not defined} in any of the papers, comparable assignments are not or hardly possible at the moment.
 However, we assume that the structural organization described in the papers usually refers to the storage environment in combination with the software system (e.g., distributed, multi-tenant cloud systems), where the actual storage medium is usually centralized.
 We strongly recommend to initiate further research in the context of the structural organization of configurable data storages, for instance, defining and formalizing the different perspectives in terms of a framework.
@@ -37,15 +37,16 @@ Nevertheless, we argue that \textbf{(RO\textsubscript{3})} \emph{more research i
 %WHAT???
 %Based on the individual fulfillment of all security-related criteria, there is a general need for security-related considerations for configurable software systems and their storage as research in security (including privacy) is lagging behind the technological advances regarding configurable systems and their data storage.
 
+\looseness=-1
 To achieve the security goals we defined, security-related concerns must be studied more extensively in the context of configurable storages, but this research is lagging behind the technological advances.
 This is a well-known problem in the context of data storages~\cite{strohbach2016big}.
 Particularly, this need arises with respect to norms, standards, and legal regulations. 
 Unsurprisingly, there is usually no security standard addressed  in the papers, although there exists a variety of international standards published by NIST, ISO, or IEC. 
-Only in two papers, the most relevant standards of the ISO/IEC 27000 series~\cite{ISOIEC270002018} are described to provide essential definitions (ISO/IEC 27000~\cite{ISOIEC270002018}), requirements (ISO/IEC 27001~\cite{ISOIEC270012013}), or ways of monitoring, measuring, analyzing, and evaluating security concerns (ISO/IEC 27004~\cite{ISOIEC270042016}).
+Only in two papers, the most relevant standards of the ISO/IEC 27000 series are described to provide essential definitions (ISO/IEC 27000~\cite{ISOIEC270002018}), requirements (ISO/IEC 27001~\cite{ISOIEC270012013}), or ways of monitoring, measuring, analyzing, and evaluating security concerns (ISO/IEC 27004~\cite{ISOIEC270042016}).
 Moreover, relevant legal regulations (usually in the context of privacy for personal and medical data) are only described in one paper.
-So, we argue that \textbf{(RO\textsubscript{4})} \emph{security for configurable data storages is lacking practice orientation based on established norms, standards, and legal regulations}, leading to a major barrier regarding the transfer of theoretical knowledge into practice.
+So, we argue that \textbf{(RO\textsubscript{4})} \emph{security for configurable data storages is lacking practical orientation based on established norms, standards, and legal regulations}, leading to a major barrier regarding the transfer of theoretical knowledge into practice.
 Possible reasons for not referring to established standards could be the missing need for a practical standard in the context of purely theoretical considerations or the assumption that the configurable systems automatically rely on the ISO/IEC 27000 series; since it is one of the most established security standards.
-Also, the limited number of certain systems and variability mechanisms in practice (e.g., configurable robotics cloud applications in Industry 4.0~\cite{gherardi2014software}) may result in an insufficient interesting of researching how to protect these systems against potential cyber attacks based on established standards.
+Also, the limited number of relevant systems and variability mechanisms in practice (e.g., configurable robotics cloud applications in Industry 4.0~\cite{gherardi2014software}) may result in an insufficient interest in researching how to protect these systems against potential cyber attacks based on established standards.
 
 Our findings further emphasize that \textbf{(RO\textsubscript{5})} \emph{there is a lack of concrete specifications of mitigation techniques} (e.g., concrete encryption algorithms, such as AES-256 or RSA-2048).
 For instance, in the context of encryption, it is not clear what is encrypted (e.g., data, storage medium, or communication) and how it is encrypted (e.g., using 1024 or 2048 bit in the context of asymmetric RSA encryption).
@@ -57,13 +58,13 @@ We suggest to not only specify mitigation techniques, but to also assign them to
 
 Interestingly, similar to the data storages, the perspectives on the security measures differ in the analyzed papers.
 In detail, some measures refer to the overall software system (e.g., firewall~\cite{siegmund2020dimensions}), while others focus on the storage environment (e.g., access control of cloud users~\cite{moens2015allocating}) or the storage medium (e.g., encryption of a database and its communication~\cite{preuveneers2016systematic}).
-However, it is not always clear what exactly a security measure refers to, although there exist categorizations of security controls, e.g., provided by NIST~\cite{securityprivacycontrols2020}. 
+However, it is not always clear what exactly a security measure refers to, although there exist categorizations of security controls, for instance, by NIST~\cite{securityprivacycontrols2020}. 
 Thus, we argue that \textbf{(RO\textsubscript{6})} \emph{a concrete assignment of mitigation techniques to their target area (i.e., their perspective) is usually missing}, leading to a decreasing comparability of existing research.
 
-In contrast to other research on security and configurable systems~\cite{Kenner2021MappingStudy}, the security goals of the CIA triad (confidentiality, integrity, availability) are not addressed the most (cf. \autoref{fig:taxonomy}) within the papers we selected.
+In contrast to other research on security and configurable systems~\cite{Kenner2021MappingStudy}, the security goals of the CIA triad are not the ones addressed most often (cf. \autoref{fig:taxonomy}) within the papers we selected.
 Instead, availability and authorization are typically mentioned.
 We argue that this is the result of these two security goals being more closely related to data storages.
-Furthermore, we assume that some security goals that are relevant, but have not been mentioned, are considered as given (e.g. integrity and non-repudiation).
+Furthermore, we assume that some security goals that are relevant, but have not been mentioned, are considered as given (e.g., integrity and non-repudiation).
 In the context of databases, both can be assumed to be automatically fulfilled by the general properties of a database. 
 However, we emphasize that \textbf{(RO\textsubscript{7})} \emph{concrete security goals (e.g., according to the definitions of ISO/IEC 27000~\cite{ISOIEC270002018}) are usually missing in the context of configurable storages}, implying a lack of practical orientation.
 
@@ -71,7 +72,7 @@ However, we emphasize that \textbf{(RO\textsubscript{7})} \emph{concrete securit
 
 We identified a variety of domains, implying that most of the selected papers are not concerned with domain specifics. 
 Thus, most of the analyzed research should be transferable and applicable to a large number of use cases.
-However, we note that this might be a hurdle for actually implementing the corresponding techniques in practice, since these solutions are not yet specified for a concrete domain or use case. 
+However, we note that this may be a hurdle for actually implementing the corresponding techniques in practice, since these solutions are not yet specified for a concrete domain or use case. 
 We identified a trend towards the production domain, more specifically cyber-physical systems and robotics applications.
 So, we see a high application potential for security research on configurable data storages in cyber-physical, cloud, robotics, and Industry 4.0 systems---which share similar properties, involve large amounts of data, and have high security concerns~\cite{ervural2018overview}.
 Similarly, considering the projections used in the papers, most focus on the mapping between problem space and solution space or the problem space only, meaning that actual (implemented) solutions for secure configurable storages are missing.
@@ -83,10 +84,10 @@ However, these would significantly increase the practical relevance of the confi
 The configurable systems we examined are mostly not verified or only verified in the context of an individual product, which is why we argue that \textbf{(RO\textsubscript{9})} \emph{we are lacking feature-based and family-based security verifications}.
 We argue that it would be valuable to verify configurable storages also in these ways, especially to fulfill domain-specific requirements and security demands in a verified manner.
 Addressing this opportunity could increase the confidence in configurable systems and their data storages, also improving the trust in the behavior of feature interactions.
-Moreover, costs could be reduced by avoiding potential system adaptions~\cite{Kenner2021MappingStudy}, for instance, in terms of updates that could also lead to new security risks.
+Moreover, costs could be reduced by avoiding potential system adaptions~\cite{Kenner2021MappingStudy,Krueger2020CostComparision}, for instance, in terms of updates that could also lead to new security risks.
 
-Surprisingly, about half of the publications are concerned with the evolution of the systems, which is more than in previous studies (e.g., by \citet{Kenner2021MappingStudy}).
-This fact might be due to the papers' focus on cloud systems, which are possibly subject to more evolution-related modifications, due to their high scalability according to the systems' requirements.
+Surprisingly, about half of the publications are concerned with the evolution of the systems, which is more than in previous studies~\cite{Kenner2021MappingStudy}.
+This may be due to the papers' focus on cloud systems, which are possibly subject to more evolution-related modifications, due to their high scalability according to the systems' requirements.
 Furthermore, we found that \textbf{(RO\textsubscript{10})} \emph{tools to support the secure engineering and evolution of data storages are usually missing}.
 The combination of these two issues results in the problem that papers serving an evolving solution space (and are thus most predestined for practice) lack a clear understanding of how existing tools could support practitioners.
 Thus, we would recommend to at least name the tools used (e.g., FeatureIDE~\cite{Meinicke2017FeatureIDE}) and report on the experiences of evolving configurable systems and their data storages (e.g., how the security of data is ensured despite evolutionary changes).
@@ -103,7 +104,7 @@ Security measures resulting in concrete features (e.g., access-control mechanism
 \begin{figure}
 	\includegraphics[width=\linewidth]{img/taxonomy.pdf}
 	\vspace*{-4ex}
-	\caption{Overview of the security goals addressed in the reviewed publications distinguished by the different perspectives. The numbers indicate the corresponding publications, with those in the middle representing the overall amount (which can be more than 100\,\% since papers can involve multiple perspectives and goals).}
+	\caption{Overview of the security goals and perspectives of the selected papers. The numbers indicate the corresponding papers, with those in the middle representing the overall amount (which can be more than 100\,\%, since papers can involve multiple perspectives and goals).}
 	\label{fig:taxonomy}
 	\vspace*{-2ex}
 \end{figure}
@@ -117,13 +118,13 @@ This is why we argue that \textbf{(RO\textsubscript{12})} \emph{more research is
 
 Interestingly, some papers stated variability as one issue that could compromise the security of a configurable system or its storage.
 However, although this threat was recognized, only in one paper a concrete mitigation technique was proposed, precisely the parallel execution of variants~\cite{nguyen2014exploring}.
-Nevertheless, this issue shows that \textbf{(RO\textsubscript{13})} \emph{the treatment of security threats or risks caused by variability and their relationships require more research}.
+Nevertheless, this issue shows that \textbf{(RO\textsubscript{13})} \emph{the treatment of security threats or risks caused by variability and their relationships requires more research}.
 
 In \autoref{fig:taxonomy}, we can see that most of the papers we analyzed do not focus on configurable data storages themselves.
 Instead, the papers are more concerned with configurable systems that also include a data storage (e.g., to store user data or variability-related data).
-Surprisingly, the number of papers in our sample that consider security or privacy goals is decreasing since 2018.
-However, we argue that \textbf{(RO\textsubscript{14})} \emph{the research area of configurable systems, especially configurable data storages, and security is under-explored}, since data storages are usually interpreted as a part of a system rather than an individual system with requirements regarding variability.
-Consequently, security is often related to the overall system, but researchers should also focus on the data storages that store and provide critical data.
+Surprisingly, the number of papers in our sample that considers security or privacy goals is decreasing since 2018.
+We argue that \textbf{(RO\textsubscript{14})} \emph{the research area of configurable systems, especially configurable data storages, and security is under-explored}, since data storages are usually interpreted as a part of a system rather than an individual system with own requirements.
+Consequently, security is often related to the overall system, but researchers should also focus on the storages that store and provide critical data.
 
 
 \subsection{Threats to Validity}
@@ -135,14 +136,13 @@ Second, we are missing in-depth details regarding the content and consistency of
 In detail, some authors describe their work in great detail, while others only mention some essential properties (e.g., concrete encryption algorithms) or describe them briefly.
 However, this is probably due to the fact that we considered both conference papers and journal articles in our study.
 Although we aimed to mitigate such issues in our data analysis, we cannot ensure that this did not impair the comparability or led to misinterpretations on our side (e.g., in the context of assigning categories).
-Third, we found a few issues regarding the fulfillment of certain criteria, such as several papers not providing any description or even a name of tools supporting their work---leading to a decreasing comprehensibility and replicability of the research.
+Third, we found a few issues regarding the fulfillment of certain criteria, such as several papers not providing any descriptions or names of tools used---leading to a decreased comprehensibility and replicability of the paper.
 Fourth, besides these threats to the internal validity, the external validity of our study could be impaired by the number of publications we considered (50).
 Although we searched in three databases, we are aware that the smaller the number of included papers, the higher the potential impact of erroneous classifications.
-We assume that we missed papers that are relevant for our study (i.e., security and configurable data storages), due to our overall search strategy, which does not cover all potential subtopics (e.g., variability modeling in the automated search).
+We assume that we missed papers that are relevant for our study, due to our overall search strategy, which does not cover all potential subtopics (e.g., variability modeling in the automated search).
 
 \looseness=-1
-Although the described issues may threaten our findings, we aimed to mitigate them by only relying on established literature databases covering relevant and peer-reviewed papers.
+Although such issues threaten our findings, we aimed to mitigate them by relying on established literature databases covering relevant and peer-reviewed papers, as well as snowballing to avoid technical problems~\cite{Shakeel2018LiteratureAnalysis,Krueger2020ReplicatingSLRs}.
 We considered a large number of papers during our systematic analysis (i.e., 538 initial papers), leading to a decreased threat of missing papers that would change our analysis.
 Additionally, the insights we identified are similar across all papers we studied, increasing our confidence that we did not miss important papers.
 Thus, we argue that our study provides detailed, reliable, and highly valuable insights regarding security in the context of configurable data storages.
-%For future work, we plan to extend our study by conducting a systematic literature review, e.g. examining the relevant topics and their criteria in more detail based on concrete metrics and proving the identified research trends and gaps.
